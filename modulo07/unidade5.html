@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade V - Espaço de características</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+								
+									
+											<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
+												<div class="w-100">
+												<h1 class="mb-0" id="uni5">Unidade V - Espaço de características</h1>
+											</div></header>
+											
+											<h2 class="mb-0" id="uni5-1">5.1 Extração de características</h2>
+											<p class="lead mb-3 text-justify indent">A extração de características é uma etapa fundamental no processo de aprendizado de máquina, onde informações relevantes são derivadas dos dados brutos. Este processo visa transformar dados complexos e volumosos em um conjunto de características mais manejável e significativo para a modelagem. Por exemplo, em imagens, características como bordas, texturas e formas podem ser extraídas para facilitar a detecção ou o reconhecimento.</p>
+											<p class="lead mb-3 text-justify indent">As características extraídas devem capturar a essência dos dados, preservando as informações críticas 
+												necessárias para as tarefas de análise subsequentes. Técnicas como Histogramas de Gradientes Orientados (HOG) para imagens, 
+												<i>Term Frequency-Inverse Document Frequency</i> (TF-IDF) para textos, e <i>Mel-Frequency Cepstral Coefficients</i> (MFCC) para áudios 
+												são exemplos comuns de métodos de extração de características. Cada técnica é escolhida com base na natureza dos dados e 
+												nos requisitos específicos da aplicação.</p>
+											<p class="lead mb-3 text-justify indent">A extração manual de características é um processo no qual um especialista analisa os dados brutos para identificar e definir características relevantes que serão utilizadas em modelos de ML. Este processo exige um conhecimento profundo do domínio específico e das propriedades dos dados, permitindo ao especialista selecionar atributos significativos que capturam as informações mais importantes. Essas características, uma vez extraídas, são organizadas em um formato estruturado, facilitando a análise e o treinamento de algoritmos de aprendizado. A extração manual de características é essencial em muitos campos, pois garante que os modelos sejam treinados com base em dados bem definidos e altamente relevantes, aumentando assim a eficácia e a precisão das previsões. Falaremos mais sobre conjuntos de dados adiante.</p>
+											<p class="lead mb-3 text-justify indent">Além disso, a extração de características pode ser automatizada utilizando DL. 
+												Em aplicações de DL, camadas convolucionais de Rede Neural Convolucional (CNN) extraem automaticamente características hierárquicas de 
+												imagens, enquanto Rede Neural Recorrente (RNN) ou <i>Transformers</i> (transformadores) podem capturar dependências temporais em dados sequenciais.</p>
+											<p class="lead mb-3 text-justify indent">Não existe receita pronta: cada contexto deve ser criteriosamente estudado para se definir quais características serão extraídas manualmente pelo especialista ou qual métodos será empregado para a seleção automática, pois essas escolhas são cruciais para o desempenho do modelo de ML.</p>
+											<h2 class="mb-0" id="uni5-2">5.2 Seleção de características</h2>
+											<p class="lead mb-3 text-justify indent">A seleção de características é o processo realizado após a extração das características e tem como objetivo identificar e escolher um subconjunto das características mais relevantes para a construção de um modelo de ML (Guyon & Elisseeff, 2003). Esse processo é essencial para melhorar a eficiência do modelo, reduzir a complexidade computacional e prevenir o (sobreajuste) (falaremos sobre isso adiante). De forma direta, podemos entender que técnicas de seleção de características ajudam a eliminar dados redundantes ou irrelevantes que não contribuem para a precisão do modelo.</p>
+											<p class="lead mb-3 text-justify indent">Existem vários métodos de seleção de características, incluindo métodos de filtro, <i>wrapper</i><sup>1</sup> e baseados em modelos. 
+												Métodos de filtro utilizam estatísticas para avaliar a relevância de cada característica de forma independente do modelo. Exemplos incluem correlação, 
+												qui-quadrado e testes de informação mútua. Métodos de <i>wrapper</i>, como <i>Recursive Feature Elimination</i> (RFE), avaliam combinações de características 
+												utilizando o desempenho do modelo. Já os métodos baseados em modelos, como <i>Least Absolute Shrinkage and Selection Operator</i> (LASSO)<sup>2</sup>, incorporam a 
+												seleção de características diretamente no processo de treinamento do modelo.</p>
+											<p class="lead mb-3 text-justify indent">Ao eliminar características irrelevantes ou redundantes, a seleção de características simplifica o modelo, reduzindo o número de parâmetros que precisam ser ajustados durante o treinamento. Isso resulta em algoritmos mais rápidos, pois há menos dados a serem processados. Modelos simplificados necessitam de menos iterações para convergir durante o treinamento, acelerando o processo de aprendizado. Isso é particularmente vantajoso em algoritmos de otimização que dependem de múltiplas iterações, como gradiente descendente. Além disso, com menos características (mantendo, é claro, as mais relevantes), o tempo necessário para a realização dos cálculos durante o treinamento é significativamente reduzido. Isso é crucial em aplicações práticas onde o tempo de processamento é uma limitação.</p>
+											<p class="lead mb-3 text-justify indent">Outra vantagem que determina a importância do processo de seleção de características é a redução 
+												da demanda de recursos computacionais. Menos características significam que menos dados precisam ser armazenados na memória durante o processamento. 
+												Isso é particularmente importante em sistemas com recursos limitados, como dispositivos embarcados ou aplicações móveis.  A quantidade de operações 
+												matemáticas necessárias para processar os dados é reduzida, diminuindo a carga computacional e permitindo que modelos sejam treinados e executados 
+												em <i>hardwares</i> menos potentes. Por fim, a seleção de características facilita a escalabilidade dos modelos para grandes conjuntos de dados. 
+												Ao trabalhar com um subconjunto mais gerenciável de características, torna-se mais fácil lidar com volumes massivos de dados sem sobrecarregar os recursos computacionais.</p>
+											<hr class="m-0" size="1" width="30%" Align="left" noshade>
+												<p class="lead mb-2 text-justify indent"><small>
+													<p class="lead mb-2 text-justify indent"><sup>1</sup> <i>Wrapper</i> é uma abordagem para a seleção de características em <i>machine learning</i> onde a eficácia de diferentes 
+														subconjuntos de características é avaliada diretamente pelo desempenho do modelo de aprendizado. Em vez de utilizar medidas 
+														estatísticas simples para selecionar características, o método <i>wrapper</i> usa o próprio algoritmo de aprendizado para determinar 
+														quais características são mais relevantes. Isso é feito testando iterativamente diferentes combinações de características e 
+														observando como a inclusão ou exclusão de cada uma afeta o desempenho do modelo.</p>
+													<p class="lead mb-2 text-justify indent"><sup>2</sup> LASSO é uma técnica de regularização e seleção de características que adiciona uma penalidade 
+														baseada na soma dos valores absolutos dos coeficientes de regressão. Essa penalidade força a redução de 
+														alguns coeficientes a zero, efetivamente selecionando um subconjunto de características durante o treinamento do modelo.</p>
+												</small></p>
+											<p class="lead mb-3 text-justify indent">A seleção adequada de características pode levar a modelos mais interpretáveis e eficientes, facilitando a compreensão dos dados e a tomada de decisões. Também pode ajudar a reduzir a dimensionalidade dos dados, abordando desafios associados a conjuntos de dados de alta dimensão.</p>
+											<h2 class="mb-0" id="uni5-3">5.3 Características vs. dimensionalidade</h2>
+											<p class="lead mb-3 text-justify indent">A relação entre características e dimensionalidade é um aspecto crucial em ML. Cada característica adicionada a um conjunto de dados aumenta sua dimensionalidade, o que pode ter implicações significativas no desempenho e na complexidade do modelo. Embora a inclusão de mais características possa fornecer mais informações ao modelo, também pode levar a desafios como a maldição da dimensionalidade (abordaremos essa questão adiante). Vamos utilizar alguns exemplos para entendermos melhor como é a relação característica vs. dimensionalidade.</p>
+											<p class="lead mb-3 text-justify indent"><b>a) Uma dimensão (1D ou unidimensional):</b></p>
+											<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+												<li>Imagine que temos uma característica, como a altura de uma pessoa.</li>
+												<li>Cada pessoa pode ser representada como um ponto em uma linha, onde a posição na linha indica a altura.</li>
+											</ul>
+											<p class="lead mb-3 text-center" id="link-figura-17"><b>Figura 17</b> - Dados unidimensionais sobre altura (em cm)</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 17 - Dados unidimensionais sobre altura (em cm).png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria</small></p>
+												</div>
+											<p class="lead mb-3 text-justify indent"><b>b) Duas dimensões (2D ou bidimensional):</b></p>
+											<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+												<li>Agora, adicionamos uma segunda característica, como o peso.</li>
+												<li>Cada pessoa agora é representada como um ponto em um plano bidimensional, onde a posição é determinada pela altura e pelo peso.</li>
+											</ul>
+											<p class="lead mb-3 text-center" id="link-figura-18"><b>Figura 18</b> - Dados bidimensionais que relacionam peso (em kg) e altura (em cm) de cinco pessoas</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 18.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria</small></p>
+												</div>
+											<p class="lead mb-3 text-justify indent">Cada ponto no gráfico da Figura 18 representa uma pessoa com uma combinação respectiva de altura e peso.</p>
+											<p class="lead mb-3 text-justify indent"><b>c) Três dimensões (3D ou tridimensional):</b></p>
+											<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+												<li>Adicionando uma terceira característica, como a idade, movemos para um espaço tridimensional.</li>
+												<li>Cada pessoa agora é representada como um ponto em um espaço 3D, com altura, peso e idade determinando sua posição. Observe o gráfico da Figura 19 a seguir.</li>
+											</ul>
+											<p class="lead mb-3 text-center" id="link-figura-19"><b>Figura 19</b> - Dados tridimensionais que relacionam peso (em kg), altura (em cm) e idade (em anos) de cinco pessoas</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 19.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Cada nova característica adicionada representa uma nova dimensão no espaço dos dados. Assim:</p>
+											<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+												<li>1 característica = 1 dimensão (linha);</li>
+												<li>2 características = 2 dimensões (plano);</li>
+												<li>3 características = 3 dimensões (espaço 3D);</li>
+												<li>N características = N dimensões (hiperespaço).</li>
+											</ul>
+											<p class="lead mb-3 text-justify indent">Em espaços de alta dimensão (hiperespaços), visualizar os dados se torna impossível, mas a matemática e os algoritmos de ML ainda podem operar nesses espaços. Cada ponto de dado em um espaço N-dimensional representa uma instância com N características, e os algoritmos de ML utilizam essas coordenadas para encontrar padrões, realizar classificações e fazer previsões.</p>
+											<p class="lead mb-3 text-justify indent">Por exemplo, se adicionarmos uma nova característica como a "pressão arterial" ao nosso exemplo de pessoas, estaríamos aumentando a dimensionalidade do nosso espaço de dados para quatro Dimensões (4D) (altura, peso, idade, pressão arterial). Embora não possamos visualizar um espaço 4D, a adição dessa característica fornece mais informações que podem ser úteis para melhorar a precisão do modelo de ML.</p>
+											<p class="lead mb-3 text-justify indent">Em um espaço de alta dimensão, a densidade dos dados tende a diminuir, tornando mais difícil encontrar padrões significativos. Isso ocorre porque, à medida que a dimensionalidade aumenta, o volume do espaço de características cresce exponencialmente, e os dados se tornam esparsos. Consequentemente, os algoritmos de ML podem ter dificuldades para generalizar a partir dos dados de treinamento, resultando em <i>overfitting</i> (sobreajuste).</p>
+											<p class="lead mb-3 text-justify indent">Portanto, equilibrar o número de características é fundamental. A seleção cuidadosa de características relevantes e a redução da dimensionalidade são práticas importantes para manter um conjunto de dados manejável e para garantir que o modelo seja capaz de aprender e generalizar de forma eficaz.</p>
+
+											<h2 class="mb-0" id="uni5-4">5.4 Maldição da dimensionalidade</h2>
+											<p class="lead mb-3 text-justify indent">A maldição da dimensionalidade (Bellman, 1961) refere-se aos vários fenômenos que surgem quando se trabalha 
+												com dados em espaços de alta dimensão. À medida que a dimensionalidade dos dados aumenta, o volume do espaço aumenta de tal forma que os pontos de dados se tornam esparsos. 
+												Em consequência, muitas das intuições e técnicas que funcionam bem em espaços de baixa dimensão deixam de ser aplicáveis. Na Figura 20 mostra 2 gráficos representando um 
+												plano bidimensional denso e um plano tridimensional esparso. Veja que, no gráfico da figura 22, os objetos estão distantes entre si de forma generalizada, o que dificulta encontrar similaridades.</p>
+											<p class="lead mb-3 text-center" id="link-figura-20"><b>Figura 20</b> - Espaços de características bidimensional denso (à esquerda) e tridimensional esparso (à direita)</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura20.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.mssqltips.com/tipimages2/5546_visualize-patterns-high-volume-data-hexbin-scatterplot-power-bi.007.png">Pragmatiq, 2023</a>.</small></p>
+												</div>
+											<p class="lead mb-3 text-justify indent">Uma das principais dificuldades associadas à maldição da dimensionalidade é que a distância entre os pontos de dados tende a se tornar uniforme, dificultando a distinção entre eles. Isso pode prejudicar a eficácia de algoritmos de aprendizado de máquina baseados em distância, como kNN (<i>k-Nearest Neighbors</i>) e de <i>clustering</i> (agrupamento).</p>
+											<p class="lead mb-3 text-justify indent">Para mitigar os efeitos da maldição da dimensionalidade, técnicas de redução de dimensionalidade (aprofundaremos neste assunto adiante), como PCA e <i>t-Distributed Stochastic Neighbor Embedding</i> (t-SNE), são frequentemente utilizadas. Essas técnicas ajudam a projetar os dados em um espaço de menor dimensão, preservando as características mais importantes e facilitando a análise e a modelagem.</p>
+											<h2 class="mb-0" id="uni5-5">5.5 Normalização do espaço de características</h2>
+											<p class="lead mb-3 text-justify indent">A normalização do espaço de características é uma etapa crucial no pré-processamento de dados em ML. Consiste em ajustar as escalas das características para que todas contribuam igualmente para o modelo, evitando que características com valores maiores dominem o processo de aprendizado. Isso é particularmente importante em algoritmos baseados em distância, como kNN e SVM.</p>
+											<p class="lead mb-3 text-justify indent">Existem várias técnicas de normalização, como a padronização (<i>standardization</i>), que transforma as características para terem média zero e desvio padrão um, e a normalização min-max, que reescala os valores para um intervalo específico, geralmente entre 0 e 1. A escolha da técnica de normalização depende da natureza dos dados e do algoritmo utilizado.</p>
+											<p class="lead mb-3 text-justify indent">Retomando o exemplo anterior, em que apresentamos um espaço de características bidimensionais com os eixos de altura (em cm) e peso (em kg), se os valores de altura estivessem em metros, a amplitude dessa característica em relação ao peso das pessoas seria bem menor. Isso quer dizer que, sem normalização, as diferenças de escala entre essas características poderiam causar problemas nos algoritmos de aprendizado de máquina. Por exemplo, os valores de peso podem variar entre 50 e 150 kg, enquanto os valores de altura variam entre 1,5 e 2 metros. Esta diferença de escala pode fazer com que a característica de peso domine os cálculos de distância, levando a modelos que não consideram a altura de forma adequada. A normalização transforma os dados para que todas as características tenham a mesma escala, tipicamente ajustando os valores para um intervalo padrão, como 0 a 1, por exemplo. Isso garante que cada característica contribua igualmente para o modelo, melhorando a precisão, a eficiência do treinamento e a capacidade de generalização do modelo para novos dados.</p>
+											<p class="lead mb-3 text-justify indent">A Figura 21 apresenta um mesmo espaço de características com os objetos representados por círculos. Na Figura com dados sem normalização percebemos que a escala dos dados do eixo de altura (x1) é bem menor em relação à peso (x2). Enquanto na outra, após a normalização dos valores entre -2 e 2, os objetos aparecem mais distribuídos, com a classe 0 (cor azul) e classe 1 (cor vermelha) mais distantes entre si, ao passo que respectivos elementos mantém a proximidade dentro da mesma classe.</p>
+											<p class="lead mb-3 text-center" id="link-figura-21"><b>Figura 21</b> - Espaço de características de peso e altura não normalizado (à esquerda) e normalizado (à direita)</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 21.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://stats.stackexchange.com/questions/287425/why-do-you-need-to-scale-data-in-knn">Kedarps, 2017</a>.</small></p>
+												</div>
+											<p class="lead mb-3 text-justify indent">Portanto, a normalização melhora a convergência de algoritmos de otimização e pode levar a um melhor desempenho geral do modelo. Além disso, facilita a comparação de diferentes características e garante que os modelos treinados sejam mais robustos e interpretáveis. Falaremos mais sobre normalização de dados mais adiante.</p>
+											<h2 class="mb-0" id="uni5-6">5.6 Transformação do espaço de características</h2>
+											<p class="lead mb-3 text-justify indent">A transformação do espaço de características envolve a aplicação de técnicas para alterar a representação das características, de forma a destacar padrões ocultos nos dados ou tornar as características mais apropriadas para o modelo de ML. Apesar das técnicas de transformação do espaço de características alterarem a escala dos valores das características, não confunda com normalização. O processo de normalizar reescala as características para mitigar possíveis desbalanceamentos nos valores que podem priorizar algumas características em detrimento de outras. Já as transformações re-escalam os valores das características para destacar padrões mais significativos e melhorar o desempenho do modelo. Transformações podem incluir a aplicação de funções matemáticas, como logaritmos, exponenciais, ou polinômios, bem como a utilização de técnicas avançadas como PCA.</p>
+											<p class="lead mb-3 text-justify indent">PCA é uma técnica amplamente utilizada que transforma um conjunto de características originais em um novo conjunto de características ortogonais (componentes principais), que capturam a maior parte da variação presente nos dados originais. Essa transformação pode reduzir a dimensionalidade dos dados, ao mesmo tempo que preserva as informações essenciais, facilitando a visualização e a modelagem.</p>
+											<p class="lead mb-3 text-justify indent">Outra técnica importante é o uso de <i>embeddings</i>, particularmente em PLN. <i>Embeddings</i>, como Word2Vec ou BERT, transformam palavras em vetores de características densos que capturam contextos semânticos, permitindo que os modelos de PLN lidem com a semântica de maneira mais eficaz. A transformação correta do espaço de características pode melhorar significativamente o desempenho dos modelos de ML.</p>
+											<p class="lead mb-3 text-justify indent">Na Figura 22, é exemplificado o processo de transformação do espaço de características usando o <i>kernel</i> do SVM. De forma simplificada, o <i>kernel</i> transforma os dados de entrada para um espaço de características de maior dimensão. Esta transformação pode tornar dados que são não linearmente separáveis em seu espaço original (de baixa dimensão) linearmente separáveis no novo espaço (de alta dimensão). Nesse caso, aumentar a dimensionalidade, efeito colateral da transformação, favorece a separação das classes.</p>
+											<p class="lead mb-3 text-center" id="link-figura-22"><b>Figura 22</b> - Transformação do espaço de características</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 22 - Transformação do espaço de características.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.researchgate.net/publication/367664188/figure/fig3/AS:11431281117775306@1675533290992/Maximum-hyperplane-and-feature-space-transformation.jpg">Niyogisubizo <i>et al</i>., 2023</a>.</small></p>
+												</div>
+											<h2 class="mb-0" id="uni5-7">5.7 Redução da dimensionalidade</h2>
+											<p class="lead mb-3 text-justify indent">A redução da dimensionalidade é o processo de diminuir o número de características em um conjunto de dados, mantendo a maior quantidade possível de informação relevante. Essa técnica é crucial para lidar com a maldição da dimensionalidade e melhorar a eficiência dos algoritmos de ML. Métodos como PCA e <i>Linear Discriminant Analysis</i> (LDA) são frequentemente utilizados para esse fim.</p>
+											<p class="lead mb-3 text-justify indent">PCA reduz a dimensionalidade projetando os dados em um espaço de menor dimensão que captura a maior variância possível. LDA, por outro lado, busca maximizar a separabilidade entre diferentes classes ao projetar os dados em um espaço que preserva as informações discriminantes. Ambas as técnicas ajudam a simplificar o modelo, reduzindo o ruído e a complexidade computacional.</p>
+											<p class="lead mb-3 text-justify indent">A redução da dimensionalidade não apenas melhora a eficiência do processamento, mas também pode levar a modelos mais robustos e generalizáveis. Ao focar nas características mais importantes, os modelos são menos propensos a <i>overfitting</i> (sobreajuste) e mais capazes de capturar os padrões subjacentes nos dados.</p>
+											<h2 class="mb-0" id="uni5-8">5.8 Seleção de Características vs. Redução da Dimensionalidade</h2>
+											<p class="lead mb-3 text-justify indent">A seleção de características e a redução da dimensionalidade são técnicas relacionadas, mas distintas, em ML. A seleção de características envolve a escolha de um subconjunto das características originais que são mais relevantes para a tarefa de aprendizado. Como vimos anteriormente, isso pode ser feito utilizando métodos de filtro, <i>wrapper</i> (empacotagem) ou baseados em modelos, que avaliam a importância de cada característica de forma individual ou em combinação.</p>
+											<p class="lead mb-3 text-justify indent">Por outro lado, a redução da dimensionalidade cria novas características a partir das originais, projetando os dados em um espaço de menor dimensão. Técnicas como PCA e LDA transformam as características existentes em novas combinações que capturam a maior parte da variabilidade ou informação discriminante dos dados. Essas novas características não são um simples subconjunto das originais, mas uma reconfiguração que pode melhorar a análise.</p>
+											<p class="lead mb-3 text-justify indent">Ambas as abordagens são valiosas para lidar com conjuntos de dados de alta dimensão, mas a seleção de características mantém a interpretabilidade das características originais, enquanto a redução da dimensionalidade pode revelar estruturas e padrões mais profundos. A escolha entre essas técnicas depende do objetivo específico e das características do conjunto de dados.</p>
+											
+											<p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+											<div class="box2">
+												<h3 class="mb-0" id="5-relembrar">Para relembrar…</h3>
+												<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Nessa unidade, discutimos o processamento e transformação de características em ML, abordando temas como extração e seleção de características, relação entre características e dimensionalidade, maldição da dimensionalidade, normalização e transformação do espaço de características, além da distinção entre seleção de características e redução de dimensionalidade. A extração de características foi apresentada como o processo de derivar informações relevantes dos dados brutos, com exemplos de técnicas como HOG para imagens e TF-IDF para textos. A seleção de características, por sua vez, envolve identificar e escolher o subconjunto mais relevante de características, utilizando métodos como filtros, <i>wrappers</i> e técnicas baseadas em modelos.</p>
+												<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Exploramos a relação entre características e dimensionalidade, destacando como cada nova característica adiciona uma nova dimensão ao espaço dos dados. Isso pode aumentar a complexidade do modelo e levar à maldição da dimensionalidade, onde a alta dimensionalidade faz com que os dados se tornem esparsos e os algoritmos de ML tenham dificuldades para generalizar. A normalização do espaço de características foi enfatizada como uma prática essencial para ajustar as escalas das características, garantindo que todas contribuam igualmente para o modelo, o que é crucial para algoritmos baseados em distância, como kNN e SVM.</p>
+												<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Além disso, discutimos a transformação do espaço de características, que pode incluir técnicas como PCA para redução da dimensionalidade, ajudando a simplificar os dados e melhorar a eficiência computacional. Foi feita uma distinção clara entre seleção de características e redução de dimensionalidade, onde a primeira mantém a interpretabilidade das características originais e a segunda transforma os dados em um novo espaço de menor dimensão. Abordamos também a importância de evitar o <i>overfitting</i> (sobreajuste), onde modelos complexos se ajustam excessivamente aos dados de treinamento, e como técnicas como validação cruzada e regularização podem ajudar a mitigar esse problema.</p>
+											</div>
+											<p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+											<div class="box3">
+												<h3 class="mb-0" id="uni5-saiba-mais">Saiba mais…</h3>
+												
+													<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font><a href="https://www.researchgate.net/publication/287743399_A_survey_of_feature_selection_and_feature_extraction_techniques_in_machine_learning">
+														Artigo de revisão abrangente que revisa técnicas de seleção e extração de características</a>.</p>
+													
+														<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font><a href="https://lvdmaaten.github.io/publications/papers/TR_Dimensionality_Reduction_Review_2009.pdf">
+															Revisão comparativa de diversas técnicas de redução de dimensionalidade, como PCA, t-SNE, e LDA</a>.</p>	
+												
+											</div>
+											
+											
+											</section>
+												
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni5">Unidade V - Espaço de características</a></li>
+											<ul>
+												<li><a href="#uni5-1">5.1 Extração de características</a></li>
+												<li><a href="#uni5-2">5.2 Seleção de características</a></li>
+												<li><a href="#uni5-3">5.3 Características vs. dimensionalidade</a></li>
+												<li><a href="#uni5-4">5.4 Maldição da dimensionalidade</a></li>
+												<li><a href="#uni5-5">5.5 Normalização do espaço de características</a></li>
+												<li><a href="#uni5-6">5.6 Transformação do espaço de características</a></li>
+												<li><a href="#uni5-7">5.7 Redução da dimensionalidade</a></li>
+												<li><a href="#uni5-8">5.8 Seleção de características vs. redução da dimensionalidade</a></li>
+												
+											</ul>
+										
+										
+										
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade VI - Funções discriminantes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+								
+									
+											
+												<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
+													<div class="w-100">
+													<h1 class="mb-0" id="uni6">Unidade VI - Funções discriminantes</h1>
+												</div></header>
+												
+												<h2 class="mb-0" id="uni6-1">6.1 Introdução</h2>
+												<p class="lead mb-3 text-justify indent">As funções discriminantes desempenham um papel fundamental no campo da aprendizagem de máquina e reconhecimento de padrões. Estas funções matemáticas são utilizadas para classificar ou categorizar objetos em diferentes classes com base em suas características ou atributos observáveis. O conceito de funções discriminantes tem suas raízes na estatística e na teoria da decisão, remontando ao início do século XX.</p>
+												<p class="lead mb-3 text-justify indent">Um dos pioneiros no desenvolvimento de funções discriminantes foi o estatístico britânico Ronald Fisher, que introduziu a LDA em 1936. Fisher aplicou esta técnica para classificar espécies de íris com base em medidas de suas pétalas e sépalas. Seu trabalho estabeleceu as bases para muitas das abordagens modernas de classificação em aprendizagem de máquina.</p>
+												<p class="lead mb-3 text-justify indent">Ao longo das décadas, outros pesquisadores contribuíram significativamente para o desenvolvimento das funções discriminantes e suas aplicações em ML. Entre esses estão Vladimir Vapnik, co-criador do SVM e Cedric Smith que introduziu uma variação do LDA com a Análise Discriminante Quadrática (QDA).</p>
+												<p class="lead mb-3 text-justify indent">Formalmente, uma função discriminante é uma função matemática que mapeia um vetor de características de entrada para um valor escalar, que é então usado para tomar uma decisão de classificação. Para um problema de classificação com K classes, geralmente são definidas K funções discriminantes, uma para cada classe. A classe predita para um novo exemplo é determinada pela função discriminante que produz o maior valor para esse exemplo.</p>
+												<p class="lead mb-3 text-justify indent">Esta abordagem fornece uma base teórica sólida para muitos algoritmos de classificação em aprendizagem de máquina, permitindo a criação de modelos que podem aprender a distinguir entre diferentes classes de objetos ou eventos com base em suas características observáveis.</p>
+												<h2 class="mb-0" id="uni6-2">6.2 Aplicações</h2>
+												<p class="lead mb-3 text-justify indent">As funções discriminantes são amplamente utilizadas em diversas aplicações de aprendizagem de máquina para solucionar problemas do cotidiano. Alguns exemplos notáveis incluem:</p>
+												
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Reconhecimento de Caracteres</b>: em sistemas de OCR, funções discriminantes são empregadas para classificar caracteres individuais em letras ou números. Isso é crucial para a digitalização de documentos, leitura automática de placas de veículos e processamento de formulários escritos à mão.</li>
+													<li><b>Diagnóstico Médico</b>: em sistemas de diagnóstico, como a detecção de câncer, as funções discriminantes podem ser utilizadas para classificar se uma célula é cancerosa ou não com base em características extraídas de imagens médicas. O LDA, por exemplo, pode ser aplicado para distinguir entre células benignas e malignas, analisando parâmetros como a textura e a forma das células.</li>
+													<li><b>Detecção de Spam</b>: sistemas de filtragem de e-mails frequentemente utilizam funções discriminantes para classificar mensagens como spam ou não-spam. O modelo aprende a distinguir entre as duas classes com base em características do e-mail, como palavras-chave, estrutura do texto e informações do remetente.</li>
+													<li><b>Reconhecimento de Fala</b>: em sistemas de reconhecimento de voz, funções discriminantes são aplicadas para classificar segmentos de áudio em fonemas ou palavras específicas. Isso é fundamental para a criação de assistentes virtuais e sistemas de transcrição automática.</li>
+													<li><b>Análise de Sentimentos</b>: na análise de mídias sociais e avaliações de produtos, funções discriminantes são usadas para classificar o sentimento expresso em textos como positivo, negativo ou neutro. Isso auxilia empresas a entender a percepção do público sobre seus produtos ou serviços.</li>
+													<li><b>Visão Computacional</b>: em sistemas de reconhecimento facial, as funções discriminantes ajudam a identificar indivíduos com base em características faciais. Utilizando técnicas como o SVM, o sistema pode aprender a distinguir entre diferentes rostos, mesmo em condições de iluminação variada e ângulos diferentes.</li>
+													<li><b>Previsão de Risco de Crédito</b>: instituições financeiras utilizam funções discriminantes para classificar clientes em diferentes níveis de risco de crédito, baseando-se em seu histórico financeiro, renda e outros fatores relevantes. Modelos como o QDA podem ser aplicados para identificar padrões em dados financeiros que indicam um risco elevado de inadimplência ou atividades fraudulentas.</li>
+												</ul>
+												<h2 class="mb-0" id="uni6-3">6.3 Conceitos Importantes</h2>
+												<p class="lead mb-3 text-justify indent">Para compreender como as funções discriminantes podem ser utilizadas em aplicações é necessário conhecer um pouco mais. As subseções seguintes tratarão de conceitos importantes para esse entendimento.</p>
+												<h3 class="mb-0" id="uni6-3-1">6.3.1 Espaço de características</h3>
+												<p class="lead mb-3 text-justify indent">O espaço de características é um conceito fundamental em ML. Ele representa um espaço multidimensional onde cada dimensão corresponde a uma característica ou atributo dos dados.  Refere-se ao conjunto de todas as características ou variáveis independentes que são usadas para descrever as amostras de dados. Cada ponto nesse espaço representa uma amostra específica, e suas coordenadas correspondem aos valores das características dessa amostra.</p>
+												<p class="lead mb-3 text-justify indent">Para ilustrar, considere um problema de classificação de flores, onde cada flor é descrita por quatro características: comprimento da sépala, largura da sépala, comprimento da pétala e largura da pétala. Aqui, o espaço de características é , e cada flor é um ponto nesse espaço.</p>
+												<h3 class="mb-0" id="uni6-3-2">6.3.2 Fronteiras de decisão</h3>
+												<p class="lead mb-3 text-justify indent">As fronteiras de decisão referem-se às regiões que separam o espaço de características em áreas associadas a diferentes classes. Na figura abaixo temos alguns exemplos de fronteiras de decisão para classificar X e O. O X e O podem ser, por exemplo, pessoas que foram diagnosticadas com uma doença ou não , respectivamente. Os eixos x, pode ser o valor dos resultados da contagem de leucócitos e o eixo y pode ser a quantidade de dias que a pessoa faz exercícios físicos.</p>
+												<p class="lead mb-3 text-justify indent">As fronteiras de decisão podem ser:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Fronteiras lineares</b>: hiperplanos que separam as classes de forma linear no espaço de características, como ilustrado na figura abaixo e a esquerda.</li>
+													<li><b>Fronteiras quadráticas</b>: superfícies quadráticas que permitem separação não linear entre classes, sendo a mais simples fronteira não linear. Ela segue uma equação do segundo grau, como por exemplo y=x^2. Um exemplo dessa curva aplicada à fronteira de decisão é ilustrada na figura abaixo e ao centro.</li>
+													<li><b>Fronteiras não lineares</b>: superfícies de decisão complexas que podem assumir formas arbitrárias para melhor separar as classes. A figura abaixo ilustra uma complexa fronteira de decisão que separa perfeitamente X de O, contudo veremos na unidade Conjunto de Dados que nem sempre esse tipo de “perfeição” é vantajosa.</li>
+												</ul>
+												<p class="lead mb-3 text-center" id="link-figura-23"><b>Figura 23</b> - Exemplo tipo de fronteiras</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 23 - Exemplo tipo de fronteiras.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://miro.medium.com/v2/resize:fit:828/format:webp/1*dpUnwfXqnU5Kd-gfafgIgQ.png">Towards Data Science, 2018</a>.</small></p>
+												</div>
+												<h3 class="mb-0" id="uni6-3-3">6.3.3 Classificação binária vs. multiclasse</h3>
+												<p class="lead mb-3 text-justify indent">Existem dois grandes grupos de classificação: binária e multiclasse. A classificação binária, como o próprio nome diz, refere-se apenas a duas classes, como por exemplo os casos ilustrados na figura abaixo e a direita. Nesse caso se resumem a uma única função 
+													(reta em verde) que separa as duas classes (O de X). Exemplos de métodos de classificação binária incluem Regressão Logística e SVM.</p>
+												<p class="lead mb-3 text-justify indent">Em problemas de classificação com mais de duas classes, como classificação de imagens em diferentes categorias, são requeridas múltiplas funções discriminantes , uma para cada par de classes, como o ilustrado abaixo (Figura 24) e a direita. 
+													A reta vermelha separa o X dos quadrados e triângulos. A reta em verde separa os triângulos dos X e quadrados, por fim, a reta em azul separa os quadrados dos triângulos e X. Alguns exemplos de métodos multiclasse são a LDA e QDA.</p>
+												<p class="lead mb-3 text-center" id="link-figura-24"><b>Figura 24</b> - Na classificação binária utilizou-se uma função discriminante, na multi-classes, múltiplas  funções discriminantes são utilizadas </p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 24.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*lp0gdEqNTMsAFAEw_Qwusw.png">Medium, 2021</a>.</small></p>
+												</div>
+												<h2 class="mb-0" id="uni6-4">6.4 Principais Algoritmos</h2>
+												<p class="lead mb-3 text-justify indent">Os algoritmos de aprendizagem de máquina que utilizam funções discriminantes variam em complexidade e capacidade de modelagem, os principais são:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>LDA</b>: é o algoritmo mais simples e amplamente utilizado. Ele assume que os dados seguem uma distribuição normal em cada classe e que as matrizes de covariância são iguais. É ideal para situações com baixo número de variáveis e alta dimensionalidade.</li>
+													<li><b>QDA</b>: essa variante da LDA relaxa a suposição de igualdade das matrizes de covariância, permitindo que elas sejam diferentes para cada classe. É mais robusto que a LDA, mas pode ser computacionalmente mais caro.</li>
+													<li><b>Análise Discriminante Regularizada (RDA)</b>: essa técnica introduz regularização para lidar com problemas de alta dimensionalidade, onde o número de características é maior do que o número de observações.</li>
+												</ul>
+												<h3 class="mb-0" id="uni6-4-1">6.4.1 Conceitos Matemáticos Importantes</h3>
+												<p class="lead mb-3 text-justify indent">Para entendimento dos algoritmos é bom termos uma noção de alguns conceitos matemáticos que são utilizados.</p>
+												<h4 class="mb-0" id="uni6-4-1-1">6.4.1.1 Matriz de covariância ou de dispersão</h4>
+												<p class="lead mb-3 text-justify indent">Suponha que você esteja conduzindo um estudo sobre o crescimento de diferentes espécies de plantas em um jardim. Para cada planta, você coleta dados sobre três características: altura, número de folhas e largura das folhas. Essas características podem variar de acordo com fatores como exposição ao sol, quantidade de água e tipo de solo.</p>
+												<p class="lead mb-3 text-justify indent">A matriz de dispersão é uma ferramenta matemática que permite compreender como essas características variam em relação umas às outras. Por exemplo:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Altura x Número de Folhas</b>: Plantas mais altas podem ter um maior número de folhas, ou essa correlação pode ser inexistente.</li>
+													<li><b>Altura x Largura das Folhas</b>: Pode haver uma relação entre a altura da planta e a largura das folhas, indicando que plantas mais altas têm folhas mais largas.</li>
+													<li><b>Número de Folhas x Largura das Folhas</b>: O número de folhas pode influenciar ou não a largura média das folhas.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">A matriz de dispersão organiza essas relações de forma sistemática, permitindo uma análise clara de como cada par de características está relacionado. Se as características (altura, número de folhas e largura das folhas) tendem a aumentar ou diminuir juntas, isso sugere uma correlação positiva entre elas. Caso contrário, a matriz indicará uma falta de correlação significativa.</p>
+												<p class="lead mb-3 text-justify indent">A matriz de dispersão é composta por elementos que representam a variância e a covariância entre as diferentes características:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Variância</b>: Refere-se à medida de quanto uma única característica (por exemplo, a altura) varia em relação à média.</li>
+													<li><b>Covariância</b>: Refere-se à medida de como duas características (por exemplo, altura e número de folhas) variam juntas.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">Por meio da matriz de dispersão, é possível identificar padrões nos dados que podem fornecer tendências valiosas sobre os fatores que mais influenciam o crescimento das plantas.</p>
+												<p class="lead mb-3 text-justify indent">Se uma covariância entre duas variáveis for <b>positiva</b>, isso indica que, à medida que uma das variáveis aumenta, a outra também tende a aumentar. Por exemplo, na figura abaixo, o valor positivo na interseção de "<i>Sepal.Length</i>" e "<i>Petal.Length</i>" indica que, conforme o comprimento da sépala aumenta, o comprimento da pétala também tende a aumentar. Isso sugere uma relação linear direta entre essas duas variáveis.</p>
+												<p class="lead mb-3 text-justify indent">Por outro lado, se uma covariância entre duas variáveis for <b>negativa</b>, isso indica que, à medida que uma das variáveis aumenta, a outra tende a diminuir. Por exemplo, o valor negativo na interseção de "<i>Sepal.Length</i>" e "<i>Sepal.Width</i>", sugere que à medida que o comprimento da sépala aumenta, a largura da sépala tende a diminuir, indicando uma relação inversa entre essas duas variáveis.</p>
+												<p class="lead mb-3 text-justify indent">A matriz de covariância (veja Figura 25 abaixo) permite entender as relações de co-dependência entre as variáveis, e a presença de valores positivos ou negativos ajuda a identificar o tipo de relação linear entre elas.</p>
+												<p class="lead mb-3 text-center" id="link-figura-25"><b>Figura 25</b> - Matriz de Covariância e as relações de co-dependência entre as variáveis</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 25.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.hackersrealm.net/post/iris-dataset-analysis-using-python">Hackers Realm, 2022</a>.</small></p>
+												</div>
+												<h4 class="mb-0" id="uni6-4-1-3">6.4.1.2 Autovetores e Autovalores</h4>
+												<p class="lead mb-3 text-justify indent">Os conceitos de autovalores e autovetores são fundamentais em diversas áreas da matemática aplicada, incluindo a análise de dados e o aprendizado de máquina. Apesar de serem conceitos avançados, eles podem ser compreendidos de maneira mais intuitiva por meio de uma analogia visual.</p>
+												<p class="lead mb-3 text-justify indent">Imagine que você tem um vetor representado por uma flecha em um plano. Esse vetor aponta em uma determinada direção e possui um certo comprimento. Agora, suponha que aplicamos uma transformação matemática a esse vetor, como uma rotação, esticamento ou compressão. Após essa transformação, o vetor pode mudar de direção, de comprimento, ou ambos. Entretanto, em alguns casos especiais, o vetor mantém sua direção original, embora seu comprimento possa ter sido alterado. Quando isso ocorre, esse vetor é denominado <b>autovetor</b>.</p>
+												<p class="lead mb-3 text-justify indent">O fator pelo qual o comprimento do vetor é alterado durante a transformação é chamado de <b>autovalor</b>. Ou seja, o autovalor representa o quanto o autovetor foi esticado ou comprimido, enquanto o autovetor é a direção que permanece inalterada.</p>
+												<p class="lead mb-3 text-justify indent">Na figura abaixo, imagine que o vetor em azul passa por uma transformação matemática que resulta nos vetores em laranja. A transformação matemática aplicada a ambos os vetores em azul 
+													é a mesma (tanto no primeiro quanto no segundo gráfico da figura), porém os resultados são diferentes. No segundo gráfico da figura 26, temos um vetor (1,1) que após a transformação matemática teve rotação e alteração 
+													de tamanho, portanto pode-se dizer que o vetor azul <b>não é</b> um autovetor. Já no segundo gráfico, temos o vetor (1,2) que após a transformação matemática <b>não</b> teve rotação porém teve alteração de tamanho, 
+													portanto pode-se dizer que o vetor azul <b>é</b> um autovetor e possui um autovalor de 5, que é o fator de escala quando comparados os vetores azul e laranja.</p>
+													<p class="lead mb-3 text-center" id="link-figura-26"><b>Figura 26</b> - Aplicação de transformações em vetor, (a) exemplo de autovalor e autovetor, (b) exemplo de um não autovetor e autovalor</p>
+													<div align="center">
+														<span class="image fit" style="width: 70%;"><img src="images/Figura 26.png" alt="" /></span>
+														<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://youtu.be/5UjQVJu89_Q?t=64">Solid Mechanics Classroom, 2017</a>.</small></p>
+													</div>
+												<p class="lead mb-3 text-justify indent">Em termos mais formais:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Autovetor</b>: Um vetor que, após uma transformação linear, mantém sua direção original.</li>
+													<li><b>Autovalor</b>: O escalar pelo qual o autovetor é multiplicado após a transformação.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">Esses conceitos são amplamente utilizados na decomposição de matrizes, uma técnica que permite simplificar problemas complexos.</p>
+												<h3 class="mb-0" id="uni6-4-2">6.4.2 Análise Discriminante Linear (LDA)</h3>
+												<p class="lead mb-3 text-justify indent">A LDA é um método de classificação que busca encontrar uma combinação linear das características que melhor separa duas ou mais classes. O LDA assume que as classes têm a mesma matriz de covariância, mas médias diferentes.</p>
+												<p class="lead mb-3 text-justify indent">Funcionamento do Algoritmo LDA:</p>
+												<ol style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li>Calcula-se a média de cada classe;</li>
+													<li>Calcula-se a matriz de dispersão entre classes e dentro das classes;</li>
+													<li>Calcula-se os autovetores e autovalores da matriz de dispersão;</li>
+													<li>Seleciona-se os k melhores autovetores para projeção;</li>
+													<li>Projeta-se os dados no novo espaço e realiza a classificação.</li>
+												</ol>
+												
+												<p class="lead mb-3 text-justify indent">Para ilustrar na prática uma aplicação do LDA usando o famoso conjunto de dados Iris, o código abaixo faz todo o processo do algoritmo descrito acima, cujo objetivo é classificar o tipo da flor com base nas suas características (largura e comprimento) de pétalas e sépalas.</p>
+												<p class="lead mb-3 text-justify" id="link-codigo-01"><b>Código 1</b> - Processamento do algoritmo de análise discriminante linear (LDA), usando o conjunto de dados Íris</p>
+<pre><code># Importação das bibliotecas necessárias
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Carrega o conjunto de dados Iris
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Divide os dados em conjuntos de treino e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Cria e treina o modelo LDA
+lda = LinearDiscriminantAnalysis()
+lda.fit(X_train, y_train)
+
+# Realiza previsões e avalia a acurácia
+accuracy = lda.score(X_test, y_test)
+print(f"Acurácia do LDA: {accuracy:.2f}")</code></pre>
+<br>
+												<h4 class="mb-0" id="uni6-4-2-1">6.4.2.1 Detalhamento do código</h4>
+												<p class="lead mb-3 text-justify" id="link-codigo-02"><b>Código 2</b> - Importando as bibliotecas necessárias</p>
+<pre><code># Importação das bibliotecas necessárias
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split</code></pre>
+<br>
+
+												<p class="lead mb-3 text-justify">-<span class="highlight2">from sklearn.discriminant_analysis import LinearDiscriminantAnalysis</span>: Este comando importa a classe <i>Linear Discriminant Analysis</i> (<i>LDA</i>) da biblioteca <i>scikit-learn</i> 
+													(comumente abreviada como <span class="highlight2">sklearn</span>).</p>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">from sklearn.datasets import load_iris</span>: 
+													Aqui, importamos a função <span class="highlight2">load_iris</span>, que carrega o conjunto de dados Iris, um dos datasets mais conhecidos e frequentemente utilizados em exemplos de aprendizado de máquina.</p>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">from sklearn.model_selection import train_test_split</span>: Este comando importa a função <span class="highlight2">train_test_split</span>, que facilita a divisão do 
+													conjunto de dados em subconjuntos de treinamento e de teste.</p>
+													<p class="lead mb-3 text-justify" id="link-codigo-03"><b>Código 3</b> - Carregando o conjunto de dados Íris</p>
+<pre><code>iris = load_iris()
+X, y = iris.data, iris.target</code></pre>
+<br>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">iris = load_iris()</span>: Nesta linha, o conjunto de dados Iris é 
+													carregado e armazenado na variável <span class="highlight2">iris</span>. Este conjunto de dados contém informações sobre três espécies de flores: setosa, 
+													versicolor e virginica; com quatro características mensuradas para cada amostra (comprimento e largura das pétalas e sépalas).</p>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">X, y = iris.data, iris.target</span>: Aqui, o conjunto de dados é dividido em duas partes:</p>
+												<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+													<li>-<span class="highlight2">X</span>: Representa as características das amostras: comprimento e largura das pétalas e sépalas (as variáveis independentes).</li>
+													<li>-<span class="highlight2">y</span>: Corresponde às classes ou rótulos das amostras (a variável dependente), indicando a qual espécie de flor cada amostra pertence (setosa, versicolor ou virginica).</li>
+												</ul>
+												<p class="lead mb-3 text-justify" id="link-codigo-04"><b>Código 4</b> - Dividindo o conjunto de dados em dois subconjuntos</p>
+<pre><code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)</code></pre>
+												
+<br> 											<p class="lead mb-3 text-justify">- <span class="highlight2">train_test_split(X, y, test_size=0.3, random_state=42)</span>: 
+	Esta função divide o conjunto de dados em dois subconjuntos, seu objetivo mais claro será abordado na unidade 8:</p>
+												<p class="lead mb-3 text-justify indent">-<span class="highlight2">X_train e y_train</span>: Contêm as amostras que serão utilizadas para treinar o modelo.</p>
+												<p class="lead mb-3 text-justify indent">-<span class="highlight2">X_test e y_test</span>: Contêm as amostras que serão utilizadas para testar o modelo, avaliando seu desempenho.</p>
+												<p class="lead mb-3 text-justify indent">-<span class="highlight2">test_size=0.3</span>: Especifica que 30% das amostras serão reservadas para o teste, enquanto os 70% restantes serão utilizados para o treinamento.</p>
+												<p class="lead mb-3 text-justify indent">-<span class="highlight2">random_state=42</span>: Define um valor fixo para o gerador de números aleatórios, garantindo que a divisão dos dados seja reproduzível em diferentes execuções do código.</p>
+												<p class="lead mb-3 text-justify" id="link-codigo-05"><b>Código 5</b> -  Criando um modelo de análise discriminante linear (LDA)</p>
+<pre><code>lda = LinearDiscriminantAnalysis()
+lda.fit(X_train, y_train)</code></pre>
+<br>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">lda = LinearDiscriminantAnalysis()</span>: 
+													Esta linha cria um modelo LDA que será utilizado para a classificação das amostras.</p>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">lda.fit(X_train, y_train)</span>: O método fit treina o modelo LDA utilizando os 
+													dados de treinamento <span class="highlight2">X_train</span> e <span class="highlight2">y_train</span>. Durante este processo, o modelo aprende as relações entre as características das amostras e 
+													suas respectivas classes, ajustando os parâmetros internos para maximizar a separação entre as diferentes classes. 
+													É nessa fase que o algoritmo apresentado anteriormente é de fato aplicado.</p>
+													<p class="lead mb-3 text-justify" id="link-codigo-06"><b>Código 6</b> -  Realizando previsões e avaliando a acurácia do modelo</p>
+<pre><code># Realiza previsões e avalia a acurácia
+accuracy = lda.score(X_test, y_test)
+print(f"Acurácia do LDA: {accuracy:.2f}")</code></pre>
+<br>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">accuracy = lda.score(X_test, y_test)</span>: Este método, chamado <span class="highlight2">score</span>, 
+													é aplicado ao modelo <span class="highlight2">lda</span> previamente treinado. Ele calcula a acurácia do modelo, ou seja, a proporção de previsões corretas 
+													que o modelo fez ao ser testado com o conjunto de dados <span class="highlight2">X_test</span> em comparação com os rótulos verdadeiros <span class="highlight2">y_test</span>. 
+													O resultado é guardado na variável <span class="highlight2">accuracy</span>, que representará a porcentagem de amostras corretamente classificadas pelo modelo.</p>
+												<p class="lead mb-3 text-justify">-<span class="highlight2">print(f"Acurácia do LDA: {accuracy:.2f}")</span>: Esta função <span class="highlight2">print</span> imprime uma mensagem na tela. 
+													<span class="highlight2">f"Acurácia do LDA: {accuracy:.2f}"</span> é uma string formatada que inclui o valor da acurácia calculada. 
+													A expressão <span class="highlight2">{accuracy:.2f}</span> formata o valor da acurácia para que seja exibido com duas casas decimais, 
+												facilitando a leitura e a interpretação do resultado. Isso só é possível com o uso do <span class="highlight2">f</span> antes da string, que permite 
+												inserir o valor da variável <span class="highlight2">accuracy</span> diretamente no texto.</p>
+																							
+												<h3 class="mb-0" id="uni6-4-3">6.4.3 Análise Discriminante Quadrática (QDA)</h3>
+												<p class="lead mb-3 text-justify indent">A QDA é uma extensão do LDA que não assume que as classes têm a mesma matriz de covariância. Isso permite que o QDA capture relações não lineares entre as características.</p>
+												<p class="lead mb-3 text-justify indent">Funcionamento do Algoritmo QDA:</p>
+												<ol style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+													<li>Calcula a média e a matriz de covariância para cada classe;</li>
+													<li>Calcula a função discriminante quadrática para cada classe;</li>
+													<li>Classifica novos pontos de dados com base na função discriminante que produz o maior valor.</li>
+												</ol>
+												<p class="lead mb-3 text-justify indent">Para ilustrar na prática uma aplicação do QDA abaixo é proposto um código muito similar ao utilizado no LDA, com pequenas diferenças que serão detalhadas a seguir.</p>
+												<p class="lead mb-3 text-justify" id="link-codigo-07"><b>Código 7</b> - Processamento do algoritmo de análise discriminante quadrática (QDA)</p>
+<pre><code># Importação das bibliotecas necessárias
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Carrega o conjunto de dados Iris
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Divide os dados em conjuntos de treino e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Cria e treina o modelo QDA
+qda = QuadraticDiscriminantAnalysis()
+qda.fit(X_train, y_train)
+
+# Realiza previsões e avalia a acurácia
+accuracy = qda.score(X_test, y_test)
+print(f"Acurácia do QDA: {accuracy:.2f}")</code></pre><br>
+												<p class="lead mb-3 text-justify indent">Nessa primeira parte do código, somente a primeira linha possui alguma diferença.</p>
+												<p class="lead mb-3 text-justify" id="link-codigo-08"><b>Código 8</b> - Importando as bibliotecas necessárias</p>
+<pre><code># Importação das bibliotecas necessárias
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split</code></pre><br>
+
+												<p class="lead mb-3 text-justify">-<span class="highlight2">from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis</span>: 
+													Este comando importa a classe referente ao <i>QDA</i> da biblioteca <i>scikit-learn</i>.</p>
+												<p class="lead mb-3 text-justify indent">Outra parte que foi necessária adaptação é o emprego dessa classe mais a frente no código.</p>
+												<p class="lead mb-3 text-justify" id="link-codigo-09"><b>Código 9</b> - Criando e treinando o modelo de análise discriminante quadrática (QDA)</p>
+<pre><code># Cria e treina o modelo QDA
+qda = QuadraticDiscriminantAnalysis()
+qda.fit(X_train, y_train)</code></pre>
+<br>
+												<p class="lead mb-3 text-justify indent">De forma similar ao visto no QDA:</p>
+												<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+													<li>-<span class="highlight2">qda = QuadraticDiscriminantAnalysis()</span>: Esta linha cria um modelo QDA que será utilizado para a classificação das amostras.</li>
+													<li>-<span class="highlight2">qda.fit(X_train, y_train)</span>: O método fit treina o modelo LDA utilizando os dados de treinamento <span class="highlight2">X_train</span> e <span class="highlight2">y_train</span>.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">Por fim, a apresentação dos resultados de acurácia também precisam ser adaptados.</p>
+                                                <p class="lead mb-3 text-justify" id="link-codigo-10"><b>Código 10</b> - Realiza previsões e avalia a acurácia</p>
+<pre><code># Realiza previsões e avalia a acurácia
+accuracy = qda.score(X_test, y_test)
+print(f"Acurácia do QDA: {accuracy:.2f}")</code></pre>
+<br>
+												<p class="lead mb-3 text-justify indent">Em comparação com o LDA em accuracy = <span class="highlight2">qda.score(X_test, y_test)</span>, 
+													substitui-se <span class="highlight2">lda</span> por <span class="highlight2">qda</span> para que sejam capturados os score do modelo qda. De forma análoga, 
+													em <span class="highlight2">print(f"Acurácia do QDA: {accuracy:.2f}")</span> é alterado o texto da impressão de LDA para QDA.</p>
+												<h3 class="mb-0" id="uni6-4-4">6.4.4 Análise Discriminante Regularizada (RDA)</h3>
+												<p class="lead mb-3 text-justify indent">A RDA é uma técnica que combina LDA e QDA, permitindo um equilíbrio entre os dois métodos através de um parâmetro de regularização.</p>
+												<p class="lead mb-3 text-justify indent">O parâmetro de regularização é uma variável crucial que controla a complexidade do modelo e a forma como a regularização é aplicada. 
+													A regularização é uma técnica utilizada para evitar o sobreajuste (<i>overfitting</i>), que ocorre quando um modelo se ajusta excessivamente aos dados de treinamento e 
+													perde capacidade de generalização para novos dados.</p>
+												<p class="lead mb-3 text-justify indent">Ele equilibra entre a matriz de covariância empírica (calculada diretamente a partir dos dados) e uma matriz diagonal  (uma matriz onde apenas as variâncias das variáveis são consideradas, e as covariâncias são ignoradas) com valores variando entre 0 e 1. Com valor 0, não é aplicada nenhuma regularização, portanto a matriz de covariância regularizada é igual à matriz de covariância empírica. Com valor 1, temos o máximo de regularização, ou seja, a matriz de covariância regularizada é igual à matriz de covariância diagonal. Valores intermediário de regularização a matriz de covariância regularizada é uma combinação ponderada entre a matriz de covariância empírica e a matriz de covariância diagonal.</p>
+												<p class="lead mb-3 text-justify indent">Funcionamento do algoritmo RDA:</p>
+												<ol style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+													<li>Calcula a média de cada classe;</li>
+													<li>Estima as matrizes de covariância de cada classe;</li>
+													<li>Aplica regularização para ajustar as matrizes de covariância;</li>
+													<li>Calcula a função discriminante regularizada;</li>
+													<li>Classifica novos pontos de dados com base na função discriminante que produz o maior valor.</li>
+												</ol>
+                                                <p class="lead mb-3 text-justify" id="link-codigo-11"><b>Código 11</b> - Processamento do algoritmo de análise discriminante regularizada (RDA)</p>
+<pre><code>from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Carrega o conjunto de dados Iris
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Divide os dados em conjuntos de treino e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Cria e treina o modelo RDA (usando LDA com shrinkage)
+rda = LinearDiscriminantAnalysis(solver='lsqr', shrinkage='auto')
+rda.fit(X_train, y_train)
+
+# Realiza previsões e avalia a acurácia
+accuracy = rda.score(X_test, y_test)
+print(f"Acurácia do RDA: {accuracy:.2f}")</code></pre><br>
+												<p class="lead mb-3 text-justify indent">Se compararmos o código proposto ao apresentado no LDA notam-se pequenas diferenças. 
+													Não foi necessário a importação de um nova classe, sendo utilizada a mesma <span class="highlight2">LinearDiscriminantAnalysis</span> aplicada no LDA. 
+													A principal mudança está no uso de alguns argumentos no momento da criação do modelo <span class="highlight2">rda</span>.</p>
+                                                    <p class="lead mb-3 text-justify" id="link-codigo-12"><b>Código 12</b> - Cria e treina o modelo RDA (usando LDA com <i>shrinkage</i>)</p>
+<pre><code># Cria e treina o modelo RDA (usando LDA com shrinkage)
+rda = LinearDiscriminantAnalysis(solver='lsqr', shrinkage='auto')
+rda.fit(X_train, y_train)</code></pre><br>
+												<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+													<li>-<span class="highlight2">rda = LinearDiscriminantAnalysis(solver='lsqr', shrinkage='auto')</span>: 
+														cria o modelo <span>rda</span>, utilizando a regularização automática através do emprego do argumento <span class="highlight2">shrinkage='auto'</span>.</li>
+													<li>-<span class="highlight2">shrinkage</span> é o parâmetro de regularização, visto anteriormente. O valor 'auto' encontrará o melhor valor de 
+														regularização, porém pode ser alterado manualmente para valores entre 0 e 1.</li>
+													<li>-<span class="highlight2">solver</span> é um parâmetro para escolher o algoritmo para encontrar a solução. 
+														Para o uso com o RDA é necessário ajustá-lo para <span class="highlight2">‘lsqr’</span>, para utilizar o método dos mínimos quadrados; ou <span class="highlight2">‘eigen’</span>, 
+														quando quer utilizar decomposição de autovalores. Somente com o uso desses 2 valores é  calculada a matriz de 
+														covariância e o pode-se utilizar em conjunto o parâmetro <span class="highlight2">shrinkage</span>.</li>
+												</ul>
+												<h2 class="mb-0" id="uni-6-5"><i>Notebook Colab</i></h2>
+												<p class="lead mb-3 text-justify indent">No <i>link</i> abaixo é possível ver a implementação dos algoritmos LDA, QDA e RDA explicados anteriormente, bem como alguns exercícios.</p>
+												<div class="box">
+													<p class="lead mb-3 text-center"><a class="break-all" href="https://colab.research.google.com/drive/1KyyJUAWqp15cqjTF_YQeSdCHZTPA04ic?ouid=109086597327779507567&usp=drive_link">
+														https://colab.research.google.com/drive/1KyyJUAWqp15cqjTF_YQeSdCHZTPA04ic?ouid=109086597327779507567&usp=drive_link
+													</a></p>
+												</div>
+												<p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+												<div class="box2">
+													<h3 class="mb-0" id="uni-6-saiba-mais">Saiba mais…</h3>
+												<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+													<li>LDA:</li>
+													<ul style="margin-left: 1cm;"class="alt4 lead mb-3 text-justify indent">
+													<li>- Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems. Annals of Eugenics, 7(2), 179-188.</li>
+													<li>- <a class="break-all" href="https://www.geeksforgeeks.org/ml-linear-discriminant-analysis/">
+														https://www.geeksforgeeks.org/ml-linear-discriminant-analysis/</a></li>
+													<li>- <a href="https://www.youtube.com/watch?v=azXCzI57Yfc">https://www.youtube.com/watch?v=azXCzI57Yfc</a></li>
+													<li>- <a href="https://www.youtube.com/watch?v=julEqA2ozcA">https://www.youtube.com/watch?v=julEqA2ozcA</a></li>
+												</ul>
+													<li>QDA: Smith, C. A. B. (1947). Some examples of discrimination. Annals of Eugenics, 13(1), 272-282.</li>
+													<li>RDA: Friedman, J. H. (1989). Regularized discriminant analysis. Journal of the American Statistical Association, 84(405), 165-175.</li>
+												</ul>	
+												</div>
+												<p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt=" "/></span></p>
+												<div class="box3">
+													<h3 class="mb-0" id="6-relembrar">Para relembrar…</h3>
+													<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Cada algoritmo possui suas próprias características e é mais adequado para determinados tipos de problemas. A escolha do algoritmo depende das características dos dados, do objetivo da tarefa de classificação e dos requisitos de desempenho e interpretabilidade do modelo.</p>
+													<p class="lead mb-3 text-justify" id="link-tabela-03"><b>Tabela 3</b> - Resumo das vantagens e desvantagens dos algoritmos que usam funções discriminantes</p>
+													<div align="center">
+														<span class="image fit" style="width: 70%;"><img src="images/Tabela 3.png" alt="" /></span>
+														<p class="lead mb-2 text-center"><small>Fonte: Autoria própria.</small></p>
+													</div>
+												</div>
+												</section>
+													
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni6">Unidade VI - Funções discriminantes</a></li>
+											<ul>
+												<li><a href="#uni6-1">6.1 Introdução</a></li>
+												<li><a href="#uni6-2">6.2 Aplicações</a></li>
+												<li><a href="#uni6-3">6.3 Conceitos Importantes</a></li>
+												<li><a href="#uni6-4">6.4 Principais Algoritmos</a></li>
+												<li><a href="#uni6-5">6.5 <i>Notebook Colab</i></a></li>
+											</ul>
+										
+										
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

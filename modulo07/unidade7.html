@@ -1,0 +1,783 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade VII - Conjuntos de dados</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+								
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+									
+								        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="uni7">
+									<header class="main">
+										<div class="w-100">
+											<h1 class="mb-0" id="uni7">Unidade VII - Conjuntos de dados</i></h1>
+										</div></header>
+										
+                                        <h2 class="mb-0" id="uni7-1">7.1 A Importância dos Dados para a Construção de Modelos de ML</h2>
+                                        <p class="lead mb-3 text-justify indent">No ML, a qualidade dos dados é fundamental para o sucesso dos modelos preditivos. Dados robustos e bem preparados são a base para que os algoritmos possam extrair padrões relevantes e generalizar de maneira eficaz para novos casos. Um conjunto de dados rico e diversificado permite que os modelos sejam mais precisos e confiáveis, enquanto dados incompletos ou tendenciosos podem levar a resultados distorcidos e ineficazes. Portanto, a coleta, o processamento e a análise crítica dos dados são etapas cruciais na construção de sistemas inteligentes.
+                                        </p>
+                                        <p class="lead mb-3 text-justify indent">No contexto do ML, os dados são frequentemente referidos como a “matéria prima” que alimenta os modelos. A qualidade e a quantidade dos dados utilizados são fatores determinantes para o desempenho e a eficácia dos algoritmos. Para que um modelo de ML seja capaz de identificar padrões complexos e realizar previsões precisas, é essencial que os dados estejam devidamente coletados, limpos e preparados.
+                                        </p>
+                                        <p class="lead mb-3 text-justify indent">A qualidade dos dados se refere à precisão, completude, consistência e relevância das informações coletadas. Dados de alta qualidade possuem as seguintes características:
+                                        </p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Precisão</b>: Os dados devem refletir a realidade de forma exata, sem erros ou distorções.</li>
+                                            <li><b>Completude</b>: Um conjunto de dados completo sobre todas as variáveis relevantes para o problema que se deseja resolver, sem lacunas significativas.														</li>
+                                            <li><b>Consistência</b>: Dados consistentes mantêm a coerência entre diferentes
+                                                fontes e ao longo do tempo, sem contradições.</li>
+                                            <li><b>Relevância</b>: Apenas os dados que são diretamente aplicáveis ao
+                                                problema em questão devem ser utilizados, evitando o “ruído” de
+                                                informações irrelevantes.</li>
+                                        </ul>
+                                        <p style="padding: 0; margin-top: 0;"    class="lead mb-3 text-justify indent">Quando a qualidade dos dados é alta, os modelos de ML são capazes de
+                                            aprender de forma mais eficiente, resultando em previsões e classificações mais
+                                            precisas.</p>
+                                        <p class="lead mb-3 text-justify indent">Além da qualidade, a diversidade dos dados desempenha um papel crucial na
+                                            robustez dos modelos. Dados diversos são aqueles que capturam uma ampla gama de
+                                            variabilidades possíveis dentro do conjunto de informações. Isso inclui variações em
+                                            termos de demografia, condições operacionais, comportamentos e cenários. Um
+                                            modelo treinado em um conjunto de dados diversificado é mais provável de
+                                            generalizar bem para novos casos que não foram observados durante o treinamento,
+                                            reduzindo o risco de sobreajuste. Modelos treinados em dados que representam
+                                            diversas populações e situações têm maior probabilidade de serem justos e precisos
+                                            para todos os grupos, evitando vieses indesejados.</p>
+                                        <p class="lead mb-3 text-justify indent">Por outro lado, dados incompletos ou tendenciosos podem comprometer
+                                            significativamente a performance dos modelos de ML. Dados incompletos, com
+                                            valores ausentes ou insuficientes para determinadas variáveis, podem levar a falhas
+                                            na aprendizagem do modelo. Da mesma forma, dados tendenciosos, que não
+                                            representam adequadamente a realidade ou que refletem vieses implícitos, podem
+                                            resultar em modelos que perpetuam essas distorções.</p>
+                                        <p class="lead mb-3 text-justify indent">Por exemplo, se um conjunto de dados para um modelo de classificação de
+                                            crédito é composto majoritariamente por exemplos de uma única classe social ou
+                                            região geográfica, o modelo pode aprender a associar características irrelevantes com
+                                            o resultado desejado, prejudicando sua capacidade de generalização.</p>
+                                        <p class="lead mb-3 text-justify indent">Dada a importância dos dados no ML, o processamento e a análise crítica
+                                            desses dados são etapas que demandam atenção e rigor. O processamento envolve
+                                            tarefas como limpeza dos dados, normalização, tratamento de valores ausentes e
+                                            redução de dimensionalidade, todas elas voltadas a melhorar a qualidade dos dados
+                                            antes de serem utilizados para treinar um modelo.</p>
+                                        <p class="lead mb-3 text-justify indent">Além disso, a análise crítica dos dados requer uma compreensão profunda do
+                                            domínio em questão para identificar possíveis vieses, outliers e inconsistências. Esta
+                                            análise permite a correção de problemas antes que os dados sejam usados na
+                                            construção do modelo, garantindo que o modelo seja treinado em dados que
+                                            verdadeiramente representem o problema que se deseja resolver.</p>
+                                            <wbr>
+
+                                        <h2 class="mb-0" id="uni7-2">7.2 Dados Estruturados vs. Dados Não Estruturados</h2>
+                                        <p style="padding: 0; margin-top: 0;"  class="lead mb-3 text-justify indent">Dados estruturados são aqueles organizados em uma estrutura predefinida,
+                                            como em tabelas com linhas e colunas, facilitando a análise por meio de ferramentas
+                                            de processamento de dados tradicionais. Já os dados não estruturados abrangem
+                                            informações que não seguem um padrão de organização, como textos, imagens e
+                                            vídeos, exigindo técnicas mais avançadas para serem analisados, como PLN e visão
+                                            computacional. A capacidade de trabalhar com ambos os tipos de dados é essencial
+                                            para aproveitar ao máximo o potencial da aprendizagem de máquina.</p>
+                                        <p class="lead mb-3 text-justify indent">Os <b>dados estruturados</b> são organizados em um formato específico, como
+                                            tabelas, facilitando a sua análise e processamento. Exemplos incluem:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li><b>Bases de Dados Relacionais</b>: Informações armazenadas em tabelas
+                                                    com linhas e colunas, como Sistemas de Gestão de Bancos de Dados
+                                                    (SGBD).</li>
+                                                <li><b>Planilhas</b>: Dados organizados em colunas e linhas, como arquivos Excel
+                                                    ou Google Sheets.</li>
+                                                <li><b>Formulários Online</b>: Respostas capturadas em campos específicos e
+                                                    padronizados.</li>											
+                                            </ul>
+                                        <p class="lead mb-3 text-justify indent">Os <b>dados não estruturados</b> não possuem um formato específico e são mais
+                                            difíceis de organizar e analisar. Exemplos incluem:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li><b>Texto Livre</b>: Documentos em texto, e-mails, mensagens de texto.</li>
+                                                <li><b>Multimídia</b>: Imagens, vídeos, áudios.</li>
+                                                <li><b>Postagens em Redes Sociais</b>: Conteúdos variados como texto, imagens
+                                                    e vídeos, frequentemente misturados.</li>													
+                                            </ul>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-27"><b>Figura 27</b> - Exemplo de dados estruturados e não estruturados </p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 27.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://k21academy.com/microsoft-azure/dp-900/structured-data-vs-unstructured-data-vs-semi-structured-data/"><u>Alam, 2024.</u></a></small></p>
+                                            </div>
+
+                                        <h2 class="mb-0" id="uni7-3">7.3 Conjuntos de Dados Supervisionados, Não Supervisionados e Semi-supervisionados</h2>
+                                        <p class="lead mb-3 text-justify indent">Nos conjuntos de dados supervisionados, cada exemplo de treinamento inclui
+                                            uma entrada e uma saída desejada, permitindo ao modelo aprender a relação entre
+                                            elas. Em contraste, os conjuntos não supervisionados contêm apenas entradas,
+                                            cabendo ao algoritmo descobrir padrões sem uma resposta direta para guiar o
+                                            aprendizado. Já os conjuntos semi-supervisionados combinam uma pequena
+                                            quantidade de dados rotulados com uma grande quantidade de dados não rotulados,
+                                            aproveitando o melhor de ambas as abordagens para melhorar a precisão dos
+                                            modelos.</p>
+                                        <p class="lead mb-3 text-justify indent">Na figura abaixo (Figura 28) é ilustrado o mesmo conjunto de dados
+                                            apresentado de duas maneiras: rotulados (em triângulos e quadrados) e não rotulados
+                                            (em círculos). Os métodos supervisionados necessitam que todos os dados possuam
+                                            rótulos, como em Modelo Supervisionado da Figura 28. Já os métodos não
+                                            supervisionados não necessitam de rótulo e tentarão identificar apenas pelas
+                                            características, como apresentado da porção Modelo Não Supervisionado. Por último,
+                                            quando há parte dos dados com rótulo e parte sem rótulos, os métodos
+                                            semi-supervisionados podem ser a melhor opção, como ilustrado na porção Modelo
+                                            Semi-supervisionado da figura.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-28"><b>Figura 28</b> - Exemplo de tipos de dados para diferentes modelos</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 28.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte:  Adaptado de <a href="https://www.ncbi.nlm.nih.gov/books/NBK595448/bin/503777_1_En_13_Fig2_HTML.jpg"><u>Trambaiolli, Biazoli, Sato, 2022</u>.</a></small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">É possível encontrar publicamente uma série de conjuntos de dados, sejam eles
+                                            supervisionados, semi-supervisionados ou não supervisionados para uso em conjunto
+                                            com modelos de classificação, regressão, clusterização, etc. Alguns conjuntos de dados
+                                            se tornaram icônicos no campo da aprendizagem de máquina pela sua relevância e
+                                            frequente uso em estudos e aplicações. Conjuntos de dados padronizados são
+                                            fundamentais para o desenvolvimento e a avaliação de algoritmos de aprendizado de
+                                            máquina, pois permitem comparar o desempenho de diferentes abordagens em
+                                            condições controladas. Dentre os conjuntos de dados mais amplamente utilizados
+                                            estão o <b>Iris</b>, o <b>MNIST</b> e o <b>CIFAR-10</b>.</p>
+                                        <p class="lead mb-3 text-justify indent">O conjunto <b>Iris</b>, por exemplo, é composto por 150 amostras de flores
+                                            pertencentes à espécie Iris, distribuídas igualmente entre três subespécies. Cada
+                                            amostra é caracterizada por quatro atributos numéricos que descrevem propriedades
+                                            morfológicas das flores, e é utilizado principalmente em tarefas de classificação para
+                                            prever a subespécie com base nessas características.</p>
+                                        <p class="lead mb-3 text-justify indent">O <b>MNIST</b> é um extenso conjunto de 70,000 imagens de dígitos manuscritos,
+                                            cada uma rotulada com um valor correspondente entre 0 e 9. Este conjunto é
+                                            amplamente empregado em tarefas de reconhecimento de caracteres e serve como
+                                            referência para avaliar o desempenho de algoritmos de classificação de imagens.</p>
+                                        <p class="lead mb-3 text-justify indent">Por fim, o <b>CIFAR-10</b> consiste em 60,000 imagens coloridas de 32x32 pixels,
+                                            distribuídas igualmente entre 10 categorias de objetos, como aviões, automóveis e
+                                            animais. Este conjunto de dados é utilizado para testar e comparar algoritmos de
+                                            classificação de imagens, especialmente em tarefas que envolvem reconhecimento de
+                                            objetos em imagens coloridas.</p>
+                                        <p class="lead mb-3 text-justify indent">A Tabela abaixo a seguir resume as principais características dos conjuntos de
+                                            dados mencionados, fornecendo uma visão geral sobre seu tamanho, quantidade de
+                                            dados rotulados e aplicação principal.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-05"><b>Tabela 4</b> - Resumo dos Conjuntos de Dados Iris, MNIST e CIFAR-10</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Tabela 4.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Autoria própria</small></p>
+                                        </div>
+
+                                        <h2 class="mb-0" id="uni7-4">7.4 Limpeza de Dados (Tratamento de Valores Ausentes, <i>Outliers</i>, Erros de Digitação)</h2>
+                                        <p class="lead mb-3 text-justify indent">A limpeza de dados é uma etapa essencial no processamento e análise de
+                                            dados, visando a correção e aprimoramento da qualidade dos dados para garantir a
+                                            eficácia das análises e a confiabilidade dos resultados. Abaixo, são abordados os
+                                            principais aspectos da importância da limpeza de dados, bem como os conceitos
+                                            fundamentais envolvidos nesse processo:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; padding: 0; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li><b>Confiabilidade</b>: Dados limpos e bem preparados são cruciais para garantir a
+                                                    confiabilidade das análises. Quando os dados estão isentos de erros e
+                                                    inconsistências, é possível obter percepções mais precisas e confiáveis, que
+                                                    refletem com maior exatidão a realidade que se pretende analisar. A presença
+                                                    de valores ausentes, duplicados ou errôneos pode comprometer a validade dos
+                                                    resultados e a tomada de decisões.</li>
+                                                <li><b>Qualidade</b>: A qualidade dos dados é um fator determinante para a obtenção
+                                                    de percepções precisas. Dados bem limpos e estruturados fornecem uma base
+                                                    sólida para a realização de análises avançadas e a construção de modelos
+                                                    preditivos. A qualidade dos dados afeta diretamente a capacidade do modelo
+                                                    de aprender padrões significativos e generalizar para novos dados.</li>
+                                                <li><b>Eficiência</b>: Dados
+                                                    bem
+                                                    estruturados
+                                                    e
+                                                    limpos
+                                                    facilitam
+                                                    a
+                                                    análise,
+                                                    economizando tempo e recursos. Ao resolver problemas como valores
+                                                    ausentes, duplicações e <i>outliers</i> de forma sistemática, a análise pode ser
+                                                    conduzida de maneira mais eficiente, permitindo que os analistas e cientistas
+                                                    de dados concentrem seus esforços na interpretação dos resultados em vez de
+                                                    corrigir problemas de dados.</li>
+                                                <li><b>Valores Ausentes</b>: Valores ausentes referem-se a dados faltantes ou nulos em
+                                                    um conjunto de dados. Esses valores podem surgir por diversos motivos, como
+                                                    falhas na coleta de dados ou erros de entrada. A abordagem para tratar valores
+                                                    ausentes inclui a imputação, onde valores ausentes são substituídos por
+                                                    estimativas baseadas em outros dados, ou a interpolação, que utiliza os dados
+                                                    existentes para prever os valores faltantes.</li>
+                                                <li><b>Valores Duplicados</b>: Valores duplicados são registros idênticos dentro do
+                                                    conjunto de dados que podem distorcer a análise e levar a resultados
+                                                    enviesados. A identificação e remoção de duplicatas são importantes para
+                                                    garantir que cada entrada seja considerada apenas uma vez, evitando
+                                                    redundâncias que podem afetar a precisão dos resultados analíticos.</li>
+                                                <li><b><i>Outliers</i></b>: São valores que se desviam significativamente da maioria dos dados.
+                                                    Esses valores extremos podem influenciar desproporcionalmente os resultados
+                                                    das análises e dos modelos estatísticos. A detecção e tratamento de outliers são
+                                                    essenciais para evitar que eles distorçam a interpretação dos dados e a
+                                                    construção de modelos preditivos.</li>
+                                                <li><b>Formatação</b>: A uniformidade na formatação dos dados refere-se à consistência
+                                                    nos formatos e na estrutura dos dados. Dados com formatos inconsistentes,
+                                                    como diferentes padrões de data ou variações na representação de números,
+                                                    podem causar erros e dificultar a análise. A padronização da formatação
+                                                    garante que todos os dados estejam no mesmo formato, facilitando a análise e
+                                                    a integração dos dados.</li>
+                                            </ul>
+                                        <p class="lead mb-3 text-justify indent">A limpeza de dados é uma etapa fundamental que assegura a precisão e a
+                                                confiabilidade das análises. Ao tratar valores ausentes, duplicados e <i>outliers</i> eg arantir a uniformidade na formatação, é possível obter dados de alta qualidade que
+                                                são essenciais para a construção de modelos eficazes e a realização de análises
+                                                precisas.</p>
+
+                                        <h2 class="mb-0" id="uni7-5">7.5 Pré-processamento (Normalização, Codificação de Variáveis Categóricas)</h2>
+                                        <p class="lead mb-3 text-justify indent">O pré-processamento de dados é uma etapa crucial que prepara os dados para
+                                            o treinamento do modelo. A normalização, como visto na unidade 5, ajusta a escala
+                                            dos dados para garantir que todas as características contribuam igualmente para o
+                                            aprendizado. Já a codificação de variáveis categóricas transforma essas variáveis em
+                                            um formato numérico que os algoritmos podem processar, como a codificação <i>one-hot</i>
+                                            ou a utilização de variáveis <i>dummy</i>.</p>
+                                        <p class="lead mb-3 text-justify indent">A normalização ajusta a escala dos dados para garantir que todas as
+                                            características tenham igual importância no processo de aprendizado. As duas
+                                            técnicas comuns de normalização são: <i>Min-Max Scaling</i> e <i>Z-score Standardization</i>.</p>
+                                        <p class="lead mb-3 text-justify indent">O <i>Min-Max Scaling</i>, também conhecido como normalização de intervalo,
+                                            transforma os dados para um intervalo específico, geralmente [0, 1]. A fórmula
+                                            utilizada é:</p>
+                                            <p class="formula text-center"><a href="https://www.codecogs.com/eqnedit.php?latex=X_%7B%5Ctext%7Bnormalizado%7D%7D%20%3D%20%5Cfrac%7BX%20-%20X_%7B%5Ctext%7Bmin%7D%7D%7D%7BX_%7B%5Ctext%7Bmax%7D%7D%20-%20X_%7B%5Ctext%7Bmin%7D%7D%7D#0">
+                                                <strong>X<small>normalizado</small></strong> = 
+                                                <span class="fraction">
+                                                    <span class="numerator">X - X<small>min</small></span>
+                                                    <span class="denominator cursive">X<small>max</small> - X<small>min</small></span>
+                                                </span></p>
+                                                                                                
+                                        <p class="lead mb-3 text-justify indent">Onde (X) é o valor original da característica,
+                                            (X<small>min</small>)
+                                            é o valor mínimo da característica,
+                                            e (X<small>max</small>) é o valor máximo. Essa técnica é particularmente útil quando
+                                            é necessário que os dados estejam em um intervalo fixo. No entanto, pode ser sensível
+                                            a outliers, pois os valores extremos podem distorcer o intervalo de normalização.</p>
+                                        <p class="lead mb-3 text-justify indent">A padronização pelo <i>Z-score</i>, também conhecida como normalização padrão,
+                                            transforma os dados para que tenham média zero e desvio padrão um. A fórmula é:</p>
+                                            <p class="formula text-center"><a href="https://www.codecogs.com/eqnedit.php?latex=X_%7B%5Ctext%7Bpadronizado%7D%7D%20%3D%20%5Cfrac%7BX%20-%20%5Cmu%7D%7B%5Csigma%7D#0">
+                                                <strong>X<small>padronizado</small></strong> = 
+                                                <span class="fraction">
+                                                    <span class="numerator">X - μ</span>
+                                                    <span class="denominator cursive">σ</span>
+                                                </span></p>																												
+                                        <p class="lead mb-3 text-justify indent">Onde (X) é o valor original, (μ) é a média dos valores da característica, e (σ) é o
+                                            desvio padrão. Este método é útil para dados que não possuem uma distribuição
+                                            uniforme ou quando se deseja que as características tenham a mesma escala,
+                                            independentemente das unidades originais. É menos sensível a <i>outliers</i> em
+                                            comparação ao <i>Min-Max Scaling</i>.</p>
+                                        <p class="lead mb-3 text-justify indent">Algoritmos de aprendizado de máquina geralmente exigem que os dados
+                                            estejam em formato numérico. Portanto, variáveis categóricas, que representam
+                                            categorias ou rótulos, precisam ser convertidas em um formato que os algoritmos
+                                            possam processar. As técnicas comuns para codificação de variáveis categóricas
+                                            incluem:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li><b><i>One-Hot Encoding</i></b> que transforma uma variável categórica em uma série de
+                                                    colunas binárias, onde cada coluna representa uma categoria específica. Se
+                                                    uma variável categórica tem (k) categorias, será criada uma nova coluna para
+                                                    cada categoria, preenchida com 0s e 1s indicando a presença ou ausência
+                                                    daquela categoria. Esta técnica é adequada para variáveis categóricas sem
+                                                    ordem intrínseca e evita a introdução de uma ordem implícita. No entanto,
+                                                    pode
+                                                    aumentar
+                                                    significativamente
+                                                    a
+                                                    dimensionalidade
+                                                    dos
+                                                    dados,
+                                                    especialmente se o número de categorias for grande.</li>
+                                                <li><b><i>Label Encoding</i></b> que atribui um valor numérico a cada categoria de uma
+                                                    variável categórica. Cada categoria é substituída por um número inteiro único.
+                                                    <i>Label Encoding</i> é útil para variáveis categóricas ordinais, onde a ordem das
+                                                    categorias é importante. No entanto, pode introduzir uma ordem artificial para
+                                                    variáveis categóricas nominais, o que pode ser inadequado para alguns
+                                                    algoritmos de aprendizado de máquina.</li>
+                                            </ul>
+                                        <p class="lead mb-3 text-justify indent">Na figura abaixo é possível compreender melhor como funciona cada uma das
+                                            técnicas apresentadas. <i>Label Encoding</i> simplesmente atribui um número único a cada
+                                            categoria, como 1 para "Apple", 2 para "Chicken" e 3 para "Broccoli". <i>One-Hot Encoding</i>, por outro lado, cria uma nova coluna para cada categoria e atribui 1 se a
+                                            observação pertence àquela categoria e 0 caso contrário.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-29"><b>Figura 29</b> - Exemplo de técnicas para criação de variáveis categóricas</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 29.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://medium.com/@michaeldelsole/what-is-one-hot-encoding-and-how-to-do-it-f0ae272f1179"><i>Medium, 2018.</i></a></small></p>
+                                            </div>
+                                            <p class="lead mb-3 text-justify indent">O pré-processamento de dados é fundamental para garantir que as
+                                                características estejam na mesma escala e em um formato que os algoritmos de
+                                                aprendizado de máquina possam processar efetivamente. A normalização, por meio
+                                                do <i>Min-Max Scaling</i> e da <i>Z-score Standardization</i>, ajusta a escala dos dados para
+                                                melhorar a convergência e o desempenho do modelo. A codificação de variáveis
+                                                categóricas, utilizando técnicas como <i>One-Hot Encoding</i> e <i>Label Encoding</i>, converte
+                                                categorias em formatos numéricos, preparando os dados para análise e modelagem.
+                                                Estas práticas são essenciais para a construção de modelos precisos e robustos em
+                                                aprendizado de máquina.</p>
+
+
+                                        <h2 class="mb-0" id="uni7-6">7.6 Seleção e Engenharia de Características (Feature Selection e Feature Engineering)</h2>
+                                        <p class="lead mb-3 text-justify indent">A seleção de características envolve escolher as variáveis mais relevantes para
+                                            o modelo, o que pode aumentar sua eficácia e reduzir a complexidade. Por outro lado,
+                                            a engenharia de características é a arte de criar novas variáveis a partir das
+                                            existentes para capturar relações mais complexas entre os dados, que possam
+                                            influenciar a predição e melhorar a capacidade preditiva do modelo. Ambos os
+                                            processos são essenciais para otimizar o desempenho do modelo.</p>
+                                        <p class="lead mb-3 text-justify indent">A seleção de características visa identificar e escolher o subconjunto mais
+                                            relevante de atributos que melhor explicam a variabilidade da variável alvo. Ao
+                                            reduzir a dimensionalidade dos dados, a seleção de características contribui para:</p>
+
+                                            
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Melhora na performance</b>: A remoção de características irrelevantes ou
+                                                redundantes
+                                                pode
+                                                reduzir
+                                                o
+                                                <i>overfitting</i>
+                                                (sobreajuste)
+                                                e
+                                                aumentar
+                                                a
+                                                generalização do modelo.</li>
+                                            <li><b>Redução da complexidade</b>: Modelos com menos características são mais
+                                                simples de treinar, interpretar e manter.</li>
+                                            <li><b>Diminuição do tempo de treinamento</b>: Menos características implicam em
+                                                menor tempo de computação durante o treinamento do modelo.</li>								
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">A engenharia de características é uma etapa que exige um profundo
+                                            conhecimento do domínio do problema e criatividade. Abaixo algumas técnicas de
+                                            engenharia de características:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li><b>Transformações</b>: Aplicação
+                                                    de
+                                                    funções
+                                                    matemáticas
+                                                    como
+                                                    logaritmo,
+                                                    exponencial ou normalização para ajustar a distribuição dos dados.</li>
+                                                <li><b>Combinações</b>: Criação de novas características a partir da combinação de
+                                                    duas ou mais características existentes, como a razão entre duas variáveis.</li>
+                                                <li><b>Interações</b>: Consideração
+                                                    de interações entre características, como a multiplicação de duas variáveis.</li>													
+                                                <li><b>Criação de features binárias</b>: Transformação de variáveis categóricas em
+                                                    variáveis binárias (<i>one-hot encoding</i>).</li>
+                                                <li><b>Extração de features</b>: Aplicação de técnicas como PCA para reduzir a
+                                                    dimensionalidade e extrair as características mais relevantes.</li>
+                                            </ul>
+
+                                        <h2 class="mb-0" id="uni7-7">7.7 Divisão em Conjuntos de Treino, Validação e Teste</h2>
+                                        <p class="lead mb-3 text-justify indent">A divisão dos dados em conjuntos de treino, validação e teste é fundamental
+                                            para a avaliação objetiva dos modelos de ML. O conjunto de treino é utilizado para
+                                            ajustar
+                                            os
+                                            parâmetros
+                                            do
+                                            modelo,
+                                            o
+                                            de
+                                            validação
+                                            é usado para ajustar
+                                            hiperparâmetros e evitar <i>overfitting</i> (um ajuste excessivo do modelo), e o conjunto de
+                                            teste fornece uma estimativa final da performance do modelo em dados não vistos,
+                                            garantindo a generalização do modelo. Normalmente as proporções dos conjuntos são
+                                            60% para treino, 20% para validação e 20% para teste.</p>
+                                        <p class="lead mb-3 text-justify indent">Para ilustrar, na Figura 32 abaixo temos um conjunto de dados de fotos de
+                                            cachorros e gatos, cujo objetivo é treinar modelos de classificação para diferenciar
+                                            fotos de gatos das de cachorros. Uma parte dos dados originais é alocada para o
+                                            conjunto de treino. O modelo de aprendizado de máquina "aprende" a partir desses
+                                            dados, ajustando seus parâmetros internos para realizar a tarefa desejada (por
+                                            exemplo, classificar imagens como gatos ou cachorros). Outra parte dos dados é
+                                            reservada para o conjunto de validação. Esse conjunto é utilizado para ajustar os
+                                            hiperparâmetros do modelo, como a taxa de aprendizado ou a complexidade do
+                                            modelo. A ideia é encontrar a configuração que leva ao melhor desempenho do
+                                            modelo no conjunto de validação, sem que ele "veja" esses dados durante o
+                                            treinamento.</p>
+                                        <p class="lead mb-3 text-justify indent">Os modelos treinados são avaliados no conjunto de validação. A avaliação
+                                            permite comparar o desempenho de cada modelo e escolher o que apresenta os
+                                            melhores resultados. O modelo que obtém o melhor desempenho no conjunto de
+                                            validação é selecionado como o melhor modelo. Esse melhor modelo é finalmente
+                                            avaliado em um conjunto de dados totalmente independente, chamado conjunto de
+                                            teste. Esse conjunto nunca foi utilizado durante o treinamento ou a validação. A
+                                            avaliação no conjunto de teste fornece uma estimativa mais realista do desempenho
+                                            do modelo em dados nunca vistos antes. A acurácia é uma métrica que mede o
+                                            desempenho do modelo no conjunto de teste e indica a porcentagem de exemplos que
+                                            o modelo classificou corretamente.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-30"><b>Figura 30</b> - Exemplo divisão do conjunto de dados</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 30.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://analisemacro.com.br/wp-content/uploads/2023/07/esquema2.png"><i> Silva, 2023.</i></a></small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent"><b><i>Cross Validation</i></b></p>
+                                        <p class="lead mb-3 text-justify indent">Frequentemente utilizado na fase de divisão dos conjuntos de dados, o
+                                            <i>Cross-validation</i> (validação cruzada <i>k-fold</i>) é uma técnica estatística que permite
+                                            avaliar a robustez do modelo ao dividir o conjunto de treino em várias partições e
+                                            realizar treinamentos e validações múltiplas. Isso ajuda a garantir que o modelo não
+                                            esteja sobreajustado (sofra <i>overfitting</i>) a um conjunto de dados específico favorecendo
+                                            melhor desempenho do modelo para dados desconhecidos. Ao contrário da divisão
+                                            tradicional em conjuntos de treino, validação e teste, a validação cruzada  <i>k-fold</i> 
+                                            permite que todos os dados sejam utilizados tanto para treinamento quanto para
+                                            teste, mitigando o impacto da aleatoriedade na divisão inicial dos dados.</p>
+                                        <p class="lead mb-3 text-justify indent">Com base na Figura 31 abaixo, inicialmente o conjunto de dados é dividido em
+                                            K partes (normalmente 5 ou 10), chamadas de <i>folds</i>, de tamanho aproximadamente
+                                            igual. O processo é repetido K vezes (nesse caso 5), K-1 folds são combinados para
+                                            formar o conjunto de treinamento (Folds em verde) e o <i>fold</i> restante é utilizado como
+                                            conjunto de teste (fold em azul). O modelo é treinado em cada iteração (split) e
+                                            avaliado no conjunto de teste correspondente (<i>fold</i> azul). As métricas de desempenho
+                                            (acurácia, precisão, recall, etc.) obtidas em cada iteração são calculadas e uma média é
+                                            tomada. Essa média representa a estimativa do desempenho do modelo.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-31"><b>Figura 31</b> - Exemplo <i>k-fold</i></p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 31.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://scikit-learn.org/stable/modules/cross_validation.html"><i>Scikit-learn, 2024.</i></a></small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">Ao utilizar todos os dados tanto para treinamento quanto para teste, o <i>k-fold</i>
+                                            reduz o viés na estimativa do desempenho do modelo, que poderia ocorrer devido a
+                                            uma divisão inicial aleatória não representativa. A média das métricas obtidas em
+                                            todas as iterações fornece uma estimativa mais robusta e confiável do desempenho do
+                                            modelo. O <i>k-fold</i> pode ajudar a identificar modelos que estão sofrendo de <i>overfitting</i>,
+                                            ou seja, modelos que se ajustam muito bem aos dados de treinamento, mas
+                                            apresentam um desempenho pobre em dados não vistos.</p>
+                                        <p class="lead mb-3 text-justify indent">A validação cruzada <i>k-fold</i> é uma técnica poderosa e versátil para avaliar o
+                                            desempenho de modelos de aprendizado de máquina. Ao garantir uma utilização
+                                            mais eficiente dos dados e fornecer uma estimativa mais robusta do desempenho, o
+                                            k-fold é uma ferramenta essencial no processo de desenvolvimento de modelos.</p>
+
+                                        <h2 class="mb-0" id="uni7-8">7.8 Dados Desbalanceados e Técnicas para Balanceamento</h2>
+                                        <p class="lead mb-3 text-justify indent">Conjuntos de dados desbalanceados ocorrem quando algumas classes têm
+                                            muito mais exemplos do que outras, o que pode prejudicar o aprendizado do modelo.
+                                            Técnicas como <i>oversampling</i> (aumentar a representatividade das classes minoritárias)
+                                            e <i>undersampling</i> (reduzir a representatividade das classes majoritárias) são usadas
+                                            para balancear o conjunto de dados e melhorar o desempenho do modelo.</p>
+                                        <p class="lead mb-3 text-justify indent">Na figura abaixo há um exemplo de dados desbalanceados, nota-se a evidente
+                                            diferença na quantidade de dados da classe 0 e 1, em azul e laranja respectivamente.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-32"><b>Figura 32</b> - Exemplo dados desbalanceados</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 32.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Adaptado de <a href="https://medicalfuturist.com/healthcare-trends-hype-cycle/"><i>Medium, 2022</i></a>.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">Modelos treinados com dados desbalanceados tendem a ser mais precisos na
+                                            classificação da classe majoritária, ignorando ou classificando incorretamente os
+                                            exemplos da classe minoritária. Isso ocorre porque o algoritmo busca minimizar o
+                                            erro global, e a classe majoritária, por ter mais exemplos, exerce maior influência na
+                                            função de custo.</p>
+                                        <p class="lead mb-3 text-justify indent">A acurácia, uma métrica comumente utilizada para avaliar o desempenho de
+                                            modelos de classificação, pode ser enganosa em casos de desbalanceamento. Um
+                                            modelo que simplesmente classifica todos os exemplos como pertencentes à classe
+                                            majoritária pode obter uma alta acurácia, mesmo que tenha um desempenho muito
+                                            ruim na classificação da classe minoritária. Métricas como precisão, <i>recall</i> e <i>F1-score</i> são mais indicadas para avaliar o desempenho em problemas de classificação com
+                                            dados desbalanceados. Essas métricas serão detalhadas na unidade de Classificação.</p>
+                                        <p class="lead mb-3 text-justify indent">Existem diversas técnicas para lidar com o desbalanceamento de dados,
+                                            buscando equilibrar a distribuição das classes e melhorar o desempenho dos
+                                            modelos. As duas principais abordagens são: <i>Oversampling</i> e <i>Undersampling</i>. A
+                                            primeira consiste em aumentar a representatividade da classe minoritária, gerando
+                                            novos exemplos sintéticos. Na segunda busca-se reduzir a representatividade da
+                                            classe majoritária, removendo aleatoriamente exemplos dessa classe.</p>
+                                        <h3 class="mb-0" id="uni7-8-1">7.8.1 - Técnica de <i>oversampling</i></h3>
+                                        <p class="lead mb-3 text-justify indent">O <b>SMOTE (<i>Synthetic Minority Over-sampling Technique</i>)</b> é uma das técnicas
+                                            mais populares de oversampling. Ele cria novos exemplos sintéticos para a classe
+                                            minoritária, interpolando os dados existentes em um espaço multidimensional. Essa
+                                            técnica é eficaz em lidar com desbalanceamentos significativos e pode melhorar
+                                            significativamente o desempenho do modelo na classificação da classe minoritária.
+                                            Nela, dados artificiais são criados com base nos K vizinhos mais próximos. Observe a
+                                            figura abaixo na qual são apresentadas duas classes, quadrados verdes e bolas azuis.
+                                            O SMOTE segue os seguintes passos:</p>
+                                            <ol style="margin-left: 1cm; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>Seleciona a classe minoritária (bolas em azul).</li>
+                                                <li>Utiliza o KNN na classe minoritária com algum valor de K. Em outras palavras,
+                                                    seleciona os K vizinhos mais próximos de bola azul x1. Nesse caso o K é 3, por
+                                                    isso, os vizinhos mais próximos são x2, x3 e x4.</li>
+                                                <li>Desenha-se linhas entre uma amostra da classe minoritária e seus K vizinhos.</li>
+                                                <li>Escolhe um valor aleatório sobre essa linha. Nesse caso as bolas em vermelho
+                                                    s1, s2 e s3 são os valores aleatórios sobre essas linhas. Elas são os dados criados
+                                                    artificialmente para o balanceamento da classe de bolas azuis.</li>
+                                            </ol>
+                                        <p class="lead mb-3 text-justify indent">O processo se repete até que a quantidade de bolas (vermelhas + azuis) seja
+                                            igual a quantidade de quadrados verdes.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-33"><b>Figura 33</b> - Exemplo do funcionamento do SMOTE</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 33.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://i0.wp.com/varshasaini.in/wp-content/uploads/2022/07/smote.jpeg?w=1400&ssl=1"><i>Yang, 2022</i></a>.</small></p>
+                                            </div>	
+                                        <h3 class="mb-0" id="uni7-8-2">7.8.2 - Técnica de <i>undersampling</i></i></h3>
+                                        <p class="lead mb-3 text-justify indent">O <i>RandomUnderSampler</i> é uma técnica simples de <i>undersampling</i> que
+                                            remove aleatoriamente exemplos da classe majoritária até que as classes estejam
+                                            balanceadas. Embora seja fácil de implementar, pode levar à perda de informações
+                                            importantes, especialmente se a classe majoritária contiver padrões relevantes.</p>
+                                        <p class="lead mb-3 text-justify indent">A escolha da técnica de balanceamento depende de diversos fatores, como:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Grau
+                                                de
+                                                desbalanceamento</b>: Para
+                                                desbalanceamentos
+                                                extremos,
+                                                o
+                                                oversampling pode ser mais eficaz.</li>
+                                            <li><b>Tamanho do conjunto de dados</b>: Em conjuntos de dados pequenos, o
+                                                <i>oversampling</i> pode levar ao <i>overfitting</i> (sobreajuste).</li>
+                                            <li><b>Natureza dos dados</b>: A complexidade dos dados e a relação entre as features</li>
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">O uso prático se estende a diversas aplicações, porém um exemplo didático é a
+                                            detecção de fraudes em cartões de crédito, onde a classe "fraude" é significativamente
+                                            menor do que a classe "não fraude". Ao aplicar o SMOTE, novos exemplos de fraudes
+                                            sintéticas seriam gerados, tornando a distribuição das classes mais equilibrada. Isso
+                                            permitiria que o modelo aprendesse a identificar padrões associados a fraudes com
+                                            maior precisão.</p>
+                                        <p class="lead mb-3 text-justify indent">O tratamento de dados desbalanceados é um desafio comum em aprendizado
+                                            de máquina. A escolha da técnica de balanceamento adequada depende das
+                                            características do conjunto de dados e dos objetivos da análise. Ao utilizar técnicas
+                                            como <i>oversampling</i> e <i>undersampling</i>, é possível melhorar significativamente o
+                                            desempenho dos modelos de classificação em problemas com classes desbalanceadas.</p>
+
+                                        <h2 class="mb-0" id="uni7-9">7.9 Subajuste (<i>Underfitting</i>) e Sobreajuste (<i>Overfitting</i>)</h2>
+                                        <p class="lead mb-3 text-justify indent">Subajuste, ou mais comumente conhecido como <i>Underfitting</i>, ocorre quando
+                                            um modelo é muito simples e não consegue capturar as tendências dos dados de
+                                            treino, resultando em baixo desempenho tanto no treino quanto no teste. Sobreajuste,
+                                            ou melhor conhecido como <i>Overfitting</i>, por outro lado, acontece quando um modelo
+                                            se ajusta excessivamente aos dados de treino, memorizando ruídos e peculiaridades,
+                                            e falha em generalizar para novos dados. Técnicas como validação cruzada,
+                                            regularização e seleção de modelos são usadas para encontrar um equilíbrio ideal e
+                                            evitar esses problemas. Ambos representam situações em que o modelo não consegue
+                                            capturar adequadamente as relações entre as variáveis, resultando em um
+                                            desempenho insatisfatório.</p>
+                                        <p class="lead mb-3 text-justify indent">O <i>underfitting</i> ocorre quando um modelo é muito simples para capturar a
+                                            complexidade dos dados. Ele não consegue aprender as relações subjacentes entre as
+                                            <i>features</i> (características) e o <i>target</i> (variável alvo), resultando em um alto erro tanto
+                                            no conjunto de treinamento quanto no conjunto de teste. Um exemplo é o ajuste de
+                                            uma linha reta a dados que seguem um padrão não linear, como o ilustrado na figura
+                                            abaixo e a esquerda. As principais causas são:</p>
+
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Modelo subespecificado</b>: O modelo escolhido não possui a complexidade
+                                                necessária para representar os dados. Por exemplo, utilizar uma regressão
+                                                linear para modelar dados não lineares.</li>
+                                            <li><b>Poucos dados de treinamento</b>: A quantidade de dados disponíveis é
+                                                insuficiente para o modelo aprender as relações complexas entre as <i>features</i>.</li>
+                                            <li><b>Características irrelevantes</b>: A inclusão de características que não possuem
+                                                relação com a variável alvo pode dificultar o aprendizado do modelo.</li>														
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Existem algumas maneiras de mitigação desses problemas, algumas técnicas
+                                            são:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Aumentar
+                                                a complexidade do modelo</b>: Utilizar modelos com mais
+                                                parâmetros, como redes neurais com mais camadas ou polinômios de maior
+                                                grau.</li>
+                                            <li><b>Adicionar mais <i>features</i></b>: Incluir características relevantes que possam ajudar
+                                                o modelo a capturar as relações subjacentes.</li>														
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">O <i>overfitting</i> ocorre quando um modelo se ajusta excessivamente aos dados de
+                                            treinamento, memorizando o ruído presente nos dados e perdendo a capacidade de
+                                            generalizar para novos dados. É como ajustar uma curva muito complexa a um conjunto de pontos, capturando até mesmo as pequenas variações aleatórias, como o
+                                            ilustrado na figura abaixo e a direta. As principais causas são:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Modelo superparametrizado</b>: O modelo possui muitos parâmetros, o que
+                                                permite que ele memorize os dados de treinamento em vez de aprender as
+                                                relações gerais.</li>
+                                            <li><b>Poucos dados de treinamento em relação à complexidade do modelo</b>: Quando o modelo é muito complexo em relação à quantidade de dados, ele
+                                                tende a sobreajustar.</li>
+                                            <li><b>Ruído nos dados</b>: A presença de ruído nos dados pode levar o modelo a
+                                                ajustar-se a padrões aleatórios, em vez das relações subjacentes.</li>														
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Existem algumas maneiras de mitigação desses problemas, algumas técnicas
+                                            são:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Reduzir
+                                                a
+                                                complexidade
+                                                do
+                                                modelo</b>: Utilizar modelos com menos
+                                                parâmetros, como redes neurais com menos camadas ou polinômios de menor
+                                                grau.</li>
+                                            <li><b>Aumentar a regularização</b>: A regularização penaliza modelos complexos,
+                                                evitando que eles se ajustem demais aos dados de treinamento.</li>
+                                            <li><b>Coleta de mais dados</b>: Aumentar a quantidade de dados de treinamento pode
+                                                ajudar a reduzir o <i>overfitting</i> (sobreajuste), pois o modelo terá mais exemplos
+                                                para aprender.</li>
+                                            <li><b>Validação cruzada</b>: A validação cruzada permite avaliar o desempenho do
+                                                modelo em diferentes subconjuntos dos dados, ajudando a identificar o
+                                                <i>overfitting</i> (sobreajuste).</li>
+                                            <li><b><i>Dropout</i></b>: Uma técnica utilizada em redes neurais que desativa aleatoriamente
+                                                neurônios durante o treinamento, forçando o modelo a não depender
+                                                excessivamente de nenhum neurônio em particular.</li>
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">O objetivo do aprendizado de máquina é encontrar um modelo que seja capaz
+                                            de generalizar bem para novos dados, evitando tanto o underfitting quanto o
+                                            <i>overfitting</i> (sobreajuste), como o ilustrado na figura abaixo e ao centro. A escolha da
+                                            técnica adequada para mitigar esses problemas depende das características dos dados
+                                            e do modelo utilizado.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-34"><b>Figura 34</b> - Exemplo ajustes de curvas</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 34.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: <a href="https://miro.medium.com/v2/resize:fit:828/format:webp/1*dpUnwfXqnU5Kd-gfafgIgQ.png"><i>Medium, 2022</i></a>.</small></p>
+                                        </div>
+
+                                        <h2 class="mb-0" id="uni7-10">7.10 <i>Notebook Colab</i>:</h2>
+                                        <p class="lead mb-3 text-justify indent">No link do colab serão abordados exemplos práticos e exercícios de dados
+                                            estruturados e não estruturados, tipos conjunto de dados; limpeza dos dados; pré
+                                            processamento; divisão do conjuntos de dados em treino, validação e teste; dados
+                                            balanceados e desbalanceados; <i>underfitting</i> e <i>overfitting</i> (sobreajuste).</p>
+                                        <div class="box">
+                                            <div class="lead mb-3 text-center"><a href="https://colab.research.google.com/drive/1s0wK-XDQOdUubutjqhJVQL-6q6jKAfy9">https://colab.research.google.com/drive/1s0wK-XDQOdUubutjqhJVQL-6q6jKAfy9</a></div>																								
+                                        </div>
+                                        <p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+                                        <div class="box2">
+                                            <h3 class="mb-0" id="1-saiba-mais">Para relembrar…</h3>
+                                            <p class="lead mb-3 text-justify">Lembre-se da importância dos dados no ML, um dado de entrada ruim
+                                                resultará em modelos ruins, por isso é muito importante estar atento aos dados e os
+                                                efeitos de treinar o modelo sem entender corretamente o que está ocorrendo.
+                                                Tenha sempre em mente:</p>
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li>Qualidade dos dados como base para modelos eficazes</li>
+                                                    <li>Diferenças entre dados estruturados e não estruturados</li>
+                                                    <li>Tipos de conjuntos de dados: supervisionados, não supervisionados e
+                                                        semi-supervisionados</li>
+                                                    <li>Processos de limpeza e pré-processamento de dados</li>
+                                                    <li>Seleção e engenharia de características</li>
+                                                    <li>Divisão dos dados em conjuntos de treino, validação e teste</li>
+                                                    <li>Técnica de <i>cross-validation</i></li>
+                                                    <li>Tratamento de dados desbalanceados</li>
+                                                    <li>Problemas de subajuste (<i>underfitting</i>) e sobreajuste (<i>overfitting</i>)</li>
+                                                </ul>
+                                            </div>
+                                            <p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+                                        <div class="box3">
+                                            <h3 class="mb-0" id="1-saiba-mais">Saiba mais…</h3>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent">
+                                                <li><a href="https://www.youtube.com/watch?v=KWtrhdSWuSQ&t=1072s">Conjunto de Dados</a></li>
+                                                <li><a href="https://www.youtube.com/watch?v=jQIOCMlDAs0%20https://www.youtube.com/watch?v=EuBBz3bI-aA&t=1s">Subajuste e sobreajuste</a> </li>
+                                                <li><a href="https://www.youtube.com/watch?v=Gzn6srbzU30">Dados desbalanceados</a></li>
+                                                <li><a href="https://youtu.be/fSytzGwwBVw?si=d4cEPTUCvxsc1U2s">Validação cruzada</a></li>															
+                                            </ul>														
+                                        </div>
+
+										
+									
+								</section>
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni7">Unidade VII - Conjuntos de dados</a></li>
+											<ul>
+												<li><a href="#uni7-1">7.1 A Importância dos Dados para a Construção de Modelos de ML</a></li>
+												<li><a href="#uni7-2">7.2 Dados Estruturados vs. Dados Não Estruturados</a></li>
+												<li><a href="#uni7-3">7.3 Conjuntos de Dados Supervisionados, Não Supervisionados e Semi-supervisionados</a></li>
+                                                <li><a href="#uni7-4">7.4 Limpeza de Dados (Tratamento de Valores Ausentes, Outliers, Erros de Digitação)</a></li>
+                                                <li><a href="#uni7-5">7.5 Pré-processamento (Normalização, Codificação de Variáveis Categóricas)</a></li>
+                                                <li><a href="#uni7-6">7.6 Seleção e Engenharia de Características (Feature Selection e Feature Engineering)</a></li>
+                                                <li><a href="#uni7-7">7.7 Divisão em Conjuntos de Treino, Validação e Teste</a></li>
+                                                <li><a href="#uni7-8">7.8 Dados Desbalanceados e Técnicas para Balanceamento</a></li>
+                                                <li><a href="#uni7-9">7.9 Subajuste (<i>Underfitting</i>) e Sobreajuste (<i>Overfitting</i>)</a></li>
+                                                <li><a href="#uni7-10">7.10 <i>Notebook Colab</i></a></li>
+
+												
+											</ul>
+										
+							
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>
