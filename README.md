@@ -66,5 +66,15 @@ conda activate generative_ai
 
 1. Machine Learning
 2. Detecção, Reconhecimento e Previsão
-3. ...
+3. Reconhecimento de Padrões
+4. Tipos de Aprendizagem de Máquina
+5. Espaço de Características
+6. Funções Discriminantes
+7. Conjunto de Dados
+8. Regressão
+9. Classificação
+10. Agrupamento
+11. Redes Neurais
+12. Encerramento
 
+## MÓD. 8
