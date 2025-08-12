@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade III - Reconhecimento de padrões</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+								
+										<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="uni1">
+											<header class="main">
+												<div class="w-100">
+													<h1 class="mb-0" id="uni3">Unidade III - Reconhecimento de padrões</h1>
+												</div></header>
+												<h2 class="mb-0" id="uni3-1">3.1 O que é reconhecimento?</h2>
+												<p class="lead mb-3 text-justify indent">Reconhecimento é o processo de identificar ou perceber algo que já é conhecido ou familiar. Já o reconhecimento de padrões é definido por Theodoridis & Koutroumbas (2009) como a ciência do estudo da organização dos dados e pode ser realizada a partir de objetos representados em diversos tipos de dados como textos, áudios, sinais, vídeos, entre outros.</p>
+												<p class="lead mb-3 text-justify indent">No contexto de ML e IA, reconhecimento refere-se à capacidade dos sistemas computacionais de identificar padrões específicos, objetos ou entidades em dados que correspondem a exemplos previamente aprendidos. Isso pode incluir: reconhecimento de imagens, onde um sistema identifica objetos ou pessoas em uma foto; reconhecimento de fala, onde uma máquina entende palavras e frases faladas; e reconhecimento de texto, onde um sistema identifica e extrai informações de documentos escritos. O processo de reconhecimento é fundamental para diversas aplicações, onde a habilidade de perceber semelhanças, mesmo na presença de variações, é crucial para o funcionamento eficaz do sistema.</p>
+												<p class="lead mb-3 text-justify indent">Abaixo listamos alguns exemplos de aplicações do processo de reconhecimento de padrões:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Reconhecimento facial</b>: sistemas que identificam indivíduos com base em características faciais que são semelhantes aos rostos presentes em um banco de dados, mesmo que haja pequenas variações como ângulos diferentes ou mudanças na expressão facial (Figura 5).</li>
+													<li><b>Reconhecimento de voz</b>: assistentes virtuais que compreendem e respondem a comandos de voz ao identificar padrões de fala semelhantes aos exemplos treinados, mesmo que a entonação ou o ritmo da fala variem.</li>
+													<li><b>Reconhecimento de texto</b>: ferramentas que extraem informações relevantes de documentos ao identificar padrões de letras e palavras semelhantes aos treinados em sistemas Reconhecimento Óptico de Caracteres (OCR), mesmo que a fonte ou a formatação do texto seja diferente.</li>
+												</ul>
+												<p class="lead mb-3 text-center" id="link-figura-05"><b>Figura 5</b> - Exemplo de reconhecimento de face</p>
+										<div align="center">
+											<span class="image fit" style="width: 50%;"><img src="images/Figura 5 - Exemplo de reconhecimento de face.jpg" alt="" /></span>
+											<p class="lead mb-2 text-center"><small>Fonte: Banco de imagens Canva.</small></p>
+										</div>
+												<h3 class="mb-0" id="uni3-1-1">3.1.1 Treinamento de modelos</h3>
+												<p class="lead mb-3 text-justify indent">Mas você deve estar pensando: na prática, como ocorre o reconhecimento de algo? Vamos detalhar todo esse processo mas, descrevendo de uma forma direta, em ML, o reconhecimento é realizado por meio da aproximação de um modelo previamente treinado.</p>
+												<p class="lead mb-3 text-justify indent">De forma simples, um modelo em ML é um conjunto de regras ou um sistema matemático que foi produzido durante a etapa de treinamento para fazer previsões ou tomar decisões com base em dados. Pense nele como uma fórmula que aprende a partir de exemplos fornecidos e é capaz de aplicar esse aprendizado a novos dados.</p>
+												<p class="lead mb-3 text-justify indent">Para reconhecer novos dados, o sistema utiliza o modelo que foi treinado com dados conhecidos. Durante o treinamento, o modelo aprende a identificar padrões e características nos dados de entrada. Quando um novo dado é apresentado, o modelo compara esse dado com os padrões aprendidos e faz uma previsão ou classificação com base na similaridade. E essa similaridade é uma medida numérica de quão parecidos dois itens são entre si, determinando o grau de semelhança entre eles.</p>
+												<p class="lead mb-3 text-justify indent">Por exemplo, em reconhecimento facial, um modelo é treinado com milhares de imagens de rostos diferentes. O modelo aprende as características faciais, como a distância entre os olhos, a forma do nariz e a linha do queixo. Quando uma nova imagem de rosto é apresentada, o modelo analisa essas características e tenta encontrar uma correspondência com os rostos conhecidos.</p>
+												<p class="lead mb-3 text-justify indent">Os modelos são treinados com grandes volumes de dados históricos, e é essa quantidade de informação que torna possível fazer previsões e identificar padrões em novos dados.</p>
+												<p class="lead mb-3 text-justify indent">Agora que você sabe o que é e como é realizado o reconhecimento, vamos introduzir o próximo conceito: padrões.</p>
+												<h2 class="mb-0" id="uni3-2">3.2 Padrões</h2>
+												<p class="lead mb-3 text-justify indent">Padrão, em um primeiro momento, pode ser entendido como uma sequência ou grupo de fenômenos que se repetem em forma, comportamento, frequência, etc. Entretanto, no contexto de ML, o padrão tem outro significado. Vamos entender o padrão e outros conceitos que permearão todo o curso.</p>
+												<p class="lead mb-3 text-justify indent">Um padrão é uma descrição quantitativa ou estrutural de um objeto que permite identificar e reconhecer características recorrentes dentro de um conjunto de dados. O que antes poderíamos chamar de padrão, na verdade, chamamos de similaridade: explicando melhor, quando observamos algo que se repete de forma parecida, vemos uma similaridade de padrões; isso porque os padrões, no contexto de ML, são agrupamentos de valores de características dos objetos dessa observação; e quando dizemos que há uma similaridade entre esses padrões quer dizer que os valores das características desses objetos tendem a ser próximos.</p>
+												<p class="lead mb-3 text-justify indent">Abaixo listamos situações em que podemos observar similaridade de valores e/ou comportamentos:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>numérico</b>: Sequências de números que seguem uma determinada regra, como a sequência de Fibonacci.</li>
+													<li><b>visual</b>: Formas ou cores recorrentes em imagens, como a estrutura de folhas de uma planta ou características faciais em fotos.</li>
+													<li><b>comportamental</b>: Ações ou eventos que ocorrem repetidamente, como hábitos de compra de consumidores.</li>
+												</ul>
+												<h3 class="mb-0" id="uni3-2-1">3.2.1 Arranjos de padrões</h3>
+												<p class="lead mb-3 text-justify indent">Em todas essas situações descritas nos exemplos anteriores, as observações podem ser representadas por meio de um conjunto de valores, organizados em arranjos de padrões (Bishop, 2006), ou seja, estruturas de dados com valores de características (Theodoridis & Koutroumbas, 2009). Uma vez representadas em forma de arranjos de padrões, essas observações podem ser categorizadas em classes de padrões conforme suas propriedades em comum. E esse é um dos objetivos do reconhecimento de padrões: agrupar observações similares, baseado no valor de suas características.</p>
+												<p class="lead mb-3 text-justify indent">Na prática, os padrões podem ser organizados de várias maneiras, dependendo das características e da natureza dos dados. Dois dos principais arranjos de padrões são vetores e descrições estruturais como cadeias e árvores:</p>
+												<p class="lead mb-3 text-justify indent">Vetores são descrições quantitativas dos objetos, representando os dados em uma forma numérica e ordem fixa. Possuem 2 características principais:</p>
+												<ul style="margin-left: 1cm;" class="hollow-circle lead mb-3 text-justify indent">
+													<li><b>Dimensões</b>: cada vetor possui várias dimensões ou atributos, que são as características mensuráveis do objeto.</li>
+													<li><b>Espaço vetorial</b>: os vetores são representados em um espaço multidimensional onde cada dimensão corresponde a um atributo.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">Abaixo listamos alguns exemplos de tipos de dados e suas respectivas formas de representação em forma de vetor:</p>
+												<ul style="margin-left: 1cm;" class="hollow-circle lead mb-3 text-justify indent">
+													<li><b>Imagem</b>: um vetor pode representar os valores de intensidade de pixel de uma imagem.</li>
+													<li><b>Texto</b>: um vetor de frequência de palavras, onde cada dimensão representa a contagem de uma palavra específica no texto.</li>
+													<li><b>Áudio</b>: um vetor de características como frequência, amplitude e duração.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">A Figura 6 ilustra o processo de criação de um vetor de 4 características a partir de uma imagem de uma íris.</p>
+												<p class="lead mb-3 text-center" id="link-figura-06"><b>Figura 6</b> - Extração de características de uma imagem de íris</p>
+										<div align="center">
+											<span class="image fit" style="width: 70%;"><img src="images/Figura 6 - Extração de características de uma imagem de íris.png" alt="" /></span>
+											<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.mdpi.com/sensors/sensors-21-07408/article_deploy/html/images/sensors-21-07408-g002-550.jpg">Khade <i>et al</i>., 2021</a>.</small></p>
+										</div>
+										<p class="lead mb-3 text-justify indent">Cadeias e árvores são descrições estruturais que capturam a relação entre diferentes partes dos dados. Cadeias são sequências lineares de elementos conectados de forma ordenada, por exemplo:</p>
+										<ul style="margin-left: 1cm;" class="hollow-circle lead mb-3 text-justify indent">
+											<li><b>Texto</b>: cadeias de caracteres ou palavras em uma frase.</li>
+											<li><b>DNA</b>: sequências de nucleotídeos (Figura7).</li>
+										</ul>
+												<p class="lead mb-3 text-center" id="link-figura-07"><b>Figura 7</b> - Sequência de ácido desoxirribonucleico (DNA)</p>
+										<div align="center">
+											<span class="image fit" style="width: 70%;"><img src="images/Figura 7 - Sequência de DNA.png" alt="" /></span>
+											<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://blog.mendelics.com.br/wp-content/uploads/2021/10/Sequenciamento-Sanger-Capa.png">Mendelikes, 2023</a>.</small></p>
+										</div>
+												<p class="lead mb-3 text-justify indent">Árvores são estruturas hierárquicas onde os dados são organizados em nós, com um nó raiz e ramificações para outros nós, por exemplo:</p>
+												<ul style="margin-left: 1cm;" class="hollow-circle lead mb-3 text-justify indent">
+													<li><b>Árvores de decisão</b>: utilizadas em algoritmos de classificação e regressão.</li>
+													<li><b>Estruturas de dados</b>: árvores binárias utilizadas em bancos de dados e algoritmos de busca.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">A Figura 8 ilustra um algoritmo de recomendação de tipo de carro baseado na composição familiar e preferências do usuário.</p>
+												<p class="lead mb-3 text-center" id="link-figura-08"><b>Figura 8</b> - Árvore de decisão para escolha de um carro</p>
+										<div align="center">
+											<span class="image fit" style="width: 70%;"><img src="images/Figura 8 - Árvore de decisão para escolha de um carro.png" alt="" /></span>
+											<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://miro.medium.com/v2/resize:fit:1400/1*sAXOZrFTYFhRce3LfNjxJA.png">Araujo, 2020</a>.</small></p>
+										</div>
+												<h3 class="mb-0" id="uni3-2-2">3.2.2 Objetos e características</h3>
+												<p class="lead mb-3 text-justify indent">Note que usamos o termo “observações” para se referir aos exemplos dados nas seções. Entretanto, vamos introduzir o termo usual: objeto. Um objeto em reconhecimento de padrões é uma entidade ou unidade de dados que possui características específicas (Mitchell, 1997) que podem ser analisadas para identificar regularidades. Esses objetos podem ser imagens, textos, sons, ou qualquer outra forma de dados estruturados ou não estruturados.</p>
+												<p class="lead mb-3 text-justify indent">Explicando melhor, as características são propriedades mensuráveis ou categóricas de um objeto (Mitchell, 1997), como cor, forma, intensidade de pixel (em imagens), palavras ou frases (em textos), frequência e amplitude (em sinais de áudio). E quando falamos de classes (de padrões), estamos nos referindo a um grupo de objetos ou dados que possuem características ou atributos semelhantes. Esses padrões são agrupados porque compartilham propriedades que os tornam similares entre si. A seguir listamos alguns exemplos dessas propriedades nos diferentes domínios  de imagem, texto e áudio:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Imagem:</b></li>
+													<ul class="hollow-circle lead mb-3 text-justify indent">
+														<li><b>Cor</b>: representada por valores de cores <i>Red, Green and Blue (RGB), Hue, 
+															Saturation and Value</i> (HSV) e etc. que indicam as cores vemelho, verde e azul e a tonalidade, saturação e brilho.</li>
+														<li><b>Forma</b>: contornos e geometria que definem a estrutura de objetos, como círculos, quadrados ou polígonos.</li>
+														<li><b>Intensidade de Pixel</b>: valores de brilho ou intensidade em cada pixel da imagem, que podem ser usados para detectar contrastes e detalhes.</li>
+														<li><b>Textura</b>: padrões e variações na intensidade de pixel que indicam a superfície e a aparência de um objeto.</li>
+													</ul>
+													<li><b>Texto:</b></li>
+													<ul class="hollow-circle lead mb-3 text-justify indent">
+														<li><b>Palavras</b>: conjuntos de letras ou caracteres que formam unidades de significado.</li>
+														<li><b>Frases</b>: agrupamentos de palavras que constroem sentenças com significado completo.</li>
+														<li><b>Repetições</b>: palavras ou termos que aparecem repetidamente em um texto, úteis para análise de tópicos ou sentimentos.</li>
+													</ul>
+													<li><b>Áudio:</b></li>
+													<ul class="hollow-circle lead mb-3 text-justify indent">
+														<li><b>Frequência</b>: número de ciclos por segundo de uma onda sonora, medida em Hertz (Hz), essencial para identificar notas musicais e timbres.</li>
+														<li><b>Amplitude</b>: intensidade ou volume da onda sonora, que determina a percepção de volume e potência do som.</li>
+														<li><b>Tempo</b>: duração dos sons ou intervalos entre eventos sonoros, relevante para a análise de ritmo e tempo.</li>
+													</ul>
+												</ul>
+												<h3 class="mb-0" id="uni3-2-3">3.2.3 Classes</h3>
+												<p class="lead mb-3 text-justify indent">Uma classe é um rótulo ou categoria que define um grupo de objetos ou instâncias que compartilham características ou atributos comuns. As classes são usadas principalmente em tarefas de classificação, onde o objetivo é atribuir um rótulo de classe a uma nova instância com base em suas características.</p>
+												<p class="lead mb-3 text-justify indent">Quando pretendemos determinar quais objetos pertencem à mesma classe, o compartilhamento dessas propriedades, características ou atributos similares muda conforme contexto que o algoritmo está atuando, por exemplo:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Imagens de gatos</b>: têm propriedades comuns como orelhas pontudas, olhos grandes e pelos macios.</li>
+													<li><b>Textos sobre tecnologia</b>: compartilham termos e jargões técnicos, como "algoritmo", IA e ML.</li>
+													<li><b>Músicas</b>: podem ter frequências, ritmos e estruturas semelhantes.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">Na Figura 9, utilizamos um exemplo de representação dos objetos em um espaço vetorial e podemos entender como encontramos similaridade entre objetos baseado na proximidade de suas características. É possível identificar que se trata de um plano 3 Dimensões (3D): isso significa que cada objeto é representado por um vetor de características com 3 valores quaisquer. Também temos 3 agrupamentos de objetos e dizemos que estes pertencem a uma das classes: quadrado, triângulo ou círculo. Em cada uma dessas classes, os objetos estão mais próximos entre si do que de objetos de outras classes. Como esses objetos são representados por vetores com 3 valores, cada um deles indica um ponto no plano 3D. A partir desses pontos podemos calcular a distância entre eles e determinar quais estão mais próximos e, portanto, pertencem à mesma classe. Essa é uma das muitas formas de se reconhecer padrões e veremos algumas delas durante o curso. O objetivo de mostrar esse cenário é apresentar conceitos importantes que são aplicados em quaisquer algoritmos de ML. Vamos relembrá-los:</p>
+											
+												<p class="lead mb-3 text-center" id="link-figura-09"><b>Figura 9</b> - Disposição de objetos em um espaço vetorial de três dimensões</p>
+										<div align="center">
+											<span class="image fit" style="width: 70%;"><img src="images/Figura 9 - Disposição de objetos em um espaço vetorial de 3 dimensões.png" alt="" /></span>
+											<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-642-53751-6_44/MediaObjects/321332_1_En_44_Fig2_HTML.gif">Lu, Wu, Kita, 2014</a>.</small></p>
+										</div>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Objetos</b>: entidades ou instâncias de dados que possuem propriedades específicas e podem ser definidos em diferentes contextos, como imagens, textos, áudios, entre outros.</li>
+													<li><b>Características</b>: propriedades ou atributos mensuráveis que descrevem os objetos e permitem diferenciá-los uns dos outros.</li>
+													<li><b>Classes</b>: grupos ou conjuntos de objetos que compartilham um conjunto comum de características ou atributos. Representam categorias ou tipos específicos de objetos.</li>
+												</ul>
+												<p class="lead mb-3 text-justify indent">A Figura 10 exemplifica o caso de vários objetos de uma mesma classe Carro. Apesar de possuírem diferenças entre si, compartilham de um mesmo conjunto de características como quantidade de rodas, presença de farol, capacidade de passageiros, velocidade máxima, entre outras, mesmo com valores diferentes para cada uma dessas características.</p>
+												<p class="lead mb-3 text-center" id="link-figura-10"><b>Figura 10</b> - Imagem de classe, objeto e característica</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 10 - Imagem de classe, objeto e característica_.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.scaler.com/topics/images/difference-between-class-and-object_thumbnail.webp">Scaler, 2024</a>.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Abaixo, na Tabela 2, listamos alguns exemplos de classes e objetos. Esses exemplos ilustram como objetos diferentes podem compartilhar características semelhantes que os agrupam na mesma classe.</p>
+												<p class="lead mb-3 text-center" id="link-tabela-02"><b>Tabela 2</b> - Exemplos de classes e objetos pertencentes a elas</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Tabela 2.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Para que ocorra o reconhecimento de padrões com o objetivo de agrupar ou categorizar esses objetos, são necessárias algumas etapas a serem seguidas descritas na Figura 11:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Pré-processamento</b>: preparação dos objetos para análise, como normalização e remoção de ruído (conceitos que discutiremos adiante), e extração de características relevantes.</li>
+													<li><b>Seleção de características</b>: identificação das propriedades mais significativas dos objetos que ajudarão na análise e reconhecimento.</li>
+													<li><b>Classificação e agrupamento</b>: uso de algoritmos para classificar ou agrupar os objetos com base nas características extraídas.</li>
+												</ul>
+												<p class="lead mb-3 text-center" id="link-figura-11"><b>Figura 11</b> - Processo de reconhecimento de padrões em <i>machine learning</i></p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 11 - Processo de reconhecimento de padrões em ML_.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://paginas.fe.up.pt/~jmsa/recpad/rec_pa2.gif">Marquês de Sá, 2000</a>.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Então, resumindo, até agora aprendemos que em ML trabalhamos técnicas de reconhecimento de padrões, ou seja, podemos categorizar ou agrupar objetos em classes por meio da similaridade de suas características representadas em vetores de dados (padrões).</p>
+												<p class="lead mb-3 text-justify indent">Falaremos com mais detalhes sobre os tipos de algoritmos de aprendizagem de máquina e sobre o espaço vetorial, também conhecido como espaço de características nas próximas unidades.</p>
+												<p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+												<div class="box2">
+													<h3 class="mb-0" id="3-relembrar">Para relembrar…</h3>
+													<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>O reconhecimento em ML refere-se à habilidade de identificar e categorizar objetos ou padrões com base em características previamente aprendidas. Este processo envolve a percepção de semelhanças entre os novos dados e os modelos já treinados, utilizando inferência baseada em conceitos aprendidos no passado. Em termos práticos, isso significa que o sistema de reconhecimento pode identificar rostos em imagens, detectar palavras em áudios ou classificar textos em categorias específicas, dependendo dos dados de treinamento e das características extraídas.</p>
+													<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Além disso, discutimos a importância das propriedades ou características mensuráveis dos objetos, como cor, forma e intensidade de pixel em imagens, palavras ou frases em textos, e frequência e amplitude em sinais de áudio. Esses atributos são essenciais para a análise e classificação de dados. Também abordamos os principais arranjos de padrões utilizados na prática, como vetores para descrições quantitativas e cadeias e árvores para descrições estruturais.</p>
+												</div>
+												
+												<p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+												<div class="box3">
+													<h3 class="mb-0" id="uni3-saiba-mais">Saiba mais…</h3>
+												<ul class="lead mb-3 text-justify indent">
+													<li><a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">
+														Uma referência clássica para fundamentos em reconhecimento de padrões e aprendizado de máquinas</a>.</li>
+													
+													<li><a href="https://deepmind.google/">Site da Google DeepMind, que publica pesquisas inovadoras e artigos sobre avanços em IA, incluindo reconhecimento de padrões e previsão</a>.</li>
+													
+												</ul>	
+												</div>
+												
+									</section>
+										
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+																				
+										<li>
+											<a href="#uni3">Unidade III - Reconhecimento de padrões</a></li>
+											<ul>
+												<li><a href="#uni3-1">3.1 O que é reconhecimento?</a></li>
+												<li><a href="#uni3-2">3.2 Padrões</a></li>
+											</ul>
+										
+										
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

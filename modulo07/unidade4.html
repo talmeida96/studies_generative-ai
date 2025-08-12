@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade IV - Tipos de aprendizagem de máquina</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+								
+										
+										<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
+											<div class="w-100">
+												<h1 class="mb-0" id="uni4">Unidade IV - Tipos de aprendizagem de máquina</h1>
+											</div></header>
+											
+											<p class="lead mb-3 text-justify indent">Nesta unidade, vamos explorar os principais tipos de aprendizagem de máquina: supervisionada, não supervisionada, semi-supervisionada e por reforço. Vamos explicar cada um deles, utilizando metáforas para facilitar a compreensão, e apresentaremos exemplos para cada tipo.</p>
+											<p class="lead mb-3 text-justify indent">No vasto campo da aprendizagem de máquina, conhecer os diferentes tipos de aprendizagem é crucial para aplicar a abordagem mais adequada a cada situação. Compreender as nuances entre a aprendizagem supervisionada, não supervisionada, semi-supervisionada e por reforço permite que você escolha a técnica que melhor se adapta aos dados disponíveis e ao problema que deseja resolver. Cada método possui suas próprias vantagens e limitações, e a escolha correta pode significar a diferença entre o sucesso e o fracasso de um projeto. Portanto, dominar esses conceitos não apenas aprimora sua capacidade de desenvolver soluções eficazes, mas também otimiza o uso dos recursos disponíveis, tornando suas análises e previsões mais precisas e eficientes.</p>
+											<p class="lead mb-3 text-justify indent">Os diferentes tipos de aprendizagem de máquina possuem processos de treinamento distintos, refletindo suas abordagens únicas para lidar com dados. Vamos antecipar a diferença entre eles e discutiremos com mais detalhes cada um adiante.</p>
+											<p class="lead mb-3 text-justify indent">Na aprendizagem supervisionada, o treinamento envolve dados rotulados que orientam o modelo para fazer previsões precisas. 
+												A aprendizagem não supervisionada, por outro lado, busca descobrir padrões ocultos em dados não rotulados sem orientação explícita. A aprendizagem 
+												semi-supervisionada combina ambos os métodos, utilizando um pequeno conjunto de dados rotulados e um grande conjunto de dados não rotulados para 
+												melhorar a precisão. Já a aprendizagem por reforço envolve a interação contínua com um ambiente, onde o modelo aprende através de recompensas e punições. 
+												Cada tipo de aprendizagem adapta-se a diferentes cenários e desafios, destacando a importância de entender suas características e aplicações específicas. 
+												No mapa mental apresentado na Figura 12 sintetiza esses tipos de aprendizado.</p>
+											<p class="lead mb-3 text-center" id="link-figura-12"><b>Figura 12</b> - Tipos de aprendizagem de máquina</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 12 - Tipos de aprendizagem de máquina.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria.</small></p>
+												</div>
+											<h2 class="mb-0" id="uni4-1">4.1 Aprendizagem Supervisionada</h2>
+											<p class="lead mb-3 text-justify indent">Na aprendizagem supervisionada, o modelo é treinado com um conjunto de dados rotulados, ou seja, cada entrada possui uma saída correspondente. Em outras palavras, cada objeto utilizado no treinamento possui a informação sobre qual classe ele pertence. O objetivo é fazer com que o modelo aprenda a mapear entradas (arranjos de padrões) para saídas corretas (classes), permitindo que ele faça previsões sobre novos dados.</p>
+											<p class="lead mb-3 text-justify indent">Para entender melhor, imagine que você está ensinando uma criança a reconhecer frutas. Você mostra a ela várias frutas (entradas) e diz o nome de cada uma (saídas). Com o tempo, a criança aprende a associar a aparência da fruta ao seu nome. Se você mostrar uma maçã vermelha ou uma verde, a criança dirá "maçã" pois ambas compartilham de características que as tornam similares entre si, mesmo sendo de variedades distintas, e as diferencia de outras frutas.</p>
+											<p class="lead mb-3 text-justify indent">De forma simplifica, o processo de treinamento de um modelo utilizando aprendizagem supervisionada pode ser descrito em 4 passos na Figura 13:</p>
+											<p class="lead mb-3 text-center" id="link-figura-13"><b>Figura 13</b> - Treinamento de um algoritmo de aprendizagem supervisionada</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 13 - Treinamento de um algoritmo de aprendizagem supervisionada.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria.</small></p>
+												</div>
+											<p class="lead mb-3 text-justify indent">A classificação de emails como spam ou não-spam é um outro exemplo clássico de um problema de aprendizagem supervisionada. O objetivo é criar um modelo de ML que possa classificar automaticamente emails recebidos em duas classes ou categorias: <b>spam</b> (e-mail indesejado) e <b>não-spam</b> (e-mail legítimo):</p>
+											<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+												<li><b>Dados de entrada</b>: texto dos emails.</li>
+												<li><b>Dados de saída</b>: rótulos indicando se o email é spam ou não-spam.</li>
+												<li><b>Modelo</b>: algoritmo de classificação ex.: <i>Naive Bayes</i> e <i>Support Vector Machines</i> (SVM).</li>
+											</ul>
+												<h2 class="mb-0" id="uni4-2">4.2 Aprendizagem Não Supervisionada</h2>
+												<p class="lead mb-3 text-justify indent">Na aprendizagem não supervisionada não há uma medida de resultado (Hastie <i>et al</i>., 2009), o modelo trabalha com dados não rotulados. O objetivo é encontrar padrões ou agrupamentos nos dados sem orientação explícita sobre o que procurar.</p>
+												<p class="lead mb-3 text-justify indent">Na aprendizagem não supervisionada, não há uma medida de resultado, e o objetivo é descrever as associações e padrões entre um conjunto de medidas de entrada.</p>
+												<p class="lead mb-3 text-justify indent">Pense em um biólogo em trabalho de campo para identificar espécies nativas. Ele não tem um mapa (rótulos), mas pode observar as árvores e plantas ao seu redor. Com o tempo, ele percebe que certas áreas da floresta têm árvores semelhantes e as agrupa mentalmente.</p>
+												<p class="lead mb-3 text-justify indent">Com exceção dos dados não rotulados, as etapas para treinar um modelo utilizando um algoritmo de aprendizagem não supervisionado, em linhas gerais, são as mesmas do aprendizado supervisionado (Figura 14):</p>										
+												<p class="lead mb-3 text-center" id="link-figura-14"><b>Figura 14</b> - Treinamento de um algoritmo de aprendizagem não supervisionada</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 14.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Imagine que uma empresa deseja entender melhor seus clientes para oferecer produtos e serviços mais direcionados. 
+													Para isso, quer agrupar os clientes em segmentos de mercado distintos com base em suas características e comportamentos. Não se sabe quantos ou quais 
+													serão os segmentos de mercado. Esse tipo de problema é conhecido como agrupamento (ou <i>clustering</i>). Essa abordagem permite à empresa entender melhor 
+													seus clientes, resultando em estratégias mais eficazes e aumento da satisfação e lealdade do cliente:</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Dados de entrada</b>: informações sobre clientes (ex.: idade, renda, histórico de compras).</li>
+													<li><b>Dados de saída</b>: agrupamentos de clientes com características semelhantes.</li>
+													<li><b>Modelo</b>: algoritmo de clustering, ex.: <i>K-means</i> e <i>Density-Based Spatial Clustering of Applications with Noise</i> (DBSCAN).</li>
+												</ul>
+												<h2 class="mb-0" id="uni4-3">4.3 Aprendizagem Semi-Supervisionada</h2>
+												<p class="lead mb-3 text-justify indent">A aprendizagem semi-supervisionada é um meio-termo entre a aprendizagem supervisionada e a não supervisionada (Chapelle <i>et al</i>., 2006). Ela utiliza uma pequena quantidade de dados rotulados e uma grande quantidade de dados não rotulados. O modelo aproveita os dados rotulados para aprender e, em seguida, refinar seu conhecimento com os dados não rotulados.</p>
+												<p class="lead mb-3 text-justify indent">Imagine um estudante que recebe algumas respostas corretas de um professor (dados rotulados) e, em seguida, tenta completar o restante da tarefa por conta própria usando essas respostas como referência.</p>
+												<p class="lead mb-3 text-justify indent">Nas etapas de treinamento, incluímos o treinamento inicial e rodadas de refinamento para melhorar a acurácia do modelo (Figura 15):</p>
+												<p class="lead mb-3 text-center" id="link-figura-15"><b>Figura 15</b> - Treinamento de um algoritmo de aprendizagem semi-supervisionada</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 15.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://pt.vecteezy.com/arte-vetorial/11993726-elementos-infograficos-de-4-etapas-para-conteudo-diagrama-fluxograma-etapas-pecas-linha-do-tempo-fluxo-de-trabalho-grafico">Vecteezy, 2024</a>.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Agora, veja a seguinte situação: imagine que temos uma coleção de documentos de texto de um fórum online onde os usuários discutem uma ampla variedade de tópicos. Queremos classificar esses documentos em categorias específicas, como "Tecnologia", "Saúde", "Educação", etc. No entanto, só temos rótulos para um pequeno subconjunto dos documentos (talvez apenas 10% do total), enquanto a maioria dos documentos não está rotulada. A quantidade de documentos rotulados é pequena, o que torna difícil treinar um modelo de classificação tradicional com bom desempenho. Temos uma grande quantidade de documentos não rotulados que, se utilizados corretamente, podem melhorar a performance do modelo. Entretanto, a variação nos tópicos discutidos nos documentos pode ser ampla, tornando a classificação mais complexa.</p>
+												<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+													<li><b>Dados de entrada</b>: texto dos documentos.</li>
+													<li><b>Dados de saída</b>: etiquetas indicando a categoria dos documentos (rotulados).</li>
+													<li><b>Modelo</b>: algoritmo semi-supervisionado (ex.: <i>Semi-Supervised</i> SVM).</li>
+												</ul>
+												
+												<h2 class="mb-0" id="uni4-4">4.4 Aprendizagem por reforço</h2>
+												<p class="lead mb-3 text-justify indent">Na aprendizagem por reforço, o modelo aprende a tomar decisões ao interagir com um ambiente. 
+													Ele recebe recompensas ou punições com base nas ações que realiza, e o objetivo é maximizar a recompensa total ao longo do tempo.  
+													Em outras palavras, problemas de aprendizagem por reforço envolvem aprender o que fazer - como mapear situações para ações - de 
+													modo a maximizar um sinal de recompensa numérica (Hastie <i>et al</i>., 2009). É muito utilizado em jogos, robótica e sistemas autônomos.</p>
+												<p class="lead mb-3 text-justify indent">Pense que você deseja treinar um cão a buscar uma bola. Quando o cão traz a bola de volta, você o recompensa com um petisco (recompensa). Se ele corre na direção errada, você não entrega o petisco (punição). Com o tempo, o cão aprende a buscar a bola corretamente para ganhar mais petiscos.</p>
+												<p class="lead mb-3 text-justify indent">As etapas do processo de treinamento no caso de aprendizagem por reforço seguem outra lógica em relação às demais (Figura 16):</p>
+												<p class="lead mb-3 text-center" id="link-figura-16"><b>Figura 16</b> - Treinamento de um algoritmo de aprendizagem por reforço</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/Figura 16.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: Autoria própria</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Em um problema de aprendizagem por reforço aplicado a um jogo eletrônico de xadrez, o agente (um programa de IA) aprende a jogar xadrez interagindo com o ambiente (o tabuleiro de xadrez). O objetivo do agente é maximizar uma recompensa ao longo do tempo, que neste caso é ganhar a partida de xadrez. O agente é o jogador de xadrez controlado pelo algoritmo de aprendizagem por reforço. Esse agente deve aprender a tomar decisões sobre qual movimento fazer em cada estado do jogo. O ambiente é o próprio tabuleiro de xadrez e o estado atual do jogo, incluindo a posição de todas as peças e o histórico de movimentos. Cada estado representa uma configuração específica do tabuleiro de xadrez. Por exemplo, a posição inicial das peças no início do jogo é um estado, e qualquer configuração resultante de uma série de movimentos subsequentes também é um estado. As ações são todos os movimentos válidos que o agente pode fazer a partir de um determinado estado. No xadrez, isso inclui movimentar qualquer peça para qualquer posição permitida pelas regras do jogo. Por fim, a recompensa é um valor numérico que o agente recebe após realizar uma ação. No xadrez, uma recompensa positiva pode ser atribuída para capturar uma peça adversária, colocar o rei adversário em xeque-mate, ou ganhar a partida. Recompensas negativas podem ser atribuídas para perder uma peça, colocar o próprio rei em xeque, ou perder a partida:</p>
+											<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+												<li><b>Dados de entrada</b>: estado atual do tabuleiro.</li>
+												<li><b>Dados de saída</b>: ação do agente (ex.: movimento de uma peça).</li>
+												<li><b>Modelo</b>: algoritmo de aprendizagem por reforço (ex.: <i>Q-Learning, Deep Q-Network</i>).</li>
+											</ul>
+											<p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+											<div class="box2">
+												<h3 class="mb-0" id="uni4-saiba-mais">Saiba mais…</h3>
+											
+												<p class="lead mb-3 text-justify"><a href="https://www.researchgate.net/publication/43121576_A_Review_of_Machine_Learning_Algorithms_for_Text-Documents_Classification">
+													<font color="#19032B">&#10132 </font>Artigo que revisa várias técnicas de aprendizagem de máquina aplicadas à classificação de documentos de texto</a>.</p>
+												
+												<p class="lead mb-3 text-justify"><a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">
+													<font color="#19032B">&#10132 </font>Livro-texto fundamental para entender os conceitos e aplicações da aprendizagem por reforço</a>.</p>
+										
+											</div>
+											<p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+											<div class="box3">
+												<h3 class="mb-0" id="4-relembrar">Para relembrar…</h3>
+												<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Nesta unidade, abordamos os diferentes tipos de aprendizagem: supervisionada, não supervisionada, semi-supervisionada e por reforço. Para cada tipo, fornecemos uma explicação detalhada, metáforas para facilitar a compreensão e exemplos práticos. Discutimos também como os dados são manipulados e processados durante o treinamento de cada tipo de aprendizagem.</p>
+												<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Também destacamos a importância de conhecer as diferentes abordagens de aprendizagem de máquina para escolher a melhor técnica para cada situação específica. Enfatizamos que cada tipo de aprendizagem possui um processo de treinamento único, que varia desde o uso de dados rotulados na aprendizagem supervisionada até a interação contínua com um ambiente na aprendizagem por reforço. Compreender essas nuances é essencial para desenvolver soluções eficazes e precisas em ML, otimizando assim os recursos disponíveis e garantindo melhores resultados nos projetos.</p>
+											</div>
+											
+										</section>
+											
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni4">Unidade IV - Tipos de aprendizagem de máquina</a></li>
+											<ul>
+												<li><a href="#uni4-1">4.1 Aprendizagem Supervisionada</a></li>
+												<li><a href="#uni4-2">4.2 Aprendizagem Não Supervisionada</a></li>
+												<li><a href="#uni4-3">4.3 Aprendizagem Semi-Supervisionada</a></li>
+												<li><a href="#uni4-4">4.4 Aprendizagem por reforço</a></li>
+												
+											</ul>
+										
+										
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

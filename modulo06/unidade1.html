@@ -1,0 +1,745 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade I - Processamento de Dados Estruturados Multidimensionais com NumPy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> <i>Python</i> para Processamento de Dados</span>
+									<ul class="icons">
+										<li><a href="https://web.facebook.com/centrodeia" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/ceiaufg/#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+
+									<section>
+									
+													
+								<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="uni1">
+									<header class="main">
+										<div class="w-100">
+											<h1 class="mb-0" id="uni1">Unidade I - Processamento de Dados Estruturados Multidimensionais com <i>NumPy</i></h1>
+										</div></header>
+										
+										<h2 class="mb-0" id="uni1-1">1.1 Introdução ao <i>NumPy</i></h2>
+										
+										<p class="lead mb-3 text-justify indent"><i>NumPy</i>, que significa <i>Numerical Python</i>, é uma das bibliotecas mais fundamentais para a computação 
+											numérica em <i>Python</i>. Desenvolvida inicialmente em 2005 por Travis Oliphant, a biblioteca é projetada para efetuar 
+											operações matemáticas complexas de maneira eficiente e com sintaxe relativamente simples. É um pilar para várias 
+											outras bibliotecas de ciência de dados, incluindo <i>Pandas</i>, Matplotlib, Scikit-learn, entre outras.
+										</p>
+										<p class="lead mb-3 text-justify indent">O coração do <i>NumPy</i> é o <i>array</i> multidimensional ou <span class="highlight">ndarray</span>. 
+											Esse objeto é uma coleção de elementos, tipicamente números, do mesmo tipo, 
+											indexados por uma tupla de inteiros positivos que podem ser manipulados de forma vetorizada. A vetorização de operações, que elimina 
+										<i>loops</i> explícitos e usa operações aplicadas diretamente a <i>arrays</i>, é uma das razões pela qual o <i>NumPy</i> é tão rápido e eficaz.</p>
+										<p class="lead mb-3 text-justify indent"><i>NumPy</i> não só otimiza a execução de cálculos numéricos com alto desempenho por meio de suas estruturas de dados internas, 
+											mas também serve como uma interface para rotinas em C e Fortran. Isso permite que operações computacionalmente intensivas 
+											sejam executadas fora do ambiente <i>Python</i>, interpretadas e de alto nível, aumentando significativamente a velocidade de processamento.</p>
+										<p class="lead mb-3 text-justify indent">No contexto da ciência de dados, o <i>NumPy</i> é frequentemente utilizado para tarefas de preparação de dados. Isso inclui limpar, transformar 
+											e normalizar os dados — passos essenciais em qualquer processo de análise de dados. Usando o <i>NumPy</i>, essas tarefas são executadas de 
+											forma eficaz, preparando os dados para análises mais detalhadas e precisas.</p>
+										
+										<p class="lead mb-3 text-justify indent">O uso de <i>NumPy</i> se estende além da ciência de dados, beneficiando engenheiros, físicos e matemáticos. Ele é usado em quase todos os 
+											aspectos da análise científica e técnica, desde simulações até processamento de imagens, mostrando sua versatilidade e capacidade 
+											de lidar com uma ampla gama de desafios numéricos.</p>
+										<p class="lead mb-3 text-justify indent">Um dos pontos fortes do <i>NumPy</i> é a vasta gama de funcionalidades matemáticas que ele proporciona. Possibilita não somente a 
+											realização de operações matemáticas básicas, como soma e multiplicação, mas suporta também processos complexos como 
+											transformadas de Fourier e operações de álgebra linear. Essa diversidade de ferramentas torna o <i>NumPy</i> uma 
+											excelente escolha para qualquer tarefa que exija cálculos matemáticos intensivos.</p>
+										<p class="lead mb-3 text-justify indent">A comunidade de desenvolvedores e usuários do <i>NumPy</i> é grande e ativa. Isso garante que a biblioteca esteja constantemente 
+											sendo atualizada e melhorada. Também fornece um recurso rico para novos(as) usuários(as) aprenderem por meio de exemplos e 
+											tutoriais disponíveis publicamente.</p>
+										<p class="lead mb-3 text-justify indent">Antes de começarmos a explorar as funcionalidades do <i>NumPy</i>, é essencial que tenhamos a biblioteca instalada em nosso ambiente <i>Python</i>. 
+											A instalação do <i>NumPy</i> é simples e pode ser feita por meio do <span class="highlight">pip</span>, o gerenciador de pacotes do <i>Python</i>. Abra o terminal ou prompt de 
+											comando do <i>Python</i> e digite o seguinte comando: <span class="highlight">pip install numpy</span>.</p>
+										<p class="lead mb-3 text-justify indent">Esse comando baixará e instalará a última versão do <i>NumPy</i>, juntamente com suas dependências, se necessário. 
+											Após a instalação, você pode verificar se o <i>NumPy</i> foi instalado corretamente, importando a biblioteca em seu 
+											interpretador Python ou em um <i>script</i>, conforme o Código 1.</p>
+
+											<p class="lead mb-3 text-justify" id="link-code-01"><b>Código 1</b> - Verificando a instalação do <i>NumPy</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">import numpy as np
+print("NumPy versão:", np.__version__)</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+</div>
+										<p class="lead mb-3 text-justify indent"><i>NumPy</i> é notável não apenas por sua velocidade e eficiência, mas também por sua interface intuitiva. 
+											No Código 2, há um exemplo de criação de uma variável do tipo <i>array</i> (a) e, logo em seguida, cada elemento dele é multiplicado 
+											por um escalar (2), resultando em outro <i>array</i>, atribuído à variável b.</p>
+<p class="lead mb-3 text-justify" id="link-code-02"><b>Código 2</b> - Exemplos de utilização da biblioteca <i>NumPy</i> com <i>arrays</i> unidimensionais</p>
+<pre><code class="python" style="display: inline-block; width:100%"># Criando um array de uma dimensão
+a = np.array([1, 2, 3, 4, 5])
+print("Array a:", a)
+# Saída esperada: Array a: [1 2 3 4 5]
+
+# Realizando operações matemáticas simples
+b = a * 2
+print("Array b (a multiplicado por 2):", b)
+# Saída esperada: Array b (a multiplicado por 2): [ 2  4  6  8 10]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+
+										<p class="lead mb-3 text-justify indent">Até mesmo operações um pouco mais complexas, envolvendo <i>arrays</i> multidimensionais, são intuitivas. 
+											Mesmo novos(as) usuários(as) em <i>Python</i> podem aprender a usar <i>arrays</i> e a realizar operações complexas com uma curva de aprendizado 
+											relativamente suave. Um exemplo disso é o Código 3, no qual é definido um <i>array</i> bidimensional (2×2) e, em seguida, soma-se o 
+											valor 3 a cada um de seus elementos, calculando-se a média aritmética de todos os elementos (após a soma) ao final.</p>
+
+										<p class="lead mb-3 text-justify" id="link-code-03"><b>Código 3</b> - Exemplos de utilização da biblioteca <i>NumPy</i> com <i>arrays</i> multidimensionais e funções</p>
+<pre><code class="python" style="display: inline-block; width:100%"># Criando um array bidimensional (matriz)
+c = np.array([[1, 2], [3, 4]])
+print("Matriz c:\n", c)
+# Saída esperada:
+# Matriz c:
+# [[1 2]
+#  [3 4]]
+
+# Somando um número a cada elemento da matriz
+d = c + 3
+print("Matriz d (c mais 3):\n", d)
+# Saída esperada:
+# Matriz d (c mais 3):
+# [[4 5]
+#  [6 7]]
+
+# Calculando a média dos elementos do array a
+media = np.mean(a)
+print("Média dos elementos de a:", media)
+# Saída esperada: Média dos elementos de a: 3.0</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+										
+
+										<h2 class="mb-0" id="uni1-2">1.2 Vetores e Matrizes</h2>
+										<p class="lead mb-3 text-justify indent">Como dito anteriormente, um dos principais componentes do <i>NumPy</i> é a capacidade 
+											de criar e manipular <i>arrays</i>. Um <i>array</i> é uma estrutura de dados que armazena valores de maneira eficiente, sendo ideal 
+											para operações matemáticas. A criação de <i>arrays</i> no <i>NumPy</i> pode ser feita a partir de listas ou utilizando funções 
+											específicas da biblioteca. Para criar um <i>array</i> unidimensional a partir de uma lista, basta usar a função <span class="highlight">np.array()</span>. 
+											No exemplo do Código 4, tal função é utilizada para criar um <i>array</i> do <i>NumPy</i> a partir de uma lista contendo os valores 
+											de 1 a 5. </p>
+										<p class="lead mb-3 text-justify" id="link-code-04"><b>Código 4</b> - Exemplo de criação de um <i>array</i> a partir de uma lista</p>
+<pre><code class="python" style="display: inline-block; width:100%">import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+print("Array a:", a)
+# Saída esperada: Array a: [1 2 3 4 5]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+										<p class="lead mb-3 text-justify indent">Além da criação de arrays a partir de listas, o <i>NumPy</i> oferece várias funções para gerar 
+										<i>arrays</i> de maneira prática e eficiente. Algumas dessas funções incluem <span class="highlight">np.zeros()</span>, <span class="highlight">np.ones()</span>, <span class="highlight">np.arange()</span>, e <span class="highlight">np.linspace()</span>. 
+											Essas funções permitem a criação de arrays preenchidos com zeros, uns ou com uma sequência de números em um intervalo 
+											especificado. No Código 5, é apresentada a função <span class="highlight">np.zeros((3, 3))</span> para criar uma matriz 3x3 de zeros.</p>
+<p class="lead mb-3 text-justify" id="link-code-05"><b>Código 5</b> - Criando <i>array</i> de zeros com <i>np.zeros</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">zeros_array = np.zeros((3, 3))
+print("Matriz de zeros:\n", zeros_array)
+# Saída esperada:
+# Matriz de zeros:
+# [[0. 0. 0.]
+#  [0. 0. 0.]
+#  [0. 0. 0.]]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+										<p class="lead mb-3 text-justify indent">A função <span class="highlight">np.arange(start, stop, step)</span> é útil para criar <i>arrays</i> com 
+											valores sequenciais com um passo definido. Por exemplo, no Código 6, é utilizado <span class="highlight">np.arange(0, 10, 2)</span> para 
+											criar um <i>array</i> que começa em 0 e vai até 10, excluindo o último valor, com um incremento de 2.</p>
+										<p class="lead mb-3 text-justify" id="link-code-06"><b>Código 6</b> - Exemplo de utilização da função <i>np.arange</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">range_array = np.arange(0, 10, 2)
+print("Array com np.arange:", range_array)
+# Saída esperada: Array com np.arange: [0 2 4 6 8]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+											<p class="lead mb-3 text-justify indent">Para criar <i>arrays</i> com valores espaçados uniformemente em um intervalo, pode ser utilizada a função 
+											<span class="highlight">np.linspace(start, stop, num)</span>. Por exemplo, no Código 7, <span  >np.linspace(0, 1, 5)</span> gera cinco números 
+												igualmente espaçados entre 0 e 1.</p>
+										<p class="lead mb-3 text-justify" id="link-code-07"><b>Código 7</b> - Exemplo de utilização da função np.linspace</p>
+<pre><code class="python" style="display: inline-block; width:100%">linspace_array = np.linspace(0, 1, 5)
+print("Array com np.linspace:", linspace_array)
+# Saída esperada: Array com np.linspace: [0.   0.25 0.5  0.75 1.  ]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+										<p class="lead mb-3 text-justify indent"><i>Arrays</i> em <i>NumPy</i> possuem atributos que permitem fácil acesso às suas propriedades. 
+											Como pode ser visto no Código 8, <span class="highlight">array.shape</span> retorna a forma (dimensões) do <i>array</i>, enquanto <span class="highlight">array.ndim</span> retorna o número 
+											de dimensões. Esses atributos são essenciais para entender e manipular a estrutura dos dados armazenados nos <i>arrays</i>. 
+											Na Figura 1, constam exemplos de diferentes formas de <i>arrays</i> com uma, duas ou três dimensões. Nota-se que vetores são 
+											representados por <i>arrays</i> de uma dimensão e matrizes como <i>arrays</i> de duas dimensões. Os <i>arrays</i> com mais de duas dimensões 
+											são chamados de <b>tensores</b>.</p>
+											<p class="lead mb-3 text-center" id="link-figura-01"><b>Figura 1</b> - Formas e dimensões de diferentes <i>arrays</i></p>
+											<div align="center">
+												<span class="image fit" style="width: 70%;"><img src="images/figura-01.png" alt="" /></span>
+												<p class="lead mb-2 text-center"><small> Fonte: <a href="https://medium.com/@pradgya/data-science-practical-no-12b6fd885113">Kumavat (2024)</a>.</small></p>
+											</div>
+<p class="lead mb-3 text-justify" id="link-code-08"><b>Código 8</b> - Atributos <i>shape</i> e <i>ndim</i> de um <i>array NumPy</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">print("Forma do array:", linspace_array.shape)
+# Saída esperada: Forma do array: (5,)
+print("Número de dimensões:", linspace_array.ndim)
+# Saída esperada: Número de dimensões: 1</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+											<p class="lead mb-3 text-justify indent"><i>Arrays</i> multidimensionais podem ser criados passando listas aninhadas como argumentos para <span class="highlight">np.array()</span>. 
+												A profundidade das listas aninhadas determina a dimensão do <i>array</i> resultante, o que é crucial para aplicações que requerem matrizes ou 
+												tensores de alta dimensão. No Código 9, veja um exemplo de criação de uma matriz 2x3 a partir de uma lista de listas.</p>
+										<p class="lead mb-3 text-justify" id="link-code-09"><b >Código 9</b> - Exemplo de criação de <i>array</i> multidimensional (matriz 2x3) a partir de listas</p>
+<pre><code class="python" style="display: inline-block; width:100%">matriz = np.array([[1, 2, 3], [4, 5, 6]])
+print("Matriz:\n", matriz)
+# Saída esperada:
+# Matriz:
+# [[1 2 3]
+#  [4 5 6]]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+											
+										<p class="lead mb-3 text-justify indent">O atributo <span class="highlight">array.dtype</span> é 
+											particularmente importante por informar o tipo de dados dos elementos armazenados no <i>array.</i> 
+											Conhecer o tipo de dados é vital para otimizar o desempenho e garantir que as operações matemáticas sejam realizadas 
+											corretamente. Um exemplo de utilização do atributo <span class="highlight">array.dtype</span> pode ser visto no Código 10.</p>
+										<p class="lead mb-3 text-justify" id="link-code-10"><b >Código 10</b> - Exemplo de utilização do atributo <i>dtyp</i>e de um <i>array</i> do <i>NumPy</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">print("Tipo de dados de 'a':", a.dtype)
+# Saída esperada: Tipo de dados de 'a': int32 (ou int64, dependendo do sistema operacional)</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+										<p class="lead mb-3 text-justify indent"><i>Arrays NumPy</i> são mutáveis, o que significa que os valores em um <i>array</i> podem ser 
+											alterados após sua criação. Isso permite a modificação de <i>arrays</i> existentes sem a necessidade de criar novos <i>arrays</i>, 
+											otimizando o uso de memória e processamento. No Código 11, é feita a alteração do valor na posição 0 do <i>array</i>.</p>
+<p class="lead mb-3 text-justify" id="link-code-11"><b >Código 11</b> -  Alterando o valor da posição 0 de um <i>array</i> previamente definido</p>
+<pre><code class="python" style="display: inline-block; width:100%">a[0] = 10
+print("Array 'a' modificado:", a)
+# Saída esperada: Array 'a' modificado: [10  2  3  4  5]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p></div>
+										<p class="lead mb-3 text-justify indent">Entender e manipular as formas dos <i>arrays</i> é fundamental para operações avançadas, incluindo <i>broadcasting</i> (a capacidade de realizar 
+											operações aritméticas em <i>arrays</i> de diferentes formas, ajustando automaticamente as dimensões) e <i>reshaping</i> (a alteração da forma 
+											de um <i>array</i> para diferentes formatos e estruturas), que serão abordadas em detalhes nas próximas seções. A manipulação da forma 
+											de um <i>array</i> permite a reorganização dos dados sem alterar seu conteúdo, facilitando operações como transposições e reestruturação dos dados.</p>
+
+										<h2 class="mb-0" id="uni1-3">1.3 <i>Arrays</i> do <i>NumPy vs</i>. Estruturas de Dados Nativas do <i>Python</i></h2>
+										<p class="lead mb-3 text-justify indent">Listas, tuplas e conjuntos (<i>sets</i>) são estruturas de dados fundamentais em <i>Python</i>, 
+											cada uma com suas características e usos específicos. A título de revisão, no Código 12 consta um exemplo para cada uma 
+											dessas estruturas de dados, destacando suas características específicas.</p>
+<p class="lead mb-3 text-justify" id="link-code-12"><b >Código 12</b> - Exemplos com listas, tuplas e <i>sets</i></p>
+<pre><code class="python" style="display: inline-block; width:100%"># Lista: Mutável, pode conter elementos de diferentes tipos
+lista = [1, 'dois', 3.0]
+lista.append(4)  # Adiciona um elemento ao final
+print("Lista modificada:", lista)
+# Saída esperada: Lista modificada: [1, 'dois', 3.0, 4]
+
+# Tupla: Imutável, pode conter elementos de diferentes tipos
+tupla = (1, 'dois', 3.0)
+# tupla[0] = 2  # Isto resultaria em um erro
+print("Tupla:", tupla)
+# Saída esperada: Tupla: (1, 'dois', 3.0)
+
+# Conjunto: Não ordenado, sem duplicatas
+conjunto = {1, 2, 2, 3, 4, 5}
+print("Conjunto (sem duplicatas):", conjunto)
+# Saída esperada: Conjunto (sem duplicatas): {1, 2, 3, 4, 5}</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>
+											<p class="lead mb-3 text-justify indent">Os <i>arrays</i> do </i>NumPy</i> oferecem diversas vantagens em relação às listas, 
+												tuplas e <i>sets</i> nativos do <i>Python</i>, especialmente quando se trata de computação numérica e científica. 
+												Enquanto listas e tuplas são estruturas de dados gerais que podem armazenar objetos de diferentes tipos, 
+												os <i>arrays</i> do <i>NumPy</i> são homogêneos. Isso significa que todos os elementos devem ser do mesmo tipo. 
+												Essa homogeneidade permite que o <i>NumPy</i> utilize operações altamente otimizadas ao nível de <i>hardware</i>, 
+												acelerando a computação.</p>
+											<p class="lead mb-3 text-justify indent">No Código 13, é apresentado um exemplo de cenário onde realizar uma operação 
+												em um <i>array</i> do <i>NumPy</i> é bem mais performático que iterar em uma lista. Nesse exemplo, são criados um <i>array</i> e uma lista 
+												com uma sequência de um milhão de números inteiros iniciando em 0 (por meio da função <i>range</i>). A seguir, é somado 1 em 
+												cada elemento da lista e do <i>array</i>. Os tempos são medidos. O tempo para executar tal operação em um <i>array</i> será 
+												notoriamente menor que aquele para uma lista.</p>
+<p class="lead mb-3 text-justify" id="link-code-13"><b >Código 13</b> - Comparando o tempo de execução entre listas e <i>arrays</i> do <i>NumPy</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">import time
+
+lista = list(range(1000000))
+inicio = time.time()
+lista = [x + 1 for x in lista]
+fim = time.time()
+print("Tempo com lista:", fim - inicio)
+
+array = np.arange(1000000)
+inicio = time.time()
+array += 1
+fim = time.time()
+print("Tempo com array NumPy:", fim - inicio)
+# Saida Esperada (os resultados podem variar pois dependem das configurações de velocidade de processador e memória):
+# Tempo com lista: 0.23276233673095703
+# Tempo com array NumPy: 0.002035856246948242</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>
+										<p class="lead mb-3 text-justify indent">Em termos de funcionalidade, as listas são dinâmicas e podem ser facilmente modificadas 
+											(elementos podem ser adicionados ou removidos), enquanto os <i>arrays</i> do <i>NumPy</i> têm tamanho fixo após sua criação. Modificar o 
+											tamanho de um <i>array NumPy</i> implica na criação de um novo <i>array</i> e, consequentemente, na realocação de memória. 
+											Essa característica torna os <i>arrays</i> do <i>NumPy</i> menos flexíveis que as listas para operações que envolvem mudanças frequentes no 
+											tamanho dos dados, mas muito mais rápidos para operações matemáticas sobre elementos fixos.</p>
+										<p class="lead mb-3 text-justify indent">Tuplas, sendo imutáveis, não oferecem a flexibilidade das listas ou dos <i>arrays</i> 
+											do <i>NumPy</i> para modificar conteúdo após a criação, o que as torna menos úteis para computação científica, na qual a 
+											manipulação dos dados é comum. No entanto, a imutabilidade das tuplas as torna ideais como chaves de dicionários ou 
+											como elementos de conjuntos, o que não é possível com <i>arrays</i> do <i>NumPy</i> devido à sua mutabilidade.</p>
+										<p class="lead mb-3 text-justify indent">Os conjuntos (<i>sets</i>) são estruturas únicas em <i>Python</i> que não permitem elementos 
+											duplicados e não mantêm uma ordem específica dos itens. Essa característica os torna inadequados para operações 
+											numéricas que dependem da ordenação dos elementos, mas úteis para testes de pertencimento e remoção de duplicatas. 
+										<i>Arrays</i> do <i>NumPy</i>, por outro lado, mantêm a ordem dos elementos e permitem duplicatas, características essenciais 
+											para muitas operações matemáticas e análises de dados.</p>
+										<p class="lead mb-3 text-justify indent">A escolha entre usar <i>arrays</i> do <i>NumPy</i> ou estruturas de dados nativas do <i>Python</i> 
+											geralmente depende do contexto específico da aplicação. Para análises numéricas, simulações e grandes volumes de dados, 
+											os <i>arrays</i> do <i>NumPy</i> são geralmente preferidos devido à sua eficiência em termos de desempenho e à vasta biblioteca de 
+											funções matemáticas e estatísticas. Para aplicações que requerem estruturas de dados mutáveis com tipos variados ou 
+											que não envolvem operações numéricas intensivas, listas e tuplas podem ser mais apropriadas.</p>
+										<h2 class="mb-0" id="uni1-4">1.4 Operações com Arrays</h2>
+										<p class="lead mb-3 text-justify indent">Os <i>arrays</i> do <i>NumPy</i> são projetados para facilitar operações numéricas 
+											complexas com sintaxe simples e eficiente. Uma das características mais notáveis do <i>NumPy</i> é que todas as operações 
+											aritméticas básicas são aplicadas elemento a elemento. Isso significa que se você adicionar, subtrair, multiplicar ou 
+											dividir dois <i>arrays</i>, cada operação será realizada entre os elementos correspondentes de ambos os <i>arrays</i>.</p>
+										<p class="lead mb-3 text-justify indent">Por exemplo, ao trabalhar com dois <i>arrays</i>, a e b, que contêm os valores 
+											[1, 2, 3] e [4, 5, 6], respectivamente, a soma de a e b resultará em um novo <i>array</i> onde cada elemento é a soma dos 
+											elementos correspondentes dos <i>arrays</i> originais. No Código 14, isso é ilustrado, juntamente com outras operações 
+											aritméticas básicas.</p>
+										<p class="lead mb-3 text-justify" id="link-code-14"><b >Código 14</b> - Exemplo de operações aritméticas com <i>arrays</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Adição
+c = a + b
+print("Adição:", c)
+# Saída esperada: Adição: [5 7 9]
+
+# Subtração
+d = b - a
+print("Subtração:", d)
+# Saída esperada: Subtração: [3 3 3]
+
+# Multiplicação
+e = a * b
+print("Multiplicação:", e)
+# Saída esperada: Multiplicação: [ 4 10 18]
+
+# Divisão
+f = b / a
+print("Divisão:", f)
+# Saída esperada: Divisão: [4. 2.5 2. ]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>
+										<p class="lead mb-3 text-justify indent">Além das operações básicas, o <i>NumPy</i> suporta o conceito de <i>broadcasting</i>, extremamente útil quando se 
+											deseja realizar operações entre <i>arrays</i> de diferentes tamanhos. O <i>broadcasting</i> permite que você realize operações aritméticas em <i>arrays</i> que, 
+											à primeira vista, não pareceriam compatíveis para tal. Por exemplo, se você tem um <i>array</i> e um escalar, o <i>NumPy</i> permite adicionar o escalar a 
+											cada elemento do <i>array</i> sem a necessidade de replicar o escalar para corresponder ao tamanho do <i>array</i>. Esse exemplo é apresentado no Código 15.</p>
+										<p class="lead mb-3 text-justify indent">O <i>broadcasting</i> também se estende a <i>arrays</i> de diferentes dimensões. Considere um <i>array</i> h de tamanho 3 e 
+											um <i>array</i> i de forma 3x1. O <i>NumPy</i> ajusta automaticamente cada array para que suas formas correspondam, permitindo operações elemento a 
+											elemento entre eles. Nesse caso, h é um vetor linha (considerado com a forma (1, 3)) e i é um vetor coluna (considerado com a forma (3, 1)). 
+											O <i>NumPy</i> "estica" h ao longo da dimensão vertical e i ao longo da dimensão horizontal, resultando em um <i>array</i> final de forma (3, 3), 
+											onde cada elemento de h é somado ao correspondente de i, produzindo a matriz resultante (Código 15).</p>
+											<p class="lead mb-3 text-justify" id="link-code-15"><b >Código 15</b> - Exemplo de <i>broadcasting</i> entre <i>arrays</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">h = np.array([1, 2, 3])
+i = np.array([[0], [1], [2]])
+
+# Broadcasting entre diferentes tamanhos
+j = h + i
+print("Broadcasting entre diferentes tamanhos:\n", j)
+# Saída esperada:
+# Broadcasting entre diferentes tamanhos:
+# [[1 2 3]
+#  [2 3 4]
+#  [3 4 5]]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>
+										<p class="lead mb-3 text-justify indent">A indexação e o <i>slicing</i> são técnicas essenciais para acessar e modificar partes de um <i>array</i>. 
+											Com a indexação, você pode extrair elementos específicos de um <i>array</i> usando índices. Por exemplo, a[1] retorna o segundo elemento do 
+										<i>array</i> a. O slicing, por outro lado, permite acessar subconjuntos do <i>array</i>. Usando a sintaxe <span class="highlight">start:stop:step</span>, você pode extrair partes 
+											do array conforme a necessidade. Por exemplo, a[0 -2] retorna os dois primeiros elementos do <i>array</i> em a, conforme apresentado no 
+											Código 16.</p>
+									<p class="lead mb-3 text-justify" id="link-code-16"><b >Código 16</b> - Exemplos de indexação e <i>slicing</i></p>
+<pre><code class="python" style="display: inline-block; width:100%"># Indexação simples
+k = a[1]
+print("Elemento no índice 1 -", k)
+# Saída esperada: Elemento no índice 1 - 2
+
+# Slicing
+l = a[0 : 2]
+print("Primeiros dois elementos:", l)
+# Saída esperada: Primeiros dois elementos: [1 2]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>
+										<p class="lead mb-3 text-justify indent">O <i>slicing</i> é uma técnica poderosa que vai além do acesso 
+											básico a elementos, permitindo manipulações mais complexas de <i>arrays</i>. Além de selecionar um segmento de um <i>array</i>, 
+											o <i>slicing</i> pode ser usado para modificar partes de um array. Ao atribuir um valor a uma fatia de um <i>array</i>, esse valor é 
+											propagado ao longo de toda a seção selecionada. Por exemplo, no Código 17, parte de um <i>array</i> é zerada de forma simples 
+											utilizando <i>slicing</i>.</p>
+										<p class="lead mb-3 text-justify" id="link-code-17"><b >Código 17</b> - Exemplo de <i>zeroing</i> com <i>slicing</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">m = np.array([1, 2, 3, 4, 5])
+m[1 -4] = 0
+print("Array após zeroing:", m)
+# Saída esperada: Array após zeroing: [1 0 0 0 5]</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>										<p class="lead mb-3 text-justify indent">Uma característica importante do <i>slicing</i> é que as alterações feitas em <i>subarrays</i> por meio do 
+											<i>slicing</i> são refletidas no <i>array</i> original. Isso ocorre porque o <i>slicing</i> em <i>NumPy</i> retorna uma visão do <i>array</i> original, não uma cópia. 
+											Essa característica torna o <i>slicing</i> uma ferramenta eficiente, mas os(as) usuários(as) devem ser cautelosos(as) para não modificar 
+											dados inadvertidamente.</p>
+											
+											<p class="lead mb-3 text-justify indent">Outro aspecto importante do <i>slicing</i> é a inclusão do <i>step</i> que permite especificar o intervalo 
+												entre os elementos no segmento selecionado do <i>array</i>. Isso adiciona uma camada extra de flexibilidade ao acessar múltiplos elementos. 
+												Por exemplo, se você deseja selecionar elementos alternados de um <i>array</i>, pode definir o step como 2, o que 
+												significa que o <i>slicing</i> “pulará” cada segundo elemento. O uso do step é particularmente útil em situações nas quais 
+												você precisa de uma amostragem regular de dados em um conjunto maior ou deseja inverter a ordem dos elementos de um <i>array</i>.</p>
+											<p class="lead mb-3 text-justify indent">No Código 18, é demonstrado o uso de <i>slicing</i> com step em <i>arrays NumPy</i>. No 
+												primeiro exemplo, m[1 -8 -2] seleciona elementos do índice 1 ao 7 (exclusivo), pegando a cada 2 elementos, resultando 
+												nos valores [1, 3, 5, 7]. No segundo exemplo, m[::-1] usa um step negativo para inverter o <i>array</i>, 
+												resultando em [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]. Esses exemplos, bem como os apresentados na Figura 2, mostram como o 
+											<i>slicing</i> pode ser utilizado para extrair <i>sub-arrays</i> e manipular a ordem dos elementos.</p>
+<p class="lead mb-3 text-justify" id="link-code-18"><b >Código 18</b> - <i>Slicing</i> com <i>step</i></p>
+<pre><code class="python" style="display: inline-block; width:100%"># Slicing com step
+m = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+step_slice = m[ 1 : 8 : 2]
+print("Elementos selecionados com step de 2 -", step_slice)
+# Saída esperada: Elementos selecionados com step de 2 - [1 3 5 7]
+
+# Usando step negativo para inverter o array
+reverse_slice = m[::-1]
+print("Array invertido:", reverse_slice)
+# Saída esperada: Array invertido: [9 8 7 6 5 4 3 2 1 0]
+</code></pre>
+<div>
+	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+</div>
+											<p class="lead mb-3 text-center" id="link-figura-02"><b>Figura 2</b> - Exemplos de uso de <i>slicing</i></p>
+											<div align="center">
+												<span class="image fit" style="width: 70%;"><img src="images/figura-02.png" alt="" /></span>
+												<p class="lead mb-2 text-center"><small> Fonte: <a href="https://stackoverflow.com/questions/16096753/python-array-slicing-how-can-2d-array-slicing-be-implemented">Stack Overflow</a>.</small></p>
+											</div>
+											
+											<p class="lead mb-3 text-justify indent">Além de operações básicas e <i>slicing</i>, os <i>arrays NumPy</i> suportam indexação avançada, 
+												que permite selecionar elementos não contíguos e em padrões complexos. Um exemplo, como visto no Código 19, é a 
+												indexação com <i>arrays</i> de inteiros, na qual é possível especificar os índices dos elementos que deseja acessar.</p>
+
+											<p class="lead mb-3 text-justify" id="link-code-19"><b>Código 19</b> - Exemplo de indexação com lista de índices</p>
+											
+<pre><code class="python" style="display: inline-block; width:100%">n = np.array([10, 20, 30, 40, 50])
+indices = [1, 3, 4]
+o = n[indices]
+print("Elementos selecionados:", o)
+# Saída esperada: Elementos selecionados: [20 40 50]</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+											
+											<p class="lead mb-3 text-justify indent">A indexação booleana é outra forma poderosa de manipular <i>arrays</i>. 
+												Essa técnica usa um <i>array</i> booleano do mesmo tamanho que o <i>array</i> a ser indexado para selecionar elementos. Por exemplo, 
+												no Código 20, consta uma seleção com todos os elementos de um <i>array</i> que são maiores que um valor específico (p > 3, no exemplo).</p>
+											
+											<p class="lead mb-3 text-justify" id="link-code-20"><b>Código 20</b> - Exemplo de indexação booleana</p>
+											
+<pre><code class="python" style="display: inline-block; width:100%">p = np.array([1, 2, 3, 4, 5])
+mask = p > 3
+q = p[mask]
+print("Elementos maiores que 3 -", q)
+# Saída esperada: Elementos maiores que 3 - [4 5]</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+											
+										<p class="lead mb-3 text-justify indent"><i>NumPy</i> também oferece a função <span class="highlight">np.where()</span>, uma ferramenta versátil para realizar seleções condicionais. Essa 
+											função é particularmente útil para substituir valores em um <i>array</i> com base em alguma condição. No exemplo do Código 21, 
+											todos os valores menores que 3 foram substituídos por zero de forma fácil com <span class="highlight">np.where()</span>. Como é possível observar, a 
+											função <span class="highlight">np.where()</span> recebe três parâmetros: o primeiro é a condição para realização da filtragem, o segundo trata-se do 
+											valor a ser utilizado para substituição (caso a condição seja verdadeira para o elemento correspondente). 
+											Por fim, o terceiro parâmetro é o vetor de entrada, no qual a operação será realizada.</p>
+											
+										<p class="lead mb-3 text-justify" id="link-code-21"><b>Código 21</b> - Exemplo usando <i>np.where</i></p>
+											
+<pre><code class="python" style="display: inline-block; width:100%">r = np.array([1, 2, 3, 4, 5])
+s = np.where(r < 3, 0, r)
+print("Substituição condicional:", s)
+# Saída esperada: Substituição condicional: [0 0 3 4 5]</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+											
+											<p class="lead mb-3 text-justify indent">O <i>broadcasting</i> e as operações aritméticas que discutimos são apenas a ponta do iceberg. 
+											<i>NumPy</i> suporta uma ampla gama de operações matemáticas e científicas mais complexas, como 
+												operações de álgebra linear, estatística e até transformações geométricas. Além disso, as operações 
+												com <i>arrays</i> não se limitam a <i>arrays</i> de uma ou duas dimensões. <i>NumPy</i> é capaz de manipular <i>arrays</i> de 
+												alta dimensão (tensores), cruciais em aplicações avançadas como aprendizado de máquina e processamento de imagens.</p>
+										
+										<h2 class="mb-0" id="uni1-5">1.5 Funções Universais (<i>ufunc</i>)</h2>
+
+										<p class="lead mb-3 text-justify indent">As Funções Universais, ou <span class="highlight">ufuncs</span>, são uma característica central do <i>NumPy</i> que permite a execução de operações vetorizadas 
+											(operações aplicadas a todos os elementos de um <i>array</i> simultaneamente). Essas funções operam elemento a elemento, 
+											proporcionando uma execução altamente otimizada e rápida, fundamental para o processamento de grandes volumes de dados. 
+											As <i>ufuncs</i> são implementadas em C, o que significa que elas podem operar com a velocidade de código compilado, evitando os 
+											laços de interação típicos do <i>Python</i> puro.</p>
+
+										<p class="lead mb-3 text-justify indent">Existem dois tipos principais de <span class="highlight">ufuncs</span> no <i>NumPy</i>: as <span class="highlight">ufuncs</span> unárias, 
+											que operam em uma única entrada, e as <span class="highlight">ufuncs</span> binárias, 
+											que operam em dois <i>inputs</i>. Exemplos de <span class="highlight">ufuncs</span> unárias incluem funções como np.sqrt e np.exp, que calculam a raiz quadrada e o 
+											exponencial de cada elemento de um <i>array</i>, respectivamente. As <span class="highlight">ufuncs</span> binárias incluem operações como np.add e <span class="highlight">np.multiply</span>, 
+											que realizam adição e multiplicação elemento a elemento entre dois <i>arrays</i>.</p>
+
+										<p class="lead mb-3 text-justify indent">Além de operações básicas, as <span class="highlight">ufuncs</span> também suportam operações mais complexas essenciais em campos científicos e de 
+											engenharia. Por exemplo, operações de álgebra linear como produto de matrizes (<span class="highlight">np.dot</span>), determinante (<span class="highlight">np.linalg.det</span>) 
+											e autovalores (<span class="highlight">np.linalg.eigvals</span>) são suportadas por meio de submódulos específicos como <span class="highlight">np.linalg</span>, como 
+											apresentado no Código 22. Essas funções permitem realizar cálculos matemáticos complexos que são a base 
+											para muitos algoritmos de ciência de dados e aprendizagem de máquina.</p>
+										<p class="lead mb-3 text-justify" id="link-code-22"><b>Código 22</b> - Exemplo de operações de álgebra linear</p>
+											
+<pre><code class="python" style="display: inline-block; width:100%">A = np.array([[1, 2], [3, 4]])
+B = np.array([[2, 0], [1, 2]])
+
+# Produto de matrizes
+produto = np.dot(A, B)
+print("Produto das matrizes:\n", produto)
+# Saída esperada:
+# Produto das matrizes:
+# [[ 4  4]
+#  [10  6]]
+
+# Determinante
+determinante = np.linalg.det(A)
+print("Determinante:", determinante)
+# Saída esperada: Determinante: -2.0
+
+# Autovalores
+autovalores = np.linalg.eigvals(A)
+print("Autovalores:", autovalores)
+# Saída esperada: Autovalores: [-0.37228132  5.37228132]</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+										
+										<p class="lead mb-3 text-justify indent">Em estatística, o <i>NumPy</i> oferece <span class="highlight">ufuncs</span> que podem calcular médias, medianas, desvios padrão e outras medidas estatísticas 
+											diretamente de <i>arrays</i> numéricos. Isso é extremamente útil para análise de dados, onde tais cálculos são frequentes. 
+											Funções como <span class="highlight">np.mean</span>, <span class="highlight">np.median</span>, e <span class="highlight">np.std</span>, apresentadas no Código 23, são exemplos de como as operações estatísticas 
+											podem ser realizadas de maneira eficiente e direta.</p>
+										<p class="lead mb-3 text-justify" id="link-code-23"><b>Código 23</b> - Exemplo de operações estatísticas</p>
+<pre><code class="python" style="display: inline-block; width:100%">dados = np.array([1, 2, 3, 4, 5])
+
+# Média
+media = np.mean(dados)
+print("Média:", media)
+# Saída esperada: Média: 3.0
+
+# Mediana
+mediana = np.median(dados)
+print("Mediana:", mediana)
+# Saída esperada: Mediana: 3.0
+
+# Desvio padrão
+desvio_padrao = np.std(dados)
+print("Desvio padrão:", desvio_padrao)
+# Saída esperada: Desvio padrão: 1.4142135623730951</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+											<p class="lead mb-3 text-justify indent">As transformações geométricas também são uma aplicação importante das <span class="highlight">ufuncs</span>. O <i>NumPy</i> pode 
+												ser usado para aplicar transformações como rotações, escalonamentos e translações em objetos geométricos representados 
+												em <i>arrays</i>. Isso é particularmente valioso em áreas como processamento de imagens e gráficos computacionais, onde 
+												tais transformações são fundamentais.</p>
+
+											<p class="lead mb-3 text-justify indent">Como foi possível observar, as funções universais do <i>NumPy</i> são 
+												ferramentas poderosas que proporcionam não apenas a velocidade, mas também a flexibilidade para executar uma 
+												ampla gama de operações matemáticas e científicas. A capacidade de executar essas operações de forma vetorizada, 
+												sem a necessidade de <i>loops</i> explícitos em <i>Python</i>, não só economiza tempo de desenvolvimento, mas também melhora 
+												significativamente o desempenho dos programas.</p>
+
+										<h2 class="mb-0" id="uni1-6">1.6 Visualização de Dados com NumPy e Matplotlib</h2>
+										<p class="lead mb-3 text-justify indent">Embora o <i>NumPy</i> seja uma ferramenta poderosa para a manipulação de dados numéricos, a visualização desses dados é igualmente 
+											importante para a análise e comunicação eficaz dos resultados. Para isso, combinamos frequentemente o <i>NumPy</i> com <i>Matplotlib</i>, 
+											uma biblioteca de plotagem em <i>Python</i> que oferece uma variedade de funções para a criação de gráficos estáticos, animados e 
+											interativos. Nesta seção, será explorado o uso do <i>NumPy</i> em conjunto com Matplotlib para visualizar dados simples, preparando 
+											o terreno para uma exploração mais profunda de <i>Matplotlib</i> na Unidade III.</p>
+										<p class="lead mb-3 text-justify indent">Um exemplo básico de visualização de dados envolve a criação de um gráfico de linhas. Exemplos comuns são a visualização da 
+											evolução de uma variável ao longo do tempo ou a relação funcional entre duas variáveis. Utilizando <i>arrays</i> do <i>NumPy</i> para 
+											representar os dados, pode-se facilmente plotar esses dados com <i>Matplotlib</i>.</p>
+<p class="lead mb-3 text-justify" id="link-code-24"><b>Código 24</b> - Visualização de dados com <i>NumPy</i> e <i>Matplotlib</i></p>
+<pre><code class="python" style="display: inline-block; width:100%">import numpy as np
+import matplotlib.pyplot as plt
+
+# Dados
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Plotando
+plt.figure(figsize=(8, 4))
+plt.plot(x, y, label='sin(x)')
+plt.title('Gráfico de Linha Simples')
+plt.xlabel('x')
+plt.ylabel('sin(x)')
+plt.legend()
+plt.grid(True)
+plt.show()</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+											<p class="lead mb-3 text-justify indent">O Código 24 gera um gráfico de linha que mostra a função seno entre 0 e 10. O uso de <span class="highlight">np.linspace</span> 
+												para criar o array x é um exemplo perfeito de como o <i>NumPy</i> gera dados para visualizações. A função <span class="highlight">plt.plot()</span> 
+												de <i>Matplotlib</i> é usada aqui para criar o gráfico de linha, com <i>labels</i> (rótulos) para o eixo x e y, um título 
+												e uma legenda, essenciais para entender o gráfico, como pode ser visto na Figura 3.</p>
+												<p class="lead mb-3 text-center" id="link-figura-03"><b>Figura 3</b> - Gráfico gerado a partir do Código 24</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/figura-03.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Outro exemplo útil é a visualização de distribuições de dados. 
+													Histogramas são uma ferramenta comum para explorar a distribuição de conjuntos de dados. <i>NumPy</i> pode ser usado 
+													para calcular os histogramas e <i>Matplotlib</i> para plotá-los.</p>
+													<p class="lead mb-3 text-justify" id="link-code-25"><b>Código 25</b> - Exemplo de histograma com <i>NumPy</i> e <i>Matplotlib</i></p>
+<pre><code class="python" style="display: inline-block; width:100%"># Dados aleatórios
+data = np.random.normal(size=1000)
+
+# Histograma
+plt.figure(figsize=(8, 4))
+plt.hist(data, bins=30, alpha=0.75, color='blue', edgecolor='black')
+plt.title('Histograma de Dados Aleatórios')
+plt.xlabel('Valores')
+plt.ylabel('Frequência')
+plt.grid(True)
+plt.show()</code></pre>
+											
+											<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+											<p class="lead mb-3 text-justify indent">O Código 25 produz um histograma (<span class="highlight">plt.hist</span>) que ajuda a visualizar como os dados (gerados aleatoriamente, 
+												utilizando a função <span class="highlight">np.random.normal</span>) estão distribuídos em torno da média. Esse tipo de gráfico, como apresentado 
+												na Figura 4, é extremamente útil para a análise estatística inicial e para verificar a 
+												normalidade dos dados experimentais.</p>
+												<p class="lead mb-3 text-center" id="link-figura-04"><b>Figura 4</b> - Histograma gerado a partir do Código 25</p>
+												<div align="center">
+													<span class="image fit" style="width: 70%;"><img src="images/figura-04.png" alt="" /></span>
+													<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+												</div>
+												<p class="lead mb-3 text-justify indent">Embora esta seção seja apenas uma introdução à combinação de <i>NumPy</i> com <i>Matplotlib</i> para visualização de dados, 
+													ela destaca a facilidade com que essas duas poderosas ferramentas podem ser usadas juntas. Aprofundaremos mais 
+													no uso de <i>Matplotlib</i> na Unidade III, na qual uma variedade maior de tipos de gráficos e técnicas de visualização 
+													avançadas serão exploradas. Essa introdução possibilita estabelecer a base sobre como o <i>NumPy</i> alimenta as 
+													visualizações com representações eficientes de dados e como o <i>Matplotlib</i> pode ser usado para transformar esses 
+													dados em percepções visuais compreensíveis.</p>
+										<h2 class="mb-0" id="uni1-7">1.7 <i>Notebook Colab</i></h2>
+										
+										<div class="box">
+											<div class="lead mb-3 text-center"><a href="https://colab.research.google.com/drive/1YNPWABDM6IqN_VbyPxaeknjVvFJ-LiOk">https://colab.research.google.com/drive/1YNPWABDM6IqN_VbyPxaeknjVvFJ-LiOk</a></div>
+											
+								
+										</div>
+										
+									<h2 class="mb-0" id="uni1-8">1.8 Saiba Mais…</h2>
+									<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent" >
+										<li><a href="https://numpy.org/doc/stable/"><strong><i>NumPy Team</i></strong></a>. <i>NumPy documentation</i>.</li>
+										</ul>
+									<br>
+								</section>
+								
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6><i>Python</i> para Processamento de Dados</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni1">Unidade I - Processamento de Dados Estruturados Multidimensionais com <i>NumPy</i></a></li>
+											<ul>
+												<li><a href="#uni1-1">1.1 Introdução ao <i>NumPy</i></a></li>
+												<li><a href="#uni1-2">1.2 Vetores e Matrizes</a></li>
+												<li><a href="#uni1-3">1.3 Arrays do <i>NumPy vs</i>. Estruturas de Dados Nativas do <i>Python</i></a></li>
+												<li><a href="#uni1-4">1.4 Operações com <i>Arrays</i></a></li>
+												<li><a href="#uni1-5">1.5 Funções Universais (<i>ufunc</i>)</a></li>
+												<li><a href="#uni1-6">1.6 Visualização de Dados com <i>NumPy</i> e <i>Matplotlib</i></a></li>
+												<li><a href="#uni1-7">1.7 <i>Notebook Colab</i></a></li>
+												<li><a href="#uni1-8">1.8 Saiba Mais</a></li>
+											</ul>
+										
+										
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>
