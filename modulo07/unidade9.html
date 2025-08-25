@@ -1,0 +1,714 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade IX - Classificação</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+								
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+									
+								        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="uni9">
+									<header class="main">
+										<div class="w-100">
+											<h1 class="mb-0" id="uni9">Unidade IX - Classificação</i></h1>
+										</div></header>
+										
+                                        <p class="lead mb-3 text-justify indent">Como já foi comentado nas unidades anteriores deste eBook, um dos
+                                            problemas comuns no Aprendizado de Máquina é a tarefa de identificar as classes
+                                            associadas a um determinado objeto. A partir de suas características, também
+                                            chamadas de variáveis, utilizamos métodos computacionais inteligentes para tentar
+                                            determinar a qual classe esse objeto pertence. Podemos usar como exemplo a simples
+                                            tarefa de identificar se um determinado e-mail é spam ou não. Um e-mail pode conter
+                                            texto, imagens e arquivos diversos, que são suas variáveis, e pode ser interpretado
+                                            como spam ou não spam. O que determina se um e-mail é spam ou não é uma
+                                            interpretação dessas variáveis de acordo com o interesse do dono da caixa de e-mail.
+                                            Para uma pessoa, um e-mail de propaganda de um pet shop, por exemplo, pode ser
+                                            irrelevante, logo, seria classificado como spam; mas para outra pessoa, pode ser de
+                                            interesse, logo, não seria considerado spam. Dessa forma, classificar diferentes
+                                            mensagens de e-mail entre as duas classes (spam e não spam) é uma tarefa que exige
+                                            a interpretação das variáveis a cada nova mensagem, compondo assim uma tarefa de
+                                            classificação de mensagens.</p>
+                                        <p class="lead mb-3 text-justify indent">As tarefas de classificação são comuns por serem amplamente utilizadas na
+                                            automação de processos que envolvem a interpretação de dados de diversos tipos. Se
+                                            dividirmos por tipo de dado de entrada, podemos listar alguns exemplos de
+                                            aplicações.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-42"><b>Figura 42</b> - Exemplos de Aplicações de Classificação</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 42.1.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.2.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.3.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.4.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.5.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.6.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.7.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.8.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.9.png" alt="" /></span>
+                                                <span class="image fit"><img src="images/Figura 42.10.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                            </div>
+                                            <h2 class="mb-0" id="uni9-1">9.1 Classificadores</h2>
+                                            <p class="lead mb-3 text-justify indent">O elemento principal ao tratar um problema de classificação é o classificador.
+                                                Classificadores são métodos de Aprendizado de Máquina que, a partir das variáveis
+                                                extraídas de um objeto, tentam determinar a qual classe ele pertence. Esses métodos
+                                                são desenvolvidos com o objetivo de compreender as possíveis variações dentro de
+                                                uma classe. Por exemplo, em uma tarefa de reconhecimento de gatos a partir de uma
+                                                imagem, podemos ter diversas variações, como posição, raça, cor, tamanho e formato,
+                                                conforme ilustrado na Figura 45. Todas essas variações geram variáveis com algumas
+                                                diferenças, mas que ainda assim representam exemplos da mesma classe. O objetivo
+                                                dos classificadores é identificar os padrões comuns a cada classe (dois olhos, bigodes,
+                                                orelhas, quatro patas, etc.) enquanto tentam generalizar esses padrões, considerando
+                                                as possíveis variações. Assim, um bom classificador de gatos deve ser capaz de
+                                                generalizar a definição de gato e reconhecer todos os diferentes bichanos.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-43"><b>Figura 43</b> - Exemplo de diferentes amostras de uma classe “gato”</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 43.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                            </div>
+                                            <p class="lead mb-3 text-justify indent">Na literatura de Aprendizado de Máquina temos diversos classificadores.
+                                                Podemos categorizar estes métodos a partir do princípio de funcionamento de cada
+                                                um como mostra o mapa mental a seguir.</p>
+                                                <p class="lead mb-3 text-center indent" id="link-figura-44"><b>Figura 44</b> - Mapa mental classificadores na literatura de aprendizado de máquina</p>
+                                                <div>
+                                                    <span class="image fit"><img src="images/Figura 44.png" alt="" /></span>
+                                                    <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                                </div>
+                                        
+                                                <p class="lead mb-3 text-justify indent">Para entendermos melhor vamos estudar alguns destes métodos de forma mais
+                                                    detalhada começando pelo KNN, ou k-Vizinhos Mais Próximos em português, que
+                                                    realiza a classificação com base na vizinhança de cada amostra de dados.</p>	
+                                        
+                                        <h3 class="mb-0" id="uni9-1-1">9.1.1 KNN: k-<i>Nearest Neighbors</i></h3>
+                                        <p class="lead mb-3 text-justify indent">O KNN é um classificador clássico do Aprendizado de Máquina e apesar de
+                                            possuir funcionamento simples e intuitivo é muito utilizado. O conceito principal do
+                                            KNN é que os dados utilizados no treinamento do classificador delimitam a região do
+                                            espaço de variáveis que compõem as classes com base na proximidade. Para melhor
+                                            visualizar esta propriedade vamos usar como exemplo o dataset Íris .</p>
+                                        <p class="lead mb-3 text-justify indent">O dataset Íris é composto por 50 amostras de três diferentes espécies de flores
+                                            de plantas Íris, onde cada flor teve sua sépala e pétala medida. As partes das flores e
+                                            diferentes espécies estão na imagem abaixo. O objetivo aqui é diferenciar as espécies
+                                            de acordo com as características das suas flores.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-45"><b>Figura 45</b> - Exemplos das três espécies de flores Iris</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 45.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://www.researchgate.net/profile/Shohal-Hossain-2/publication/367220930/figure/fig1/AS:11431281113694842@1674035105600/Three-species-of-IRIS-flower.jpg"><i>Leitura de um dataset, 2020</i></a>.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">Se visualizarmos a distribuição dos dados em torno de duas das variáveis
+                                                (comprimento e largura da pétala) podemos observar que as diferentes espécies
+                                                formam regiões no espaço das variáveis. A espécie setosa apresenta uma
+                                                sobreposição quando olhamos apenas o comprimento (eixo x) ou largura (eixo y), mas
+                                                usando ambas as variáveis fica claro o surgimento de uma região própria da classe. O
+                                                KNN atua justamente nesse conceito de vizinhança classificando um novo dado a
+                                                partir dos k vizinhos mais próximos. Vizinhos são os dados já existentes na base de
+                                                treinamento e que estão rotulados (já sabemos a sua resposta), a partir destes são
+                                                encontrados os k mais próximos e feito uma votação para decidir qual classe atribuir
+                                                a um novo dado. O valor de k é atribuído no processo de parametrização do algoritmo
+                                                e deve ser otimizado para obter o melhor resultado.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-46"><b>Figura 46</b> - Distribuição das amostras de flores com base no comprimento e largura
+                                            da Sépala</p>
+                                        <div>
+                                                    <span class="image fit"><img src="images/Figura 46.png" alt="" /></span>
+                                                    <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">Dessa forma, se imaginarmos uma nova flor cuja pétala foi medida em termos
+                                            de largura e comprimento, ao utilizarmos o KNN com valor de k igual a 5, iremos
+                                            buscar os 5 exemplos de pétalas já conhecidos mais próximos para definir qual classe
+                                            deve ser atribuída a esse novo exemplo. Na figura a seguir podemos ver um exemplo
+                                            deste caso, onde o novo ponto será atribuído a versicolor por possuir 4 vizinhos mais
+                                            próximos que faz parte desta classe.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-47"><b>Figura 47</b> - Exemplo de aplicação do KNN em um novo dado</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 47.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">A partir deste processo podemos definir as regiões do espaço das variáveis
+                                            conforme a proximidade dos 5 vizinhos mais próximos, criando assim uma fronteira
+                                            de discriminação baseada na vizinhança dos dados. Na figura a seguir podemos
+                                            visualizar a região de cada classe. Neste exemplo podemos ver que a classe setosa está
+                                            quase perfeitamente discriminada das outras duas classes, porém as classes
+                                            versicolor e virginica estão sobrepostas de uma forma que não é possível separá-las
+                                            perfeitamente com o KNN. Dessa forma podemos afirmar que o KNN com apenas
+                                            estas duas variáveis não é capaz de obter uma boa generalização. Uma alternativa
+                                            para se obter um melhor resultado pode ser com uso das técnicas discutidas nas
+                                            unidades anteriores, como: adicionar outras variáveis, normalizar ou transformar as
+                                            variáveis utilizadas ou talvez remover <i>outliers</i> do conjunto de treino. De qualquer
+                                            maneira, para mensurarmos a qualidade desta modelagem em classificar flores e sua
+                                            capacidade de generalização é necessária uma metodologia de avaliação e métricas
+                                            objetivas.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-48"><b>Figura 48</b> - Fronteira de discriminação de um KNN</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 48.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                            </div>
+                                        
+                                        <h2 class="mb-0" id="uni9-2">9.2 Avaliação de Classificadores</h2>
+                                        <p class="lead mb-3 text-justify indent">A avaliação de modelos de Aprendizado de Máquina varia conforme o
+                                            problema a ser tratado. No caso de um problema de classificação, há alguns critérios
+                                            específicos que precisam ser observados.</p>
+                                        <p class="lead mb-3 text-justify indent">O primeiro ponto a ser tratado é a divisão dos dados em conjuntos de treino e
+                                            teste, ou em treino, validação e teste. A divisão dos dados deve ser coerente com o
+                                            problema, de forma que cada amostra de treino seja independente das amostras de
+                                            teste. Por exemplo, em um problema de imagens médicas, caso existam várias
+                                            imagens de um mesmo paciente, elas devem ser alocadas ou no conjunto de treino ou
+                                            no de teste, mas sempre juntas. Dessa forma, garantimos que os conjuntos são
+                                            Independentes e Identicamente Distribuídos (IID). Esse conceito vem da estatística e
+                                            define que as amostras devem ser:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 2%;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li><b>Independentes</b>: Se os conjuntos de treino e teste não forem
+                                                    independentes, pode haver uma correlação entre os dados nos dois
+                                                    conjuntos. Isso pode levar o modelo a "lembrar" informações específicas
+                                                    do conjunto de treino e usar essas informações para obter um
+                                                    desempenho artificialmente alto no conjunto de teste, em vez de
+                                                    aprender padrões generalizáveis. Isso resulta em uma avaliação
+                                                    otimista e irrealista do modelo.</li>
+                                                <li><b>Identicamente Distribuídos</b>: Se os conjuntos de treino e teste não
+                                                    forem identicamente distribuídos, o modelo treinado em um conjunto
+                                                    de dados pode não se comportar bem no conjunto de teste, pois os
+                                                    padrões que ele aprendeu podem não ser aplicáveis ao conjunto de
+                                                    teste. Isso levaria a uma avaliação incorreta do modelo, onde o
+                                                    desempenho no conjunto de teste não reflete o desempenho esperado
+                                                    em novos dados do mundo real.</li>																	
+                                            </ul>
+                                            <p class="lead mb-3 text-justify indent">Esse cuidado deve ser considerado para que a avaliação reflita de forma mais
+                                                fidedigna como o modelo se comportará no futuro ao lidar com novos dados,
+                                                conseguindo assim, mensurar a capacidade de generalização e identificando ao
+                                                mesmo tempo um possível <i>overfitting</i> (sobreajuste), que no caso seria equivalente a
+                                                “decorar” o conjunto de treino, que leva o classificador a um alto erro nos dados de
+                                                teste.</p>
+                                            <p class="lead mb-3 text-justify indent">Por fim, após treinar o modelo e executar o conjunto de teste, mensuramos a
+                                                qualidade das predições a partir dos rótulos já conhecidos. Para isso temos métricas
+                                                específicas para problemas de classificação.</p>
+                                        <h3 class="mb-0" id="uni9-2-1">9.2.1 Métricas para Classificação</h3>
+                                        <p class="lead mb-3 text-justify indent">Dentre as métricas a serem usadas, alguns pontos de atenção são importantes a
+                                            serem considerados. Primeiro, o objetivo da aplicação. Cada métrica tem como função
+                                            avaliar alguma qualidade ou defeito específico dos modelos, não existem métricas
+                                            universais. Assim, é necessário avaliar com base no objetivo da aplicação que está
+                                            sendo desenvolvida qual é o resultado esperado. Como por exemplo em um sistema
+                                            médico voltado a classificação de risco de pacientes que chegam ao pronto
+                                            atendimento em risco baixo e alto. Se o objetivo for fazer uma triagem automatizada
+                                            espera-se que o modelo acerte as classificações em geral, e também é preciso verificar
+                                            o desempenho por classe, para garantir que os pacientes de alto risco estão sendo
+                                            classificados corretamente, pois são os casos mais críticos. Caso o objetivo seja algo
+                                            parcialmente automatizado, de forma que um profissional de saúde irá receber uma
+                                            probabilidade de risco entre 0 e 1 e interpretar tal informação, já é preciso avaliar
+                                            não só se a classificação é correta, mas o quão precisa ela é, pois se em dois casos de
+                                            altíssimo risco um tiver probabilidade de 0,6 e o outro de 0,9, isso pode gerar
+                                            interpretações diferentes.</p>
+                                        <p class="lead mb-3 text-justify indent">Para interpretarmos as métricas, é necessário entender o contexto de
+                                            classificação
+                                            como
+                                            a
+                                            tentativa
+                                            de
+                                            classificar
+                                            corretamente
+                                            cada
+                                            classe
+                                            individualmente. Nesse contexto, usamos os termos "positivos" e "negativos" para se
+                                            referir a pertencente ou não pertencente à classe. Ao realizar a classificação, temos os
+                                            casos positivos classificados corretamente, chamados de Verdadeiros Positivos, e os
+                                            classificados erroneamente como negativos, chamados de Falsos Negativos. Da
+                                            mesma forma, temos os negativos classificados corretamente, chamados de
+                                            Verdadeiros Negativos, e os erroneamente classificados como positivos, chamados de
+                                            Falsos Positivos. Esses quatro valores formam a chamada matriz de confusão, a partir
+                                            da qual extraímos as métricas.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-49"><b>Figura 49</b> - Matriz de confusão e seus componentes</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 49.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">A partir das combinações dos quatro valores temos as principais métricas:</p>
+                                        <h4 class="mb-0" id="uni9-2-1-1">9.2.1.1 Acurácia</h4>
+                                        
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Equação</b>: <p class="formula text-center" >
+                                                <strong>ACURÁCIA</strong> = 
+                                                <span class="fraction">
+                                                    <span class="numerator">    TP + TN </span>
+                                                    <span class="denominator cursive">𝑇𝑃 + 𝑇𝑁 + 𝐹𝑃 + 𝐹𝑁</span>
+                                                </span>
+                                            </p></li>
+                                            <li><b>Definição</b>: Acurácia é a proporção de acertos com relação ao número de
+                                                respostas, sendo assim a métrica mais intuitiva pois nos entrega uma
+                                                medida do quanto o modelo acerta/erra.</li>
+                                            <li><b>Pontos positivos</b>:  
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li>Fácil compreensão</li>																		
+                                                </ul></li>
+                                            <li><b>Pontos negativos</b>:  
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li>Pode ser enganosa em conjuntos de dados desbalanceados, pois
+                                                        um modelo que prevê a classe majoritária para todos os
+                                                        exemplos ainda pode ter alta acurácia.</li>																		
+                                                </ul></li>													
+                                        </ul>
+                                        <h4 class="mb-0" id="uni9-2-1-2">9.2.1.2 Precisão</h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Equação</b>: <p class="formula text-center" >
+                                                <strong>PRECISÃO</strong> = 
+                                                <span class="fraction">
+                                                    <span class="numerator">    TP </span>
+                                                    <span class="denominator cursive">𝑇𝑃 + 𝐹𝑃 </span>
+                                                </span>
+                                            </p></li>
+                                            <li><b>Definição</b>: A precisão mede a proporção de instâncias corretamente
+                                                identificadas como positivas em relação ao total de instâncias previstas
+                                                como positivas. Ela indica o quanto as previsões positivas do modelo são
+                                                confiáveis.</li>
+                                            <li><b>Pontos positivos</b>:  
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li>Útil quando o custo de um falso positivo é alto.</li>	
+                                                    <li>Boa métrica quando se deseja minimizar alarmes falsos.</li>																		
+                                                </ul></li>																	
+                                            <li><b>Pontos negativos</b>:  
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li>Não considera os falsos negativos, o que pode ser problemático
+                                                        em casos onde a identificação de todos os positivos é crucial.</li>																		
+                                            </ul></li>																
+                                        </ul>
+                                        <h4 class="mb-0" id="uni9-2-1-3">9.2.1.3 <i>Recall</i></h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Equação</b>: <p class="formula text-center" >
+                                                <strong><i>Recall</i></strong> = 
+                                                <span class="fraction">
+                                                    <span class="numerator">    TP  </span>
+                                                    <span class="denominator cursive">𝑇𝑃 + 𝐹𝑁</span>
+                                                </span>
+                                            </p></li>
+                                            <li><b>Definição</b>: O <i>recall</i> (ou sensibilidade) mede a proporção de instâncias
+                                                positivas corretamente identificadas pelo modelo em relação ao total de
+                                                instâncias positivas reais. Ele indica a capacidade do modelo de detectar
+                                                todos os positivos.</li>
+                                                <li><b>Pontos positivos</b>:  
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li>Útil quando o custo de um falso negativo é alto.</li>	
+                                                        <li>Boa métrica quando se deseja capturar o máximo de positivos
+                                                            possível.</li>																		
+                                                    </ul></li>	
+                                                    <li><b>Pontos negativos</b>:  
+                                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                            <li>Pode levar a muitos falsos positivos se não for balanceado com
+                                                                precisão.</li>																		
+                                                    </ul></li>
+                                        </ul>
+                                        <h4 class="mb-0" id="uni9-2-1-4">9.2.1.4 <i>F1-score</i></h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Equação</b>: <p class="formula text-center" >
+                                                <strong>F1</strong> = 
+                                                2 ×
+                                                <span class="fraction">
+                                                    <span class="numerator"> Precisão × <i>Recall</i></span>
+                                                    <span class="denominator">Precisão + <i>Recall</i></span>
+                                                </span>
+                                            </p> </li>
+                                            <li><b>Definição</b>: O F1-Score é a média harmônica da precisão e do recall,
+                                                oferecendo um equilíbrio entre as duas métricas. Ele é
+                                                especialmente útil em situações onde é necessário um equilíbrio
+                                                entre precisão e <i>recall</i>.</li>
+                                                <li><b>Pontos positivos</b>:  
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li>Útil em cenários de classes desbalanceadas.</li>	
+                                                        <li>Balanceia os erros de falsos positivos e falsos negativos.</li>																		
+                                                    </ul></li>	
+                                                    <li><b>Pontos negativos</b>:  
+                                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                            <li>Pode ser difícil de interpretar isoladamente.</li>	
+                                                            <li>Não diferencia a importância relativa de precisão e <i>recall</i>.</li>																		
+                                                    </ul></li>
+                                        </ul>														
+                                        <h4 class="mb-0" id="uni9-2-1-5">9.2.1.5 Matriz de confusão</h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >																
+                                            <li><b>Definição</b>: A própria matriz de confusão pode ser usada como métrica, pois
+                                                mostra o desempenho do modelo de classificação ao exibir o
+                                                número de instâncias verdadeiras e falsas para cada classe. Ela
+                                                ajuda a entender onde o modelo está cometendo erros.</li>
+                                                <li><b>Pontos positivos</b>:  
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li>Proporciona uma visão detalhada do desempenho do modelo.</li>																																				
+                                                    </ul></li>	
+                                                    <li><b>Pontos negativos</b>:  
+                                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                            <li>Pode ser difícil de interpretar quando o número de classes é
+                                                                muito grande.</li>	
+                                                            <li>Não oferece uma métrica única de desempenho, exigindo cálculo
+                                                                de outras métricas para análise quantitativa.</li>																		
+                                                    </ul></li>
+                                        </ul>
+                                        <p style="padding-bottom: 3%;" class="lead mb-3 text-justify indent">Como podemos ver, nenhuma métrica é perfeita. As diferentes formas de
+                                            interpretar acertos e erros nos permitem avaliar a performance de um classificador
+                                            sob diferentes ângulos. Agora, vamos refletir sobre como essas métricas podem ser
+                                            aplicadas em diferentes problemas.</p>
+                                        <h4 class="mb-0" id="uni9-2-1-6">9.2.1.6 Acurácia em Detecção de Fraude</h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Problema</b>: Um banco quer identificar transações fraudulentas em tempo real.</li>
+                                            <li><b>Uso da Acurácia</b>: A acurácia pode ser usada como uma métrica geral para
+                                                avaliar o modelo se as classes de transações fraudulentas e não fraudulentas
+                                                estiverem balanceadas.</li>																
+                                            <li><b>Dificuldade</b>: Se 99% das transações são legítimas, um modelo com 99% de
+                                                acurácia pode parecer bom, mas pode estar ignorando completamente as
+                                                fraudes (1% dos casos). Nesse cenário, a acurácia sozinha pode ser enganosa.</li>
+                                            <li><b>Alternativas</b>:  
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li><b>Recall</b>: Para garantir que o modelo detecte a maioria das fraudes.</li>
+                                                    <li><b><i>F1-Score</i></b>: Para equilibrar a precisão (evitar falsos positivos) e <i>recall</i>
+                                                        (detectar fraudes).</li>																		
+                                                </ul></li>
+                                        </ul>
+                                        <h4 class="mb-0" id="uni9-2-1-7">9.2.1.7 Precisão em Diagnóstico Médico (Detecção de Câncer)</h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Problema</b>: Um sistema de apoio à decisão médica é usado para detectar câncer
+                                                em imagens de exames.</li>
+                                            <li><b>Uso da Precisão</b>: A precisão mede a proporção de diagnósticos corretos entre
+                                                os casos identificados como positivos. Alta precisão significa menos falsos
+                                                positivos.</li>
+                                            <li><b>Dificuldade</b>: A precisão sozinha não garante que todos os casos de câncer
+                                                sejam detectados.</li>
+                                                <li><b>Alternativas</b>:  
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li><b>Recall</b>: Para garantir que a maioria dos casos de câncer seja
+                                                            identificada.</li>
+                                                        <li><b><i>F1-Score</i></b>: Para equilibrar precisão e recall, maximizando a detecção de
+                                                            cânceres enquanto minimiza falsos positivos.</li>																		
+                                                    </ul></li>																
+                                        </ul>
+                                        <h4 class="mb-0" id="uni9-2-1-8">9.2.1.8 <i>F1-Score</i> em Detecção de Spam</h4>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Problema</b>: Um sistema de e-mail precisa classificar mensagens como spam ou
+                                                não-spam.</li>
+                                            <li><b>Uso do <i>F1-Score</i></b>: O F1-score equilibra precisão e recall, sendo útil para lidar
+                                                com o trade-off entre capturar a maioria dos spams e evitar falsos positivos
+                                                (e-mails legítimos marcados como spam).</li>
+                                            <li><b>Dificuldade</b>: <i>F1-Score</i> pode ser difícil de interpretar isoladamente e não
+                                                considera a distribuição das classes.</li>
+                                                <li><b>Alternativas</b>:  
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0; margin-bottom: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li><b>Matriz de Confusão</b>: Para entender a distribuição dos erros (falsos
+                                                            positivos e falsos negativos) e ajustar o modelo de acordo.</li>																																			
+                                                    </ul></li>																
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Alguns problemas exigem interpretações mais complexas para a avaliação de
+                                            classificadores, indo além de apenas interpretar acertos e erros, mas também avaliando a qualidade da classificação. Uma das alternativas mais comuns para isso é
+                                            o uso da Curva Receiver Operating Characteristic (ROC).</p>
+                                        <h4 class="mb-0" id="uni9-2-1-9">9.2.1.9 Curva ROC</h4>
+                                        <p class="lead mb-3 text-justify indent">A maioria dos classificadores realiza as classificações utilizando valores reais,
+                                            de forma que um novo objeto pode ser classificado, por exemplo, como sendo 0,7
+                                            "gato". Essas respostas são posteriormente convertidas para classes a fim de calcular
+                                            métricas clássicas como Acurácia e Precisão, resultando em acertos e erros. No
+                                            entanto, ao analisarmos mais a fundo a qualidade da classificação, podemos
+                                            considerar que, se o objeto é um gato, ele deveria ser classificado como 0,9999... "gato"
+                                            e não apenas 0,7 "gato". Esse tipo de interpretação é comum em problemas chamados
+                                            binários, onde há apenas duas classes, normalmente encaradas como positivo e
+                                            negativo, ou presença e ausência. Alguns problemas já discutidos na unidade são
+                                            binários, como diagnóstico médico, identificação de spam e detecção de fraude. Por
+                                            outro lado, o problema das flores Íris é um problema multiclasse, onde temos três
+                                            classes diferentes, e uma métrica como a acurácia, por exemplo, precisa ser calculada
+                                            por classe para, então, termos uma média geral entre todas as classes.</p>
+                                        <p class="lead mb-3 text-justify indent">Voltando aos problemas binários, podemos interpretar a saída numérica dos
+                                            classificadores e medir a qualidade a partir da Curva ROC. A Curva ROC mensura a
+                                            taxa de Verdadeiros Positivos (Recall) junto da taxa de Falsos Positivos (1 -
+                                            Especificidade, outra métrica calculada a partir da matriz de confusão) a partir de
+                                            diferentes limiares de interpretação das classes. É como se considerássemos que,
+                                            acima de 0,1, é "gato", depois acima de 0,2, é "gato", acima de 0,3, é "gato", e assim por
+                                            diante. Calculando as taxas em diferentes limiares, obtemos diferentes interpretações
+                                            do classificador e, por fim, desenhamos uma curva com esses valores. Ao observar a
+                                            curva, podemos visualizar a qualidade geral do classificador, tendo como referência
+                                            um classificador aleatório (que acerta 50% das vezes) e um classificador perfeito, que
+                                            formaria uma curva cobrindo toda a área do gráfico. Na figura a seguir, podemos
+                                            visualizar três exemplos de classificadores e suas Curvas ROC. Quanto mais alta a
+                                            curva, maior a área e, portanto, melhor o classificador.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-50"><b>Figura 50</b> - Exemplos de Curva ROC de diferentes classificadores</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 50.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Wikipedi, 2023.</small></p>
+                                            </div>
+                                            <p class="lead mb-3 text-justify indent">Como a Curva ROC pode ser complexa de interpretar, uma alternativa é
+                                                calcular a Área Sob a Curva (AUC - <i>Area Under the Curve</i>). Dessa forma, podemos
+                                                resumir toda a curva em um único valor entre 0 e 1 que sintetiza a qualidade do
+                                                classificador.</p>
+                                        <h2 class="mb-0" id="uni9-3">9.3 Classificadores Modernos</h2>
+                                        <p class="lead mb-3 text-justify indent">Com o tempo muitos classificadores, como os listados no início da unidade,
+                                            foram propostos a fim de maximizar as métricas que discutimos anteriormente.
+                                            Dentre estes os que mais obtiveram sucesso em problemas complexos foram os
+                                            classificadores baseados em <i>Ensembles</i> que usam de Árvores de Decisão. O conceito
+                                            de Ensemble refere-se à combinação de vários classificadores individuais para formar
+                                            um modelo mais robusto e preciso. A ideia principal por trás dos <i>ensembles</i> é que a
+                                            combinação de vários modelos "fracos" pode resultar em um modelo "forte". Os
+                                            métodos de ensemble, como <i>Bagging</i> e <i>Boosting</i>, têm sido amplamente utilizados para
+                                            melhorar o desempenho em tarefas de classificação. Enquanto isso, uma Árvore de
+                                            Decisão realiza a classificação por meio de uma estrutura hierárquica, onde cada "nó"
+                                            da árvore representa uma condição sobre as <i>features</i> (características) dos dados, e cada "ramo" representa o resultado de um teste sobre essa condição, conduzindo a
+                                            decisões finais ou previsões nos "nós folha". Como na figura a seguir onde podemos
+                                            ver um exemplo de Árvore de Decisão para decidir entre ir em um compromisso ou
+                                            não.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-51"><b>Figura 51</b> - Exemplo de uma árvore de decisão sobre o problema de decidir sair de
+                                                casa ou não</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 51.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                            </div>
+                                            <p class="lead mb-3 text-justify indent">Dentre os classificadores que combinam Ensemble e Árvores de Decisão
+                                                podemos destacar o <i>Extreme Gradient Boosting</i> (XGBoost) e <i>Light Gradient Boosting
+                                                    Machine</i> (LightGBM):</p>
+                                        <h3 class="mb-0" id="uni9-3-1">9.3.1 XGBoost</h3>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Arquitetura</b>: XGBoost é um algoritmo baseado em <i>Gradient Boosting</i> que
+                                                implementa técnicas como regularização para evitar <i>overfitting</i> (sobreajuste),
+                                                além de outras otimizações como paralelização e uso de histogramas para
+                                                acelerar sua execução.</li>
+                                            <li><b>Desempenho</b>: XGBoost é conhecido por seu alto desempenho em termos de
+                                                precisão e velocidade, sendo capaz de lidar com grandes conjuntos de dados e
+                                                modelos complexos.</li>
+                                            <li><b>Aplicações</b>: É amplamente utilizado em diversas áreas, desde previsão de risco
+                                                de crédito até diagnóstico médico, onde a maximização de métricas como
+                                                <i>F1-score</i> e AUC-ROC é crucial.</li>																
+                                        </ul>
+                                        <h3 class="mb-0" id="uni9-3-2">9.3.2 LightGBM</h3>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Arquitetura</b>: LightGBM é outro algoritmo de <i>Gradient Boosting</i>, mas com foco
+                                                em maior eficiência. Ele utiliza técnicas como o algoritmo de aprendizado
+                                                baseado em folhas (<i>leaf-wise</i>), que cresce as árvores de decisão de maneira
+                                                mais eficiente em termos de memória e tempo de computação.</li>
+                                            <li><b>Desempenho</b>: LightGBM é particularmente rápido em treinar modelos em
+                                                grandes volumes de dados e pode lidar melhor com características de alta
+                                                dimensão e dados esparsos.</li>
+                                            <li><b>Aplicações</b>: LightGBM é usado em muitos problemas industriais, incluindo
+                                                classificação de texto, recomendação de produtos e detecção de fraudes, onde a
+                                                precisão e a velocidade são críticas.</li>																
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">XGBoost e LightGBM são algoritmos altamente eficazes em evitar o overfitting
+                                            (sobreajuste), graças ao uso de técnicas de regularização e otimização que melhoram
+                                            a capacidade de generalização dos modelos. Eles são otimizados para alta
+                                            performance, utilizando paralelização e métodos de processamento eficientes, o que
+                                            permite o treinamento em grandes conjuntos de dados de maneira relativamente
+                                            rápida. Além disso, esses algoritmos são extremamente flexíveis e escaláveis,
+                                            suportando diferentes tipos de dados e permitindo ajustes finos nos parâmetros do
+                                            modelo para alcançar o melhor desempenho possível em métricas como acurácia,
+                                            F1-score e AUC-ROC. Outra vantagem significativa é a capacidade de lidar com dados
+                                            desbalanceados, graças a opções internas para ajustar pesos de classe e métricas
+                                            específicas, permitindo que XGBoost e LightGBM encontrem o equilíbrio ideal entre
+                                            precisão e <i>recall</i>.</p>
+                                        <p class="lead mb-3 text-justify indent">Outro ponto relevante de ambos os classificadores é a capacidade de equilibrar
+                                            viés e variância, abordando de forma eficiente esse dilema clássico do Aprendizado
+                                            de Máquina. O desafio de encontrar o equilíbrio ideal entre viés e variância é
+                                            fundamental para o desenvolvimento de modelos eficazes e robustos. Esses dois
+                                            conceitos estão diretamente ligados ao desempenho de um modelo em termos de sua capacidade de generalização para dados novos e não vistos. Na figura a seguir temos
+                                            uma ilustração do efeito de ambos os conceitos.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-52"><b>Figura 52</b> - Ilustração do efeito do Viés e Variância</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 52.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                            </div>
+                                            <p class="lead mb-3 text-justify indent">Viés: Refere-se à diferença entre as previsões médias de um modelo e os
+                                                valores reais que ele está tentando prever. Um modelo com alto viés tende a fazer
+                                                suposições fortes e simplistas sobre os dados, o que pode levar a subajuste
+                                                (<i>underfitting</i>), onde o modelo é incapaz de capturar a complexidade dos dados de
+                                                treinamento, resultando em baixa performance tanto nos dados de treinamento
+                                                quanto nos dados de teste.</p>
+                                            <p class="lead mb-3 text-justify indent">Variância: Refere-se à sensibilidade do modelo às variações nos dados de
+                                                treinamento. Um modelo com alta variância tende a se ajustar muito de perto aos
+                                                dados de treinamento, capturando até mesmo o ruído presente, o que leva a um
+                                                superajuste (<i>overfitting</i>). Embora o modelo apresente alta performance nos dados de
+                                                treinamento, ele falha ao generalizar para novos dados, resultando em desempenho
+                                                inconsistente nos dados de teste.</p>
+                                        <h2 class="mb-0" id="uni9-4">9.4 <i>Notebook Colab</i></h2>
+                                        <p class="lead mb-3 text-justify indent">No notebook a seguir iremos praticar os conceitos estudados na unidade ao
+                                            estudar e solucionar um problema de classificação de vinhos através das suas
+                                            características químicas.</p>
+                                            <div class="box">
+                                                <div class="lead mb-3 text-center"><a href="https://colab.research.google.com/drive/13kaBaoI_3tjaB3DsrlON6_K_rG_AkIwK">https://colab.research.google.com/drive/13kaBaoI_3tjaB3DsrlON6_K_rG_AkIwK</a></div>
+                                            </div>
+                                            <p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+                                            <div class="box2">
+                                                <h3 class="mb-0" id="1-saiba-mais">Saiba mais…</h3>
+                                                <p class="lead mb-3 text-justify">k-nn - <a href="https://youtu.be/HVXime0nQeI?si=zRbX-4XwNUouNy9h">https://youtu.be/HVXime0nQeI?si=zRbX-4XwNUouNy9h</a></p>
+                                                <p class="lead mb-3 text-justify">Árvores de decisão - <a href="https://www.youtube.com/watch?v=_L39rN6gz7Y">https://www.youtube.com/watch?v=_L39rN6gz7Y</a></p>
+                                                <p class="lead mb-3 text-justify">Florestas aleatórias - <a href="https://www.youtube.com/watch?v=J4Wdy0Wc_xQ">https://www.youtube.com/watch?v=J4Wdy0Wc_xQ</a></p>	
+                                                <p class="lead mb-3 text-justify">Regressão Logística - <a href="https://www.youtube.com/watch?v=yIYKR4sgzI8">https://www.youtube.com/watch?v=yIYKR4sgzI8</a></p>
+                                                <p class="lead mb-3 text-justify">SVM - <a href="https://www.youtube.com/watch?v=efR1C6CvhmE&feature=youtu.be">https://www.youtube.com/watch?v=efR1C6CvhmE&feature=youtu.be</a></p>
+                                                <p class="lead mb-3 text-justify">ROC e AUC - <a href="https://youtu.be/4jRBRDbJemM?si=HFvY9Ish7trA8Ww1">https://youtu.be/4jRBRDbJemM?si=HFvY9Ish7trA8Ww1</a></p>
+                                                <p class="lead mb-3 text-justify">Matriz de Confusão - <a href="https://www.youtube.com/watch?v=Kdsp6soqA7o">https://www.youtube.com/watch?v=Kdsp6soqA7o</a></p>
+                                                <p class="lead mb-3 text-justify">Métricas - <a href="https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62">https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62</a></p>
+                                            </div>
+                                            <p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+                                            <div class="box2">
+                                                    <h3 class="mb-0" id="1-saiba-mais">Para relembrar…</h3>
+                                                    <p class="lead mb-3 text-justify">Classificação:</p>
+                                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                            <li>Tarefa fundamental em aprendizagem de máquina</li>
+                                                            <li>Atribui categorias ou rótulos a dados de entrada</li>
+                                                            <li>Ampla aplicabilidade em medicina, finanças, marketing e segurança</li>
+                                                        </ul>																		
+                                                    <p class="lead mb-3 text-justify">Aplicações:</p>
+                                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                            <li>Diagnóstico de doenças</li>
+                                                            <li>Detecção de fraudes bancárias</li>
+                                                            <li>Análise de sentimentos</li>
+                                                            <li>Reconhecimento de imagens</li>
+                                                        </ul>
+                                                    <p class="lead mb-3 text-justify indent">Métricas de avaliação:</p>
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li>Precisão: proporção de previsões positivas corretas</li>
+                                                        <li><i>Recall</i> (sensibilidade): proporção de instâncias positivas identificadas
+                                                            corretamente</li>
+                                                        <li><i>F1-score</i>: média harmônica entre precisão e <i>recall</i></li>
+                                                        <li>Matriz de confusão: visão detalhada do desempenho do modelo</li>																			
+                                                    </ul>
+                                                    <p class="lead mb-3 text-justify indent">Algoritmos básicos:</p>
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li>k-NN (Vizinhos mais próximos)</li>
+                                                        <li>Árvores de Decisão</li>
+                                                        <li>Florestas Aleatórias</li>
+                                                        <li>Regressão Logística</li>
+                                                        <li>SVM</li>
+                                                    </ul>
+                                                    <p class="lead mb-3 text-justify indent">Curva ROC e AUC:</p>
+                                                    <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                        <li>ROC: representa o desempenho do modelo em diferentes limiares</li>
+                                                        <li>AUC: área sob a curva ROC, medida agregada de desempenho</li>
+                                                        <li>AUC de 1,0 indica classificador perfeito, 0,5 indica classificador
+                                                            aleatório</li>
+                                                        <li>Úteis para comparar modelos e selecionar limiares ótimos,
+                                                            especialmente com classes desbalanceadas</li>																			
+                                                    </ul>
+                                            </div>
+                                                
+									
+								</section>
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni9">Unidade IX - Classificação</a></li>
+											<ul>
+												<li><a href="#uni9-1">9.1 Classificadores</a></li>
+												<li><a href="#uni9-2">9.2 Avaliação de Classificadores</a></li>
+												<li><a href="#uni9-3">9.3 Classificadores Modernos</a></li>
+												<li><a href="#uni9-4">9.4 <i>Notebook Colab</i></a></li>
+											</ul>
+										
+							
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

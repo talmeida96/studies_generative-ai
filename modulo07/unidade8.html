@@ -1,0 +1,725 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade VIII - Regressão</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+								
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+									
+								        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="uni8">
+									<header class="main">
+										<div class="w-100">
+											<h1 class="mb-0" id="uni8">Unidade VIII - Regressão</i></h1>
+										</div></header>
+										
+                                        <p class="lead mb-3 text-justify indent">A regressão, no contexto do ML, constitui uma técnica estatística fundamental
+                                            para modelar a relação entre uma variável dependente contínua e uma ou mais
+                                            variáveis independentes. Variável dependente contínua é aquela que estamos
+                                            tentando prever ou explicar e que pode assumir qualquer valor numérico dentro de
+                                            um intervalo. Ela é "dependente" porque seu valor é influenciado pelos valores de
+                                            outras variáveis. Variáveis independentes são aquelas que utilizamos para prever o
+                                            valor da variável dependente. Elas são chamadas de "independentes" porque,
+                                            teoricamente, seus valores não são influenciados por outras variáveis no modelo. Um
+                                            exemplo prático seria na previsão de consumo de energia em que a variável
+                                            dependente contínua seria o consumo de energia em kWh (um valor numérico). As
+                                            variáveis independentes poderiam ser: temperatura externa, número de pessoas na
+                                            residência, hora do dia, etc. A variável dependente é o "efeito" que queremos explicar.
+                                            As variáveis independentes são as "causas" que influenciam o efeito.</p>
+                                        <p class="lead mb-3 text-justify indent">Essa metodologia, amplamente utilizada em diversas áreas do conhecimento,
+                                            permite realizar previsões quantitativas com base em padrões identificados nos
+                                            dados. Ao ajustar um modelo de regressão a um conjunto de dados, os cientistas de
+                                            dados podem estimar o valor da variável dependente para novos conjuntos de dados,
+                                            o que é de grande valor para tomada de decisões em diversos setores, como
+                                            economia, finanças, indústria e <i>marketing</i>.</p>
+                                        <p class="lead mb-3 text-justify indent">A escolha do modelo de regressão mais adequado depende das características
+                                            dos dados e do problema a ser resolvido. Existem diversos tipos de regressão, cada
+                                            um com suas particularidades e aplicações. A regressão linear, por exemplo, é a mais
+                                            simples e amplamente utilizada, modelando a relação entre as variáveis através de
+                                            uma equação linear. Já a regressão polinomial permite modelar relações não lineares,
+                                            enquanto a regressão logística é utilizada para problemas de classificação, onde a
+                                            variável dependente é binária.</p>
+                                        <p class="lead mb-3 text-justify indent">A importância da regressão no ML reside na sua capacidade de extrair
+                                            informações valiosas a partir de dados complexos. Ao identificar as relações entre as
+                                            variáveis, os modelos de regressão podem ser utilizados para entender os fatores que
+                                            influenciam um determinado fenômeno, otimizar processos, tomar decisões mais precisas e gerar novas hipóteses para pesquisa. Além disso, a regressão é uma técnica
+                                            fundamental para outras técnicas de ML, como a árvore de decisão e a floresta
+                                            aleatória.</p>
+                                        <p class="lead mb-3 text-justify indent">Enquanto a regressão foca na predição de variáveis contínuas, como preços,
+                                            temperaturas ou índices, a classificação é empregada para atribuir instâncias a
+                                            categorias discretas. Por exemplo, determinar se um e-mail é <i>spam</i> ou não é um
+                                            problema de classificação binária. Já prever a temperatura máxima para o próximo
+                                            dia é um problema típico de regressão. A distinção entre esses dois tipos de
+                                            problemas é crucial, pois os métodos e métricas de avaliação são distintos e a escolha
+                                            do modelo adequado depende dessa compreensão.</p>
+                                        <p class="lead mb-3 text-justify indent"><p class="lead mb-3 text-justify indent"> </p></p>
+                                        
+                                        <h2 class="mb-0" id="uni8-1">8.1 Métricas de Avaliação</h2>
+                                        <h3 class="mb-0" id="uni8-1-1">8.1.1 Coeficiente de Determinação R<sup>2</sup></h3>
+                                        <p class="lead mb-3 text-justify indent">O coeficiente de determinação mede a proporção da variabilidade da variável
+                                            dependente que é explicada pelas variáveis independentes no modelo. Os valores
+                                            obtidos dessa métrica variam entre 0 e 1. Um valor de 1 indica que o modelo explica
+                                            toda a variância dos dados, enquanto um valor de 0 indica que o modelo não explica
+                                            nenhuma variância. O Coeficiente de Determinação, R<sup>2</sup>, é calculado como:</p>
+                                            <p class="text-center">
+                                                <span style="font-size: 1.5em;">\( R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y_i})^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2} \)</span>
+                                            </p>
+                                            
+                                                                                                        
+                                            <p class="lead mb-3 text-justify indent">onde:</p>	
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>\( y_i \) são os valores reais,</li>
+                                                <li>\( \hat{y}_i \) são os valores preditos pelo modelo,</li>
+                                                <li>\( \bar{y} \) é a média dos valores reais,</li>
+                                        
+                                                <li><span>\( \sum\limits_{i=1}^{n} (y_i - \hat{y_i})^2 \)</span> é a Soma dos Quadrados dos Resíduos (SSR),
+                                                </li>
+                                                <li> <span>\( \sum\limits_{i=1}^{n} (y_i - \bar{y})^2 \)</span>
+                                                     é a Soma Total dos Quadrados (SST).</li>
+                                            </ul>
+                                            <p class="lead mb-3 text-justify indent">O valor de R<sup>2</sup> varia entre 0 e 1:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>R<sup>2</sup> = 0  indica que o modelo não explica nenhuma variação nos dados.</li>
+                                                <li>R<sup>2</sup> = 1  indica que o modelo explica toda a variação nos dados.</li>																
+                                            </ul>
+                                            <p class="lead mb-3 text-justify indent">De forma facilitar a compreensão, a figura abaixo ilustra a aplicação das
+                                                parcelas SSR e SST.</p>
+                                            <p class="lead mb-3 text-justify indent"><b>Variabilidade
+                                                Não
+                                                Explicada
+                                                (SSR):</b>
+                                                As
+                                                linhas
+                                                pontilhadas
+                                                laranja
+                                                representam os erros do modelo, ou seja, a diferença entre o valor real (ponto em
+                                                azul) e sua projeção ao modelo (linha vermelha). Quanto menores forem essas linhas,
+                                                melhor o modelo se ajusta aos dados.</p>
+                                            <p class="lead mb-3 text-justify indent"><b>Variabilidade Total (SST):</b> A linha horizontal verde representa a média dos
+                                                dados. A distância entre os pontos e a linha representa a variabilidade total dos
+                                                dados. O primeiro gráfico mostra a variabilidade que o modelo não consegue
+                                                explicar.</p>
+                                            <p class="lead mb-3 text-justify indent">Quanto menor a distância entre os pontos e a linha de regressão, melhor o
+                                                modelo se ajusta aos dados. O segundo gráfico mostra a variabilidade total dos dados.
+                                                Comparando os dois gráficos, pode-se ter uma ideia de quanto da variabilidade total
+                                                está sendo explicada pelo modelo.</p>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-35"><b>Figura 35</b> - Exemplo R<sup>2</sup></p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 35.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Elaborado pelo autor e disponível no <i>Google colab</i>.</small></p>
+                                            </div>
+                                        <h3 class="mb-0" id="uni8-1-2">8.1.2 Erro Quadrático Médio (MSE)</h3>
+                                        <p class="lead mb-3 text-justify indent">O Erro Quadrático Médio, <i>Mean Squared Error</i> (MSE) é uma métrica utilizada para avaliar a performance de um modelo de regressão. Ele calcula a média dos
+                                            quadrados das diferenças entre os valores observados (reais) e os valores preditos
+                                            pelo modelo. O MSE é definido como:</p>
+                                            <p class="formula text-center" >
+                                                <strong>MSE</strong> = 
+                                                <span class="fraction">
+                                                    <span class="numerator">1</span>
+                                                    <span class="denominator cursive">n</span>
+                                                </span>
+                                                <span class="summation">
+                                                    <sup class="cursive">n</sup>
+                                                    &sum;
+                                                    <sub class="cursive">i=1</sub>
+                                                </span>
+                                                (<span class="cursive">y<small>i</small></span> - <span class="cursive">&#x0177<small>i</small></span>)²
+                                            </p>															
+                                            <p class="lead mb-3 text-justify indent">onde:</p>	
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>y<sub>i</sub> são os valores reais,</li>
+                                                <li>ŷ<sub>i</sub> são os valores preditos pelo modelo,</li>
+                                                <li>n é o número de observações.</li>															
+                                            </ul>
+                                        <p class="lead mb-3 text-justify indent">O MSE penaliza erros grandes mais severamente do que erros pequenos
+                                            devido ao uso do quadrado das diferenças. Um MSE menor indica um modelo com
+                                            melhor performance, enquanto um MSE maior indica um modelo com pior
+                                            performance. De forma facilitar a compreensão, a figura abaixo ilustra o MSE. 1. No
+                                            primeiro gráfico (Resíduos ao Quadrado), tem-se:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>Os pontos azuis representam os dados reais.</li>
+                                                <li>A linha vermelha representa a linha de regressão ajustada pelo modelo.</li>
+                                                <li>As linhas tracejadas laranja e os pontos laranja representam <b>os erros
+                                                    individuais ao quadrado</b>, mostrando as diferenças entre os valores
+                                                    observados e preditos.</li>																
+                                            </ul>
+                                            <p class="lead mb-3 text-justify indent">No segundo gráfico da figura abaixo (MSE), tem-se:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>Os pontos azuis representam os dados reais.</li>
+                                                <li>A linha vermelha representa a linha de regressão ajustada pelo modelo.</li>
+                                                <li>A linha tracejada roxa horizontal representa o MSE, que é a média dos
+                                                    resíduos ao quadrado.</li>																
+                                            </ul>
+                                            <p class="lead mb-3 text-center indent" id="link-figura-36"><b>Figura 36</b> - Exemplo MSE</p>
+                                            <div>
+                                                <span class="image fit"><img src="images/Figura 36.png" alt="" /></span>
+                                                <p class="lead mb-2 text-center"><small> Fonte: Elaborado pelo autor e disponível no <i>Google colab</i>.</small></p>
+                                            </div>
+                                        <h3 class="mb-0" id="uni8-1-3"><h3 class="mb-0" id="uni8-1-3">8.1.3 Erro Absoluto Médio (MAE)</h3>
+                                        <p class="lead mb-3 text-justify indent">O MAE mede a magnitude média dos erros em um conjunto de previsões, sem
+                                            considerar sua direção. É uma métrica linear, o que significa que todos os erros são
+                                            ponderados igualmente. Quanto menor o MAE, melhor o modelo. Penaliza de forma
+                                            linear todos os erros.</p>
+                                        <p class="lead mb-3 text-justify indent">O <i>Mean Absolute Error</i> (MAE) é definido como:</p>
+                                        <p class="formula text-center"><span style="font-size: 1.5em;">\( MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y_i}|\)</span>
+                                            </p>													
+                                        
+                                        <p class="lead mb-3 text-justify indent">onde:</p>	
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>\( y_i \) são os valores reais,</li>
+                                                <li>\( \hat{y}_i \) são os valores preditos pelo modelo,</li>
+                                                <li>\( n \) é o número de observações.</li>														
+                                            </ul>
+                                        <p class="lead mb-3 text-justify indent">De forma facilitar a compreensão, a figura abaixo ilustra o MAE. No primeiro
+                                            gráfico (Erros Absolutos Individuais) tem-se:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>Os pontos azuis representam os dados reais.</li>
+                                                <li>A linha vermelha representa a linha de regressão ajustada pelo modelo.</li>
+                                                <li>As linhas tracejadas laranja e os pontos laranja representam os <b>erros
+                                                    absolutos individuais</b>, ou seja, as diferenças absolutas entre os valores
+                                                    observados e os valores preditos.</li>																
+                                            </ul>
+                                        <p class="lead mb-3 text-justify indent">No segundo gráfico (MAE) tem-se:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>Os pontos azuis representam os dados reais.</li>
+                                            <li>A linha vermelha representa a linha de regressão ajustada pelo modelo.</li>
+                                            <li>A linha tracejada roxa horizontal representa o valor do MAE, que é a média
+                                                dos erros absolutos.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-37"><b>Figura 37</b> - Exemplo MAE</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 37.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Elaborado pelo autor e disponível no <i>Google colab</i>.</small></p>
+                                        </div>
+                                        <h3 class="mb-0" id="uni8-1-4"><h3 class="mb-0" id="uni8-1-4">8.1.4 Raiz do Erro Quadrático Médio (RMSE)<sup>2</sup></h3>
+                                        <p class="lead mb-3 text-justify indent">A raiz quadrada do MSE, traz a medida de erro para a mesma escala da
+                                            variável dependente. Quanto menor o RMSE, melhor o modelo. Ela possui a mesma
+                                            unidade dos dados originais e penaliza mais os erros grandes.</p>
+                                        <p class="lead mb-3 text-justify indent">O <i>Root Mean Squared Error</i> (RMSE) é definido como:</p>
+                                        <p class="formula text-center" >
+                                            <strong>RMSE</strong> = 
+                                            <span>&#8730;</span>															
+                                            <span class="fraction">
+                                                <span class="numerator"> 1</span>
+                                                <span class="denominator cursive">n</span>
+                                            </span>
+                                            <span class="summation">
+                                                <sup class="cursive">n</sup>
+                                                &sum;
+                                                <sub class="cursive">i=1</sub>
+                                            </span>
+                                            (<span class="cursive">y<small>i</small></span> - <span class="cursive">&#x0177<small>i</small></span>)²
+                                        
+                                        </p>														
+                                        <p class="lead mb-3 text-justify indent">onde:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>y<sub>i</sub> são os valores reais,</li>
+                                            <li>ŷ<sub>i</sub> são os valores preditos pelo modelo,</li>
+                                            <li>n é o número de observações.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">O RMSE penaliza mais severamente grandes erros devido ao uso do quadrado
+                                            das diferenças, similar ao MSE, mas retorna os erros na mesma unidade dos valores
+                                            observados.</p>
+                                        <p class="lead mb-3 text-justify indent">De forma facilitar a compreensão, a figura abaixo ilustra o MAE. No primeiro
+                                            gráfico (Quadrados dos Resíduos Individuais) tem-se:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>Os pontos azuis representam os dados reais.</li>
+                                            <li>A linha vermelha representa a linha de regressão ajustada pelo modelo.</li>
+                                            <li>As linhas tracejadas laranja e os pontos laranja representam os quadrados dos
+                                                resíduos individuais, ou seja, as diferenças ao quadrado entre os valores
+                                                observados e os valores preditos.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">No segundo gráfico (RMSE), tem-se:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>Os pontos azuis representam os dados reais.</li>
+                                            <li>A linha vermelha representa a linha de regressão ajustada pelo modelo.</li>
+                                            <li>A linha tracejada roxa horizontal representa o valor do RMSE, que é a raiz
+                                                quadrada da média dos resíduos ao quadrado.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-38"><b>Figura 38</b> - Exemplo RMSE</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 38.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Gerado pelo autor e disponível no <i>Google colab</i>.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">No Quadro 2 abaixo é apresentado um resumo das vantagens e desvantagens
+                                            das métricas acima explicadas. Há também a fórmula para cada uma na qual:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>y<sub>i</sub> são os valores reais,</li>
+                                            <li>ŷ<sub>i</sub> são os valores preditos pelo modelo,</li>
+                                            <li>n é o número de observações.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-center indent" id="link-quadro-2"><b>Quadro 2</b> - Comparativo entre as métricas abordadas resume essa seção</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Quadro 2.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: autoria própria.</small></p>
+                                        </div>
+                                        <h2 class="mb-0" id="uni8-2">8.2 Tipos de Regressão</h2>
+                                        <p class="lead mb-3 text-justify indent">A análise de regressão é uma técnica estatística fundamental utilizada para
+                                            modelar a relação entre uma variável dependente e uma ou mais variáveis
+                                            independentes. Existem vários tipos de modelos de regressão, cada um com suas
+                                            características e aplicações específicas, algumas serão apresentadas nas próximas
+                                            subseções.</p>
+                                        <h3 class="mb-0" id="uni8-2-1"><h3 class="mb-0" id="uni8-2-1">8.2.1 Regressão Linear</h3>
+                                        <p class="lead mb-3 text-justify indent">Simples e múltipla, modela a relação linear entre variáveis. É o ponto de
+                                            partida para muitos estudos de regressão. A regressão linear é um método estatístico
+                                            para modelar a relação entre uma variável dependente e uma ou mais variáveis
+                                            independentes assumindo uma relação linear. A regressão linear simples assume a
+                                            seguinte fórmula:</p>
+                                        <p class="lead mb-3 text-justify indent">y = &beta;<sub>0</sub> + &beta;<sub>1</sub>X + &epsilon;</p>
+                                        <p class="lead mb-3 text-justify indent">onde:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>y é a variável dependente.</li>
+                                            <li>X é a variável independente.</li>
+                                            <li>&beta;<sub>0</sub> é o intercepto (valor de y quando X = 0).</li>
+                                            <li>&beta;<sub>1</sub>é o coeficiente de inclinação (quanto y
+                                                mudança em
+                                                
+                                                quando
+                                                muda com uma unidade de mudança em X
+                                                ).</li>
+                                            <li>&epsilon; é o termo de erro (a diferença entre os valores observados e os valores
+                                                preditos).</li>
+                                        </ul>
+                                        <h3 class="mb-0" id="uni8-2-2"><h3 class="mb-0" id="uni8-2-2">8.2.2 Regressão Ridge, Lasso e Elastic Net</h3>
+                                        <p class="lead mb-3 text-justify indent">A regressão linear é uma ferramenta poderosa para modelar relações entre
+                                            variáveis. No entanto, quando lidamos com um grande número de preditores ou
+                                            quando estes estão altamente correlacionados (multicolinearidade), o modelo pode se
+                                            tornar instável e sobreajustar aos dados de treinamento, generalizando mal para
+                                            novos dados. Para mitigar esses problemas, foram desenvolvidas técnicas de
+                                            regularização, como Ridge, Lasso e Elastic Net.</p>
+                                        <p class="lead mb-3 text-justify indent">Regressão Ridge (L2):</p>
+                                        <p class="lead mb-3 text-justify indent">A Regressão Ridge utiliza a regularização L2. Ela adiciona um termo de
+                                            penalidade baseado na norma L2 dos coeficientes à função de custo da regressão
+                                            linear. Essa penalização faz com que o novo modelo não obtenha os melhores
+                                            resultados no conjunto de treino, porém visa-se melhor desempenho no conjunto de
+                                            teste. Sua fórmula:</p>
+                                        <p class="lead mb-3 text-justify indent">min(‖y - Xβ‖² + λ‖β‖²)</p>
+                                        <p class="lead mb-3 text-justify indent">Onde:</p>														
+                                        <ul style="margin-left: 1cm; list-style-type: disc;" class="alt3 lead mb-3 text-justify indent">
+                                            <li>y é o vetor de variáveis dependentes</li>
+                                            <li>X é a matriz de variáveis independentes</li>
+                                            <li>β é o vetor de coeficientes</li>
+                                            <li>λ é o parâmetro de regularização</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">ou ainda:</p>
+                                        <p class="lead mb-3 text-justify indent">‖y - Xβ‖²: Esta parte é também conhecida como SSR que foi apresentada junto
+                                            com a métrica R<sup>2</sup>, na qual:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>y representa os valores observados;</li>
+                                            <li>Xβ representa os valores previstos pelo modelo;</li>
+                                            <li>A diferença (y - Xβ) representa os resíduos;</li>
+                                            <li>Ao elevar ao quadrado (‖...‖²), obtemos a soma dos quadrados desses resíduos.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">λ‖β‖²: Esta é a parte da regularização L2 (Ridge), onde:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>‖β‖² é a norma L2 ao quadrado dos coeficientes β;</li>
+                                            <li>λ (lambda) é o parâmetro de regularização que controla a força da penalidade.</li>
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Algumas observações adicionais:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >															
+                                            <li>O termo RSS (‖y - Xβ‖²) garante que o modelo se ajuste bem aos dados de
+                                                treinamento</li>
+                                            <li>O termo de regularização L2 (λ‖β‖²) penaliza coeficientes grandes, incentivando
+                                                o modelo a usar coeficientes menores e mais estáveis.</li>
+                                            <li>O parâmetro λ controla o equilíbrio entre estes dois objetivos. Um λ maior dá
+                                                mais peso à regularização, enquanto um λ menor prioriza o ajuste aos dados.</li>
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Como principais características da regressão Ridge estão: a redução do
+                                            overfitting (sobreajuste) ao diminuir a magnitude dos coeficientes, a tendência de
+                                            distribuir o peso entre todas as variáveis e sua eficácia quando há multicolinearidade
+                                            entre as variáveis independentes.</p>
+                                        <p class="lead mb-3 text-justify indent">Regressão Lasso (L1):</p>
+                                        <p class="lead mb-3 text-justify indent">LASSO utiliza a regularização L1. Adiciona um termo de penalidade baseado
+                                            na norma L1 dos coeficientes.</p>
+                                        <p class="lead mb-3 text-justify indent">Fórmula:</p>
+                                        <p class="lead mb-3 text-justify indent">min(‖y - Xβ‖² + λ‖β‖₁)</p>
+                                        <p class="lead mb-3 text-justify indent">Onde:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>y é o vetor de variáveis dependentes</li>
+                                            <li>X é a matriz de variáveis independentes</li>
+                                            <li>β é o vetor de coeficientes</li>
+                                            <li>λ é o parâmetro de regularização</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Como visto anteriormente, ‖y - Xβ‖² refere-se ao SSR e λ‖β‖₁ é a norma L1. A
+                                            principal diferença entre a L1 e L2 é que a segunda utiliza a norma ao quadrado.
+                                            Pode-se entender β como uma inclinação que será adicionado à inclinação já existente
+                                            do resultado do modelo linear.</p>
+                                        <p class="lead mb-3 text-justify indent">No L1 o β está sob módulo, e no L2 ele é elevado o quadrado. Em ambos casos,
+                                            o objetivo é evitar os valores negativos. A diferença é que para o L2, por menor que
+                                            seja β, ele nunca poderá ser nulo, uma vez que sempre será elevado ao quadrado. Já
+                                            para o L1, o módulo de 0 é 0, permitindo assim a seleção de variáveis.</p>
+                                        <p class="lead mb-3 text-justify indent">Elastic Net:</p>
+                                        <p class="lead mb-3 text-justify indent">O Elastic Net combina as regularizações L1 e L2, aproveitando as vantagens de
+                                            ambas as técnicas.</p>
+                                        <p class="lead mb-3 text-justify indent">Fórmula:</p>
+                                        <p class="lead mb-3 text-justify indent">min(‖y - Xβ‖² + λ₁‖β‖₁ + λ₂‖β‖²)</p>
+                                        <p class="lead mb-3 text-justify indent">Onde:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>‖y - Xβ‖²: Esta parte é também conhecida como SSR</li>
+                                            <li>λ₁‖β‖₁: componente da regularização Lasso (L1)</li>
+                                            <li>λ₂‖β‖²: componente da regularização Ridge (L2)</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Combina as propriedades do Ridge e do Lasso, pode selecionar variáveis (como
+                                            o Lasso) e lidar com multicolinearidade (como o Ridge).</p>
+                                        <h3 class="mb-0" id="uni8-2-3"><h3 class="mb-0" id="uni8-2-3">8.2.3 Árvores de Regressão</h3>
+                                        <p class="lead mb-3 text-justify indent">As árvores de regressão constituem uma técnica robusta e versátil no campo
+                                            do aprendizado de máquina, especialmente adequada para problemas de regressão
+                                            onde o objetivo é prever uma variável de saída contínua. Esta metodologia se
+                                            distingue por sua capacidade de capturar relações não-lineares complexas entre
+                                            variáveis preditoras e a variável alvo, oferecendo uma alternativa valiosa aos
+                                            modelos lineares tradicionais.</p>
+                                        <p class="lead mb-3 text-justify indent">A estrutura fundamental de uma árvore de regressão assemelha-se a um
+                                            fluxograma invertido, onde cada nó interno representa uma decisão baseada em uma
+                                            característica específica, e cada nó folha contém uma previsão numérica. O processo
+                                            de construção da árvore envolve a divisão recursiva do conjunto de dados em
+                                            subconjuntos cada vez menores, com base em regras de decisão que maximizam a
+                                            homogeneidade dentro de cada subgrupo resultante. Um exemplo de árvore de
+                                            regressão é ilustrado abaixo. Uma árvore de regressão é composta por:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Nós de decisão</b>: Pontos onde o algoritmo faz uma escolha baseada em uma
+                                                característica.</li>
+                                            <li><b>Ramos</b>: Caminhos que conectam os nós, representando os resultados das
+                                                decisões.</li>
+                                            <li><b>Nós folha</b>: Pontos finais que contêm as previsões numéricas.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">O algoritmo constrói a árvore de cima para baixo, seguindo estas etapas:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Seleção
+                                                da
+                                                Melhor
+                                                Característica</b>: O
+                                                algoritmo
+                                                examina
+                                                todas
+                                                as
+                                                características disponíveis. Para cada característica, ele calcula uma métrica de
+                                                "impureza" (geralmente a variância) para todas as possíveis divisões. A
+                                                característica que resulta na maior redução da impureza é selecionada.</li>
+                                            <li><b>Determinação do Ponto de Divisão</b>: Para a característica selecionada, o
+                                                algoritmo determina o valor ótimo para dividir os dados. Este ponto de divisão
+                                                minimiza a variância dentro dos subgrupos resultantes.</li>
+                                            <li><b>Divisão do Nó</b>: O conjunto de dados no nó atual é dividido em dois
+                                                subconjuntos com base na regra de decisão estabelecida.</li>
+                                            <li><b>Recursão</b>: o processo é repetido para cada nó filho até que um critério de
+                                                parada seja atingido.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">A construção da árvore para quando:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li>Um nó contém um número mínimo pré definido de amostras;</li>
+                                            <li>A profundidade máxima da árvore é alcançada;</li>
+                                            <li>A redução na impureza cai abaixo de um limiar especificado.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Para fazer uma previsão, um novo dado é passado pela árvore, seguindo as
+                                            regras de decisão em cada nó. Quando atinge um nó folha, o valor associado a esse nó
+                                            é a previsão.</p>
+                                        <p class="lead mb-3 text-justify indent">As figuras abaixo apresentam um exemplo da aplicação de uma árvore de
+                                            regressão. Na Figura 39 tem-se:</p>														
+                                        <ul style="margin-left: 1cm;" class="custom-list alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Eixos X1 e X2</b>: Representam as duas variáveis preditoras utilizadas para
+                                                construir a árvore.</li>
+                                            <li><b>Pontos Vermelhos</b>: Cada ponto representa uma observação (exemplo) no
+                                                conjunto de dados. A posição do ponto no gráfico indica os valores das
+                                                variáveis preditoras para aquela observação.</li>
+                                            <li><b>Linhas Verticais e Horizontais</b>: Representam os <i>splits</i> (divisões) realizados
+                                                pela árvore de regressão. Cada <i>split</i> divide o espaço de características em duas
+                                                regiões, criando nós filhos.</li>
+                                            <li><b>Caixas Verdes</b>: Cada caixa representa uma região do espaço de características
+                                                e contém um valor numérico. Esse valor é a previsão média da variável alvo
+                                                (Y) para todas as observações que caem nessa região.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Com base nisso, a Figura 40 pode ser interpretada da seguinte maneira. Se X1 é
+                                            menor que 20, verifica-se se o valor de X2 é menor que 200. Se sim, então será
+                                            retornado 300.5, que é o valor predito para o grupo de dados contidos à esquerda do
+                                            split 1 e abaixo do split 3. Se o X2 for maior que 200, então será retornado 65.7, que é o
+                                            valor predito para o grupo de dados contidos à esquerda do <i>split</i> 1 e acima do <i>split</i> 3.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-39"><b>Figura 39</b> - Exemplo de Árvore de Regressão - Dados</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 39.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: <a href="https://medium.com/pursuitnotes/decision-tree-regression-in-6-steps-with-python-1a1c5aa2ee16"><i>Medium, 2019</i></a>.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-40"><b>Figura 40</b> - Exemplo de Árvore de Regressão - Árvore</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 40.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://medium.com/pursuitnotes/decision-tree-regression-in-6-steps-with-python-1a1c5aa2ee16"><i>Medium, 2019</i></a>.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">As árvores de regressão oferecem diversas vantagens:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Interpretabilidade</b>: A
+                                                estrutura
+                                                hierárquica
+                                                permite
+                                                uma fácil
+                                                visualização e compreensão das decisões do modelo.</li>
+                                            <li><b>Capacidade de lidar com não-linearidades</b>: Capturam eficientemente
+                                                relações complexas e interações entre variáveis.</li>
+                                            <li><b>Robustez a <i>outliers</i></b>: São menos sensíveis a valores atípicos em
+                                                comparação com métodos baseados em mínimos quadrados.</li>
+                                            <li><b>Tratamento automático de variáveis categóricas </b>: Não requerem
+                                                codificação prévia de variáveis categóricas.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">Contudo, também apresentam algumas limitações:</p>
+                                        <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                            <li><b>Tendência ao <i>overfitting</i></b>: Árvores muito profundas podem se ajustar
+                                                excessivamente aos dados de treinamento.</li>
+                                            <li><b>Instabilidade</b>: Pequenas variações nos dados podem resultar em
+                                                árvores significativamente diferentes.</li>
+                                            <li><b>Dificuldade em capturar relações aditivas</b>:  Podem ser menos
+                                                eficientes que modelos lineares para relações puramente aditivas.</li>															
+                                        </ul>
+                                        <p class="lead mb-3 text-justify indent">As árvores de regressão encontram aplicações em diversos domínios,
+                                            incluindo: previsão de preços imobiliários, estimativa de demanda de produtos,
+                                            avaliação de risco de crédito, previsão de consumo de energia.</p>
+                                        <h3 class="mb-0" id="uni8-2-4"><h3 class="mb-0" id="uni8-2-4">8.2.4 <i>Recurrent Neural Network</i> (RNN) ou Rede Neural Recorrente</h3>
+                                        <p class="lead mb-3 text-justify indent">As RNNs representam uma classe sofisticada de arquiteturas de RNAs,
+                                            especificamente concebidas para lidar com dados sequenciais. Esta estrutura
+                                            inovadora revolucionou diversas áreas da IA, particularmente aquelas que envolvem
+                                            o processamento de informações temporais ou ordenadas.</p>
+                                        <p class="lead mb-3 text-justify indent">A característica distintiva das RNNs reside em sua estrutura cíclica.
+                                            Diferentemente das redes neurais <i>feedforward</i> tradicionais que serão detalhadas na
+                                            unidade específica, as RNNs incorporam conexões de realimentação, permitindo que
+                                            a informação persista ao longo do tempo. Esta propriedade confere à rede uma forma
+                                            de "memória", capacitando-a a considerar contextos anteriores na geração de saídas
+                                            atuais.</p>
+                                        <p class="lead mb-3 text-justify indent">Na figura abaixo é ilustrado à direita uma rede neural <i>feedforward</i>, sem
+                                            recorrência. À esquerda é ilustrada a RNN, destacando-se pela seta adicional que
+                                            retorna para a mesma camada de origem.</p>
+                                        <p class="lead mb-3 text-center indent" id="link-figura-41"><b>Figura 41</b> - Comparação entre redes neurais, RNN e Feed-Forward</p>
+                                        <div>
+                                            <span class="image fit"><img src="images/Figura 41.png" alt="" /></span>
+                                            <p class="lead mb-2 text-center"><small> Fonte: Adaptada de <a href="https://www.geeksforgeeks.org/introduction-to-recurrent-neural-network/"><i>GeekesForgeeks, 2024</i></a>.</small></p>
+                                        </div>
+                                        <p class="lead mb-3 text-justify indent">Na rede neural <i>feedforward</i> a informação flui em uma única direção, das
+                                            camadas de entrada para as camadas de saída. Cada neurônio em uma camada só
+                                            recebe informações da camada anterior e não possui conexões com neurônios em
+                                            camadas anteriores. Isso limita a capacidade da rede de processar sequências de
+                                            dados, onde o contexto anterior é importante.</p>
+                                        <p class="lead mb-3 text-justify indent">Na RNN os neurônios em uma camada recebem informações não apenas da
+                                            camada anterior, mas também de si mesmos em um tempo anterior. Isso cria um
+                                            "loop" que permite à rede "lembrar" informações passadas. A presença de conexões
+                                            recorrentes permite que a RNN capture dependências temporais nos dados,
+                                            tornando-as ideais para processar sequências como texto, séries temporais e fala.</p>
+                                        <p class="lead mb-3 text-justify indent">O
+                                            treinamento
+                                            de
+                                            RNNs
+                                            emprega
+                                            uma
+                                            variante
+                                            do
+                                            algoritmo
+                                            de
+                                            retropropagação, denominada <i>Backpropagation Through Time</i> (BPTT). Este método
+                                            "desdobra" a RNN em uma rede <i>feedforward</i> profunda equivalente, permitindo a
+                                            aplicação de técnicas de otimização baseadas em gradiente.</p>
+                                        <p class="lead mb-3 text-justify indent">As RNNs encontram aplicações em uma vasta gama de domínios incluindo
+                                            PLN, com tradução automática, geração de texto e análise de sentimentos. No
+                                            reconhecimento de fala, na conversão de fala para texto e em sistemas de comando
+                                            por voz. Na análise de Séries Temporais, com a previsão de demanda e análise de
+                                            mercado financeiro. Na bioinformática com a análise de sequências de DNA ou
+                                            previsão de estruturas proteicas.</p>
+                                        <p class="lead mb-3 text-justify indent">Apesar de sua potência, as RNNs apresentam desafios significativos como:
+                                            desvanecimento e explosão do gradiente. O gradiente é como um sinal que diz à rede
+                                            neural como ela deve ajustar seus "pesos" (parâmetros internos) para melhorar suas
+                                            previsões. Este sinal viaja de trás para frente na rede durante o treinamento. Quando
+                                            trabalha-se com sequências longas em RNNs, esse gradiente precisa percorrer um
+                                            caminho muito longo, causando o desvanecimento ou explosão do gradiente. Como
+                                            consequência disso, a rede tem dificuldade em aprender de eventos que ocorreram
+                                            muito tempo atrás na sequência, ou os ajustes na rede se tornam muito grandes,
+                                            fazendo com que o treinamento se torne instável. Além disso, o processamento
+                                            sequencial pode ser computacionalmente intensivo, especialmente para sequências
+                                            muito longas.</p>
+                                        <h2 class="mb-0" id="uni8-3">8.3 <i>Notebook Colab</i>:</h2>
+                                        <p class="lead mb-3 text-justify indent">No link do colab serão abordados exemplos didáticos apresentando o cálculo
+                                            manual e utilizando as bibliotecas disponíveis, bem serão criadas diversas ilustrações
+                                            para fixar a aprendizagem. Dentre os conteúdos abordados nesse notebook
+                                            incluem-se as métricas R<sup>2</sup>, MSE, MAE, RMSE, um exemplo detalhado de uso do modelo regressão linear e a aplicação direta dos modelos de regressão ridge, árvores
+                                            de regressão e RNN.</p>
+                                        <div class="box">
+                                            <p class="lead mb-3 text-justify indent">Link:</p>
+                                            <p class="lead mb-3 text-justify"><a href="https://colab.research.google.com/drive/13J8VuT8tDkdazsZa4w36h_tj3Z5QuVuI">
+                                                https://colab.research.google.com/drive/13J8VuT8tDkdazsZa4w36h_tj3Z5QuVuI</a></p>																	
+                                        </div>
+                                        <p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+                                        <div class="box2">
+                                            <h3 class="mb-0" id="1-saiba-mais">Saiba mais…</h3>
+                                            <p class="lead mb-3 text-justify">Regressão Linear - <a href="https://youtu.be/7ArmBVF2dCs?si=XV-Ax7DZz0sN2Wx1">https://youtu.be/7ArmBVF2dCs?si=XV-Ax7DZz0sN2Wx1</a></p>
+                                            <p class="lead mb-3 text-justify">Regressão Linear - <a href="https://www.youtube.com/watch?v=PaFPbb66DxQ">https://www.youtube.com/watch?v=PaFPbb66DxQ</a></p>
+                                            <p class="lead mb-3 text-justify">Regressão Ridge - <a href="https://youtu.be/Q81RR3yKn30?si=K-TkT-W69SAM60uK">https://youtu.be/Q81RR3yKn30?si=K-TkT-W69SAM60uK</a></p>	
+                                            <p class="lead mb-3 text-justify">Regressão Lasso - <a href="https://youtu.be/NGf0voTMlcs?si=T8z8AlNTh8zl6iZF">https://youtu.be/NGf0voTMlcs?si=T8z8AlNTh8zl6iZF</a></p>
+                                            <p class="lead mb-3 text-justify">Comparação entre Ridge e Lasso - <a href="https://youtu.be/Xm2C_gTAl8c?si=Ti2D0PTfnJAl1e4B">https://youtu.be/Xm2C_gTAl8c?si=Ti2D0PTfnJAl1e4B</a></p>
+                                            <p class="lead mb-3 text-justify">Árvores de regressão - <a href="https://youtu.be/g9c66TUylZ4?si=-fP85nMbFRgT2nw7">https://youtu.be/g9c66TUylZ4?si=-fP85nMbFRgT2nw7</a></p>
+                                            <p class="lead mb-3 text-justify">R<sup>2</sup> - <a href="https://youtu.be/bMccdk8EdGo?si=zRO2xrswQPq6xSZS">https://youtu.be/bMccdk8EdGo?si=zRO2xrswQPq6xSZS</a></p>
+                                            <p class="lead mb-3 text-justify">R<sup>2</sup> - <a href="https://youtu.be/aP8YP1aX2zc?si=WDFJh6kkSNPjdtgO">https://youtu.be/aP8YP1aX2zc?si=WDFJh6kkSNPjdtgO</a></p>
+                                            <p class="lead mb-3 text-justify">Regressão Linear - <a href="https://youtu.be/bMccdk8EdGo?si=zRO2xrswQPq6xSZS">https://youtu.be/bMccdk8EdGo?si=zRO2xrswQPq6xSZS</a></p>
+                                            <p class="lead mb-3 text-justify">Regressão Linear - <a href="https://youtu.be/Wo9Vt7Sc_E0?si=hd7X7u5QX-2m57AI">https://youtu.be/Wo9Vt7Sc_E0?si=hd7X7u5QX-2m57AI</a></p>
+                                        </div>
+                                        <p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+                                        <div class="box2">
+                                            <h3 class="mb-0" id="1-saiba-mais">Para relembrar…</h3>
+                                            <p class="lead mb-3 text-justify">Regressão: Técnica estatística para modelar relações entre variáveis
+                                                dependentes contínuas e variáveis independentes.</p>
+                                                <p class="lead mb-3 text-justify indent">Importância: Fundamental para previsões quantitativas em diversos campos como economia, finanças e indústria.</p>
+                                                
+                                                <p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Regressão vs. Classificação:</p>
+                                                <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                    <li>Regressão: Predição de variáveis contínuas (ex.: preços, temperaturas)</li>
+                                                    <li>Classificação: Atribuição de instâncias a categorias discretas (ex.:
+                                                        spam ou não spam)</li>																	
+                                                </ul>															
+                                            <p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Métricas de Avaliação:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>R<sup>2</sup>: Coeficiente de Determinação</li>
+                                                <li>MSE: Erro Quadrático Médio</li>
+                                                <li>MAE: Erro Absoluto Médio</li>
+                                                <li>RMSE: Raiz do Erro Quadrático Médio</li>																
+                                            </ul>															
+                                            <p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Tipos de Regressão:</p>
+                                            <ul style="margin-left: 1cm; list-style-type: disc; padding: 0;" class="alt3 lead mb-3 text-justify indent" >
+                                                <li>Linear: Simples e múltipla</li>
+                                                <li>Ridge, Lasso e Elastic Net: Incluem penalizações</li>
+                                                <li>Árvores de Regressão: Estrutura em forma de árvore</li>
+                                                <li>RNN: Para processar sequências de dados</li>																
+                                            </ul>
+                                        </div>
+                                        
+									
+								</section>
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni8">Unidade VIII - Regressão</a></li>
+											<ul>
+												<li><a href="#uni8-1">8.1 Métricas de Avaliação</a></li>
+												<li><a href="#uni8-2">8.2 Tipos de Regressão</a></li>
+												<li><a href="#uni8-3">8.3 <i>Notebook Colab</i></a></li>
+												
+											</ul>
+										
+							
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

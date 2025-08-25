@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade X - Agrupamento</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+								
+
+																<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
+																	<div class="w-100">
+																	<h1 class="mb-0" id="uni10">Unidade X - Agrupamento</h1>
+																</div></header>
+																<p class="lead mb-3 text-justify indent">Dentre as técnicas de aprendizado não supervisionado, a mais comum é o agrupamento, também conhecido 
+																	como clusterização (do inglês <i>clustering</i>). O objetivo do agrupamento é encontrar padrões em dados não rotulados. Diferente da classificação, 
+																	que identifica o padrão nas variáveis que representam uma classe, no agrupamento buscamos padrões apenas observando as variáveis em busca de grupos, 
+																	ou <i>clusters</i>, que são subconjuntos dos dados com comportamentos em comum, mas que apresentam diferenças entre si.</p>
+																<p class="lead mb-3 text-justify indent">Um exemplo de agrupamento é a interpretação de padrões de consumo de clientes. Imaginando uma loja <i>online</i> que 
+																	vende calçados, podemos ter diversos tipos de clientes. Alguns podem comprar mais calçados esportivos, outros preferem calçados casuais, e alguns 
+																	apenas opções mais formais. Os clientes não possuem rótulos explícitos para determinarmos classes, mas, ao analisarmos o padrão de consumo, podemos 
+																	identificar perfis comuns. Ao observar o histórico de compras combinado com dados como idade, gênero e profissão, é possível agrupar os clientes em 
+																	agrupamentos que reúnem perfis de compra semelhantes, ao mesmo tempo que separam grupos com perfis diferentes.</p>
+																<p class="lead mb-3 text-justify indent">Os diferentes algoritmos de agrupamento buscam identificar similaridades entre os dados enquanto tentam compreender a dissimilaridade entre os grupos. Baseado nas diferentes abordagens para tratar o problema, podemos listar alguns desses métodos no mapa mental a seguir.</p>
+																<p class="lead mb-3 text-center" id="link-figura-53"><b>Figura 53</b> - Mapa mental com os algoritmos de agrupamento</p>
+																	<div align="center">
+																		<span class="image fit" style="width: 70%;"><img src="images/Figura 53 - Mapa mental com os algoritmos de agrupamento.png" alt="" /></span>
+																		<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+																	</div>
+																
+																<h2 class="mb-0" id="uni10-1">10.1 K-Means</h2>
+																<p class="lead mb-3 text-justify indent">O algoritmo de agrupamento mais comum é o <i>K-Means</i>. Ele pertence à categoria dos algoritmos de clusterização baseados em 
+																	partição, cujo objetivo é dividir um conjunto de dados em K agrupamentos distintos, onde cada ponto de dados pertence ao agrupamento mais próximo do seu centróide. 
+																	Um centróide é o ponto central do agrupamento e é usado para representar o "centro" do mesmo. Ele é calculado como a média aritmética das coordenadas de todos os pontos 
+																	de dados que pertencem a esse agrupamento. O número de agrupamentos, K, é definido pelo usuário e ao fim da execução o esperado é ter K diferentes agrupamentos como demonstrado 
+																	na Figura a seguir.</p>
+																<p class="lead mb-3 text-center" id="link-figura-54"><b>Figura 54</b> - Ilustração de um <i>K-Means</i> aplicado com três agrupamentos</p>
+																	<div align="center">
+																		<span class="image fit" style="width: 70%;"><img src="images/Figura 54 - Ilustração de um K-Means aplicado com três agrupamentos.png" alt="" /></span>
+																		<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.tabnews.com.br/Ga0512/seu-primeiro-projeto-de-machine-learning-usando-python">Murilo, 2023</a>.</small></p>
+																	</div>
+																<p class="lead mb-3 text-justify indent">O algoritmo <i>K-Means</i> segue um processo iterativo que pode ser resumido nos seguintes passos:</p>
+																<ol style="margin-left: 1cm;"class="alead mb-3 text-justify indent">
+																	<li><b>Inicialização:</b></li>
+																	<ul class="hollow-circle lead mb-3 text-justify indent">
+																		<li>O usuário define o número de agrupamentos K que deseja encontrar.</li>
+																		<li>Inicialmente, os centróides são escolhidos aleatoriamente. Esses centróides podem ser selecionados diretamente dos pontos de dados ou gerados aleatoriamente dentro do espaço de variáveis.</li>
+																	</ul>
+																	<li><b>Atribuição de Agrupamentos:</b></li>
+																	<ul class="hollow-circle lead mb-3 text-justify indent">
+																		<li>Cada ponto de dados é atribuído ao agrupamento cujo centróide é o mais próximo. A proximidade é geralmente medida pela distância euclidiana.</li>
+																	</ul>
+																	<li><b>Atualização dos Centróides:</b></li>
+																	<ul class="hollow-circle lead mb-3 text-justify indent">
+																		<li>Depois que todos os pontos foram atribuídos a seus respectivos agrupamentos, os centróides de cada agrupamento são recalculados. O novo centróide é a média aritmética de todos os pontos dentro do agrupamento.</li>
+																	</ul>
+																	<li><b>Convergência:</b></li>
+																	<ul class="hollow-circle lead mb-3 text-justify indent">
+																		<li>Os passos de atribuição de agrupamentos e atualização dos centróides são repetidos iterativamente até que os centróides não mudem mais significativamente ou até que um número máximo de iterações seja atingido. A convergência é geralmente alcançada quando a atribuição dos pontos aos agrupamentos não muda mais, ou seja, os centróides permanecem estáveis. Para calcular a estabilidade dos centróides é usado o cálculo da inércia que refere-se à soma das distâncias quadradas entre cada ponto de dados e o centróide.</li>
+																	</ul>
+																</ol>
+																<p class="lead mb-3 text-justify indent">O algoritmo <i>K-Means</i> é eficiente para uso em grandes bases de dados e possui uma convergência relativamente rápida. 
+																	Por outro lado, o parâmetro K pode ser um desafio em sua aplicação, pois é necessário definir previamente a quantidade de agrupamentos a serem encontrados. 
+																	Outro problema comum é a sensibilidade a <i>outliers</i>, que podem alterar significativamente a posição dos centróides. Algumas variações do <i>K-Means</i> propõem o uso 
+																	de outras formas de calcular os centróides, como o <i>K-Medoids</i>, que utiliza um dado real do agrupamento como referência central, ou o <i>K-Medians</i>, que usa a mediana do agrupamento.</p>
+
+																<h2 class="mb-0" id="uni10-2">10.2 DBSCAN</h2>
+																<p class="lead mb-3 text-justify indent">Uma alternativa mais moderna ao <i>K-means</i> é o DBSCAN. O algoritmo possui duas principais vantagens,  a capacidade de detectar outliers e 
+																	excluir tais dados dos agrupamentos os identificando como ruído, e a definição automática do número de agrupamentos. Para alcançar tais vantagens o método funciona baseado em 
+																	densidade considerando regiões de alta densidade como possíveis agrupamentos. Após definir agrupamentos iniciais ele considera as regiões próximas a partir do raio entre os pontos 
+																	já pertencentes ao agrupamento, isso faz com que o método encontre agrupamentos de quaisquer formatos, o que é diferente do <i>K-means</i>, que por considerar apenas a distância para a 
+																	condróide ele assuma que os agrupamentos sejam esféricos. Após encontrar as regiões de alta densidade únicas estas são consideradas agrupamentos únicos, possibilitando assim identificar 
+																	quando agrupamentos existiram no conjunto de dados.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-55"><b>Figura 55</b> - Exemplos de aplicação do <i>K-means</i> e DBSCAN</p>
+																	<div align="center">
+																		<span class="image fit" style="width: 70%;"><img src="images/Figura 55 - Exemplos de aplicação do K-means e DBSCAN.png" alt="" /></span>
+																		<p class="lead mb-2 text-center"><small>Fonte: <a href="https://towardsdatascience.com/understanding-dbscan-algorithm-and-implementation-from-scratch-c256289479c5">Medium, 2020</a>.</small></p>
+																	</div>
+																<h2 class="mb-0" id="uni10-3">10.3 Avaliação de Agrupamentos</h2>
+																<p class="lead mb-3 text-justify indent">A avaliação de agrupamentos é um aspecto crucial na análise de dados, pois ajuda a determinar a qualidade e a utilidade dos clusters identificados por algoritmos de agrupamento. 
+																	Diferente de tarefas de aprendizado supervisionado, onde as métricas de avaliação como acurácia, precisão e <i>recall</i> podem ser facilmente calculadas com base em rótulos conhecidos, o agrupamento geralmente é um 
+																	problema de aprendizado não supervisionado, onde não se tem rótulos. Isso torna a avaliação dos agrupamentos mais desafiadora e subjetiva. Existem duas principais abordagens para avaliação de agrupamentos: avaliação 
+																	interna e avaliação externa.</p>
+																<p class="lead mb-3 text-justify indent">As métricas de avaliação interna avaliam a qualidade dos agrupamentos com base nas propriedades intrínsecas dos dados e dos agrupamentos formados, sem usar informações externas ou rótulos verdadeiros.</p>
+																<p class="lead mb-3 text-justify indent">A métrica de avaliação interna mais comum é o Índice de Silhueta (<i>Silhouette Score</i>) que mede a coesão e a separação dos agrupamentos. Para cada ponto, a silhueta é calculada como a diferença entre a 
+																	distância média ao próprio agrupamentos (coesão) e a distância média ao agrupamentos mais próximo (separação), normalizada pela maior dessas distâncias. O índice de silhueta varia de -1 a 1, onde valores próximos de 1 indicam que os pontos 
+																	estão bem agrupados em seus próprios <i>clusters</i>, valores próximos de 0 indicam sobreposição de <i>clusters</i>, e valores negativos sugerem que os pontos podem estar mal agrupados.</p>
+																<p class="lead mb-3 text-justify indent">Na figura a seguir podemos ver a avaliação do Índice de Silhueta do agrupamento do <i>dataset Wine</i> usando duas variáveis obtidas com PCA e o método <i>K-Means</i> com K igual a 2 e 3. Neste exemplo o resultado com 
+																	dois agrupamentos possui maior índice e isso pode ser visualizado pela separação dos agrupamentos. Com três, o agrupamento vermelho e verde estão muito próximos, o que pode indicar que sejam apenas um e não dois agrupamentos separados.</p>
+																<p class="lead mb-3 text-center" id="link-figura-56"><b>Figura 56</b> - Exemplos de agrupamentos e índice de silhueta com uso do KNN com diferentes valores de <i>k</i></p>
+																<div align="center">
+																	<span class="image fit" style="width: 70%;"><img src="images/Figura 56.png" alt="" /></span>
+																	<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+																</div>
+																<p class="lead mb-3 text-justify indent">Quando se tem ao menos alguns rótulos ou a possibilidade de rotular dados o agrupamento pode ser validado a partir destes rótulos, realizando assim a avaliação externa. 
+																	A técnica mais comum para tal avaliação é o <i>Rand Index</i>, ou Índice de Rand, que calcula a porcentagem de agrupamentos corretos. O índice de Rand varia de -1 a 1, onde 1 indica um agrupamento perfeito em relação aos rótulos verdadeiros, 0 indica agrupamento aleatório e valores negativos indicam desacordo com os rótulos de referência.</p>
+																<h2 class="mb-0" id="uni10-4">10.4 </i>Notebook Colab</i></h2>
+																<p class="lead mb-3 text-justify indent">No <i>notebook</i> a seguir realizaremos passo a passo o agrupamento do <i>dataset Wine</i> citado anteriormente com uso do algoritmo <i>K-Means</i>.</p>
+																<div class="box">
+																	<p class="lead mb-3 text-center"><a class="break-all" href="https://colab.research.google.com/drive/1SsSG-x5pZRPaQ_NhL-Gvpcz50QAzpPP-">https://colab.research.google.com/drive/1SsSG-x5pZRPaQ_NhL-Gvpcz50QAzpPP-</a></p>
+																</div>
+																<p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+																<div class="box2">
+																	<h3 class="mb-0" id="uni-11-saiba-mais">Saiba mais…</h3>
+																	<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+																	
+																	<li><a href="https://www.youtube.com/watch?v=4b5d3muPQmA">k-means - https://www.youtube.com/watch?v=4b5d3muPQmA</a></li>
+																	<li><a href="https://www.youtube.com/watch?v=RDZUdRSDOok">DBSCAN - https://www.youtube.com/watch?v=RDZUdRSDOok</a></li>
+																	<li><a href="https://www.youtube.com/watch?v=7xHsRkOdVwo">Agrupamento hierárquico - https://www.youtube.com/watch?v=7xHsRkOdVwo</a></li>
+																	<li><a href="https://www.youtube.com/watch?v=a2Kg2_l3L8M">Coeficiente de silhueta - https://www.youtube.com/watch?v=a2Kg2_l3L8M</a></li>
+																	<li><a href="https://www.youtube.com/watch?v=4E_DFMt60rc">Método Cotovelo - https://www.youtube.com/watch?v=4E_DFMt60rc</a></li>
+																	<li><a href="https://www.youtube.com/watch?v=MHnoWsBJpeM">Como analisar agrupamentos - https://www.youtube.com/watch?v=MHnoWsBJpeM</a></li>
+																	
+																</ul>	
+																</div>
+																<p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+																<div class="box3">
+																	<h3 class="mb-0" id="11-relembrar">Para relembrar…</h3>
+																	<p class="lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Apesar de semelhantes, classificação e agrupamento são técnicas distintas. 
+																		Classificação temos <b>dados rotulados</b>, já sabemos de antemão qual é a resposta correta. 
+																		Com métodos de agrupamento, os dados estão <b>sem rótulos</b> e buscamos identificar possíveis formas de agrupamento desses dados criando algumas classes.</p>
+																	
+																</div>
+																</section>
+																	
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+											<li>
+												<a href="#uni10">Unidade X - Agrupamento</a></li>
+												<ul>
+													<li><a href="#uni10-1">10.1 K-Means</a></li>
+													<li><a href="#uni10-2">10.2 DBSCAN</a></li>
+													<li><a href="#uni10-3">10.3 Avaliação de Agrupamentos</a></li>
+													<li><a href="#uni10-4">10.4 <i>Notebook Colab</i></a></li>
+												</ul>
+											
+										
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>

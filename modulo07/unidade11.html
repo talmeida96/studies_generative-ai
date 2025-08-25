@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unidade XI - Redes Neurais</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/monokai-sublime.min.css">
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	</head>
+	<style type="text/css">
+        body {
+            background-image: url("Background.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+        .background-bottom {
+            background-image: url("Background-2.png") !important;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+			background-position: bottom;
+			background-attachment: fixed, scroll;
+  			background-repeat: no-repeat, repeat-y; 
+        }
+        p.indent {
+            text-indent: 30px;
+        }
+
+        #sideNav {
+			background-image: url("") !important;
+            
+        }
+		.text-justify{
+			text-align: justify;
+		}
+		.text-center{
+			text-align: center;
+		}
+		
+		</style>
+		
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<span class="logo"><strong>AKCIT -</strong> Introdução a <i>Machine Learning</i> e Redes Neurais</span>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/akcitoficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/centro-de-compet%C3%AAncia-embrapii-em-tecnologias-imersivas-akcit/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</header>
+
+							
+									<section>
+								
+
+																	<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
+																		<div class="w-100">
+																		<h1 class="mb-0" id="uni11">Unidade XI - Redes Neurais</h1>
+																	</div></header>
+																	<p class="lead mb-3 text-justify indent">As RNAs constituem um ramo do Aprendizado de Máquina, o qual, por sua vez, é um subcampo da IA. Inspiradas pela estrutura e função das redes neurais biológicas, as RNAs são sistemas de processamento de informação compostos por múltiplos elementos de processamento interconectados, chamados neurônios artificiais. Esses neurônios são organizados em camadas que transformam entradas em saídas, permitindo que a rede aprenda e faça inferências a partir de dados.</p>
+																	<p class="lead mb-3 text-justify indent">Dentro do espectro do ML, as RNAs são particularmente notáveis por sua capacidade de modelar relações complexas e não lineares. Elas são uma ferramenta poderosa para tarefas como classificação, regressão, e até mesmo para geração de conteúdo, como em Redes Generativas Adversárias (GANs). As RNAs se destacam principalmente quando se trata de aprender representações úteis de dados, o que é fundamental em tarefas de visão computacional, PLN e muitas outras áreas.</p>
+																	<p class="lead mb-3 text-justify indent">A história das RNAs é marcada por avanços e retrocessos, com períodos de entusiasmo seguidos por períodos de ceticismo. A ideia de simular a atividade cerebral surgiu na década de 1940, com trabalhos pioneiros como o de Warren McCulloch e Walter Pitts, que propuseram um modelo simples de neurônio artificial.</p>
+																	<p class="lead mb-3 text-justify indent">O desenvolvimento do Perceptron, na década de 1950 por Frank Rosenblatt, foi um marco importante, mas logo se mostrou limitado devido à sua incapacidade de resolver problemas não lineares. Na década de 1980, o algoritmo de retropropagação (<i>backpropagation</i>) foi popularizado, o que permitiu o treinamento eficiente de redes neurais multicamadas.</p>
+																	<p class="lead mb-3 text-justify indent">A virada do século XXI trouxe avanços significativos, impulsionados por melhorias em hardware, algoritmos e disponibilidade de dados. O surgimento das DL revolucionou campos como o reconhecimento de voz e a visão computacional. A partir daí, o interesse pelas RNAs cresceu exponencialmente, levando a aplicações práticas em diversos setores e contribuindo para o desenvolvimento de tecnologias inovadoras.</p>
+																	<h2 class="mb-0" id="uni11-1">11.1 Neurônio Artificial</h2>
+																	<p class="lead mb-3 text-justify indent">O neurônio biológico é a unidade básica de processamento no cérebro humano, caracterizado por sua capacidade de receber sinais elétricos, processá-los e transmiti-los a outros neurônios. Um neurônio artificial, por sua vez, é uma abstração simplificada desse modelo biológico. Ele recebe entradas (sinais), pondera cada uma delas com um peso específico e as combina, geralmente adicionando um viés. A soma ponderada é então passada por uma função de ativação, que determina se e como o "neurônio" deve responder — ou seja, se deve "disparar".</p>
+																	<p class="lead mb-3 text-justify indent">Embora a inspiração seja clara, é importante notar que a analogia não é perfeita. As RNAs são construções simplificadas que capturam apenas aspectos gerais da função neural biológica, sendo projetadas para otimizar a eficiência computacional e a capacidade de aprendizado de padrões, e não para replicar o cérebro humano com precisão.</p>
+																	<p class="lead mb-3 text-justify indent">O neurônio artificial, ilustrado na figura abaixo, recebe múltiplas entradas, que podem ser sinais de outros neurônios ou dados de entrada direta (X), cada uma com um peso (W) associado. Esses pesos representam a força das conexões entre os neurônios, similar às sinapses no cérebro humano.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-57"><b>Figura 57</b> - Esquema de um neurônio artificial - <i>Perceptron</i></p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 57 - Esquema de um neurônio artificial - Perceptron.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*upfpVueoUuKPkyX3PR3KBg.png">Medium, 2024</a>.</small></p>
+																		</div>
+																	<p class="lead mb-3 text-justify indent">As entradas ponderadas são somadas, e um viés (b) pode ser adicionado a esta soma para ajustar o ponto de ativação do neurônio. O resultado é então passado através de uma função de ativação, que introduz não linearidade ao modelo. A função de ativação (f) determina a saída do neurônio, que pode ser enviada para outros neurônios em camadas subsequentes ou ser parte da saída final da rede.</p>
+																	<p class="lead mb-3 text-justify indent">Os pesos (W) em uma rede neural artificial são parâmetros ajustáveis que determinam a influência relativa das entradas na saída do neurônio. Durante o treinamento da rede, os pesos são modificados através do processo de aprendizado, permitindo que a rede ajuste suas respostas para melhor se adequar aos dados.</p>
+																	<p class="lead mb-3 text-justify indent">O viés, também conhecido como <i>bias</i>, é um parâmetro adicional que permite ajustar a resposta do neurônio de forma independente das entradas, funcionando como uma tentativa de representar o viés presente no problema.</p>
+																	<p class="lead mb-3 text-justify indent">A função de ativação tem a função de transformar o resultado do somatório em uma saída coerente. Inicialmente, foi utilizada uma função <i>step</i>, que respondia com 0 quando o somatório resultava em um valor negativo e com 1 quando o valor era positivo. Posteriormente, começaram a ser usadas funções diferentes, como a sigmóide, que mapeia a saída em valores contínuos entre 0 e 1, como ilustrado na figura a seguir.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-58"><b>Figura 58</b> - Funções de ativação <i>step</i> e <i>sigmóide</i></p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 58 - Funções de ativação step e sigmóide.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+																		</div>
+																	<p class="lead mb-3 text-justify indent">Este modelo de neurônio foi inicialmente proposto como uma nova abordagem de Aprendizado de Máquina, capaz de resolver múltiplas tarefas. No entanto, devido à sua simplicidade, não conseguiu obter resultados significativos. O avanço das RNAs ocorreu com a introdução do algoritmo de <i>backpropagation</i>, que possibilitou a criação de redes com múltiplas camadas, conhecidas como <i>Multi-Layer Perceptron</i> (MLP).</p>
+																	<h2 class="mb-0" id="uni11-2">11.2 <i>Multi-Layer Perceptron</i></h2>
+																	<p class="lead mb-3 text-justify indent">O cérebro humano é composto por uma complexa rede de neurônios biológicos interligados. De maneira similar, às pesquisas em RNAs buscaram formas de combinar vários neurônios artificiais para formar uma rede mais complexa. A solução surgiu com o algoritmo de <i>backpropagation</i>, que deu origem às redes chamadas MLPs. Como o nome sugere, essas redes organizam os perceptrons, o neurônio artificial proposto anteriormente, em forma de camadas, como ilustrado na figura a seguir.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-59"><b>Figura 59</b> - Esquema básico de um <i>Multi-Layer Perceptron</i></p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 59 - Esquema básico de um Multi-Layer Perceptron.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.researchgate.net/publication/379446797_Machine_learning_embedded_EM_algorithms_for_semiparametric_mixture_regression_models">Xiang, 2024</a>.</small></p>
+																		</div>
+																	<p class="lead mb-3 text-justify indent">Em um MLP temos três principais estruturas:</p>
+																	<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+																		<li><b>Camada de Entrada</b>: A camada de entrada recebe as variáveis do problema a ser tratado. Os neurônios desta camada multiplicam seus pesos pelas variáveis, com cada variável tendo um peso independente. Por conta disso, o número de neurônios é dado pelo número de entradas.</li>
+																		<li><b>Camada Escondida</b>: A camada escondida recebe as saídas da camada anterior e gera uma nova saída. O conceito por trás da camada escondida é proporcionar uma interpretação mais complexa dos dados por meio da combinação de camadas. Um MLP básico possui ao menos uma camada escondida, mas o mesmo processo de treinamento pode ser aplicado a várias camadas, o que pode proporcionar uma compreensão mais profunda do problema. O número de neurônios na camada escondida é arbitrário e quanto mais, maior a capacidade da rede.</li>
+																		<li><b>Camada de Saída</b>: A camada de saída é responsável por fornecer a resposta ao problema, seja uma classificação ou regressão. Ela transforma a abstração gerada pela camada escondida em saídas específicas para o problema tratado. Em um problema de classificação com duas classes, por exemplo, é comum termos dois neurônios de saída, cada um representando a probabilidade da entrada pertencer a uma das classes.</li>
+																	</ul>
+																	<p class="lead mb-3 text-justify indent">O <i>backpropagation</i> é o algoritmo responsável por treinar o MLP. Em um treinamento de uma RNA temos dois estágio: o feedfoward e logo após o backpropagation, como na figura a seguir. No <i>feedfoward</i> os diversos exemplos de um dataset são passados pela rede em direção a saída, isso faz com que tenhamos respostas para um dos exemplos e com base nessas respostas é calculado o erro do MLP.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-60"><b>Figura 60</b> - Esquema básico de um <i>Multi-Layer Perceptron</i> com indicação de fluxo de dados no <i>feedforward</i> e <i>backpropagation</i></p>
+																	<div align="center">
+																		<span class="image fit" style="width: 70%;"><img src="images/Figura 60.png" alt="" /></span>
+																		<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.researchgate.net/publication/379446797_Machine_learning_embedded_EM_algorithms_for_semiparametric_mixture_regression_models">Xiang, 2024</a>.</small></p>
+																	</div>
+																	<p class="lead mb-3 text-justify indent">O erro é mensurado pela chamada função de custo, também chamada de função de perda ou <i>loss function</i> em inglês. A função de custo é responsável por guiar o treinamento para que o MLP reduza o erro a cada tentativa. Uma função de custo comum e que foi usada inicialmente para treinar MLPs é o MSE. A função consiste em calcular a média do erro quadrático de cada amostra como mostra a equação:</p>
+																	
+																	<p class="formula text-center" >
+																		<strong>MSE</strong> = 
+																		<span class="fraction">
+																			<span class="numerator">1</span>
+																			<span class="denominator cursive">n</span>
+																		</span>
+																		<span class="summation">
+																			<sup class="cursive">n</sup>
+																			&sum;
+																			<sub class="cursive">i=1</sub>
+																		</span>
+																		(<span class="cursive">y</span> - <span class="cursive">&#x0177</span>)²
+																	</p>
+
+																	
+																<p class="lead mb-3 text-justify indent">Na equação o <i>n</i> se refere as <i>n</i> amostras do conjunto de treino, o <i>y</i> é o rótulo, resposta esperada, e &#x0177 a resposta calculada pela rede. Existem 
+																	outras funções de perda como a Entropia Cruzada, Divergência KL e Erro Absoluto Médio, cada uma possui suas características e são usadas 
+																	conforme o tipo de saída da rede neural. A partir do erro é calculado o vetor gradiente em cada neurônio da camada de saída e logo em 
+																	seguida ajustados os pesos e o viés. O vetor gradiente é um operador no cálculo vetorial que indica a direção na qual uma função cresce 
+																	mais rapidamente. Na figura a seguir, podemos ver um exemplo com a superfície de uma função e o vetor gradiente calculado em um ponto específico.</p>
+																	
+																	<p class="lead mb-3 text-center" id="link-figura-61"><b>Figura 61</b> - Exemplo de vetor gradiente em uma função com duas variáveis</p>
+																	<div align="center">
+																		<span class="image fit" style="width: 70%;"><img src="images/Figura 61 - Exemplo de vetor gradiente em uma função com duas variáveis.png" alt="" /></span>
+																		<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+																	</div>
+																	<p class="lead mb-3 text-justify indent">Como a função de perda mensura o erro do modelo, ao movimentarmos os pesos na direção oposta ao gradiente, obteremos novos pesos que reduzirão o erro calculado. Esse processo de otimização é chamado de Gradiente Descendente, e a repetição iterativa deste processo realiza o treinamento do MLP, reduzindo progressivamente o erro em relação às amostras de treinamento.</p>
+																	<p class="lead mb-3 text-justify indent">Para corrigir as camadas escondidas e de entrada de um MLP o cálculo do gradiente é realizado novamente a cada camada, gerando assim uma série de cálculos que propagam o erro, daí o nome <i>backpropagation</i>. A retropropagação do erro garante que a rede seja ajustada de forma que as camadas trabalhem em conjunto para minimizar o erro e assim gerar respostas corretas.</p>
+																	<p class="lead mb-3 text-justify indent">O MLP oferece uma capacidade muito maior do que um neurônio artificial individual, pois, com várias camadas, é capaz de construir funções discriminantes complexas. No entanto, com a introdução de várias camadas, surge o problema do <i>vanishing gradient</i>, ou "sumiço do gradiente" em português. Ao retropropagar o gradiente para camadas anteriores, temos um produto de múltiplos gradientes, o que se torna problemático devido à função de ativação sigmóide, que gera gradientes pequenos e sempre menores que 1. Como resultado, quanto mais camadas escondidas, menor o gradiente nas primeiras camadas, tornando-as mais difíceis de serem treinadas. Este problema conteve o avanço das redes neurais por algumas décadas e a solução para este problema deu origem às chamadas DL.</p>
+																	<h2 class="mb-0" id="uni11-3">11.3 <i>Deep Learning</i></h2>
+																	<p class="lead mb-3 text-justify indent">O estudo das redes neurais avançou significativamente após a criação do <i>backpropagation</i>, resultando em diversos 
+																		aprimoramentos em relação ao MLP clássico. Um dos primeiros avanços foi a introdução da função <i>Rectified Linear Unit</i> (ReLU), que substituiu a função 
+																		sigmoide e ajudou a mitigar o problema do <i>vanishing gradient</i>. Como mostrado na figura a seguir, a ReLU funciona de maneira simples, permitindo a 
+																		passagem de sinais positivos e anulando valores negativos, substituindo-os por 0. Esse funcionamento é suficiente para permitir que os neurônios 
+																		mapeiem suas saídas, ao mesmo tempo em que gera gradientes melhores, pois a derivada (inclinação) da função ReLU é 1 e constante. Com isso, 
+																		multiplicar seus gradientes através de várias camadas não apresenta o mesmo problema que ocorre com a sigmóide. Com uso da ReLU surgiram as 
+																		primeiras redes neurais com muitas camadas, caminhando assim para as redes profundas.</p>
+																		<p class="lead mb-3 text-center" id="link-figura-62"><b>Figura 62</b> - Funções de ativação sigmóide e ReLU</p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 62 - Funções de ativação sigmóide e ReLU.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://link.springer.com/article/10.1007/s00521-023-09178-5">Locke, 2023</a>.</small></p>
+																		</div>
+																	<p class="lead mb-3 text-justify indent">Outros pontos avançaram para o surgimento das redes profundas, sendo os principais:</p>
+
+																	<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+																		<li><b>Otimizadores</b>: Novos algoritmos para a aplicação do gradiente nos pesos, também conhecidos como otimizadores, foram propostos para otimizar as redes de maneira mais rápida e eficiente.</li>
+																		<li><b>Inicialização dos pesos</b>: Toda rede neural precisa iniciar com alguns pesos aleatórios para dar início ao processo de <i>feedforward</i>. Estudos descobriram formas melhores de definir esses pesos iniciais, melhorando o desempenho do treinamento.</li>
+																		<li><b>Regularização</b>: O sobreajuste dos dados sempre foi um problema nas RNAs, pois com muitas camadas e neurônios, o modelo passa a ter alta capacidade, o que facilita o sobreajuste aos dados de treinamento. Para evitar esse problema, foram propostas técnicas como <i>Dropout</i> e <i>Batch Normalization</i>.</li>
+																		<li><b>Infraestrutura computacional</b>: O surgimento de hardware especializado contribuiu enormemente para a evolução das RNAs. Unidades de Processamento Gráfico (GPUs) e Unidades de Processamento de Tensor (TPUs) viabilizaram o treinamento de redes muito maiores do que se tinha anteriormente.</li>
+																	</ul>
+																	<p class="lead mb-3 text-justify indent">Além dos pontos apontados acima, tivemos também o desenvolvimento de arquiteturas alternativas ao MLP. Sendo a principal a CNN.</p>
+
+																	<h3 class="mb-0" id="uni11-3-1">11.3.1 CNNs: Redes Neurais Convolucionais</h3>
+																	<p class="lead mb-3 text-justify indent">As CNNs propostas nos anos 90 substituem o neurônio artificial, como o perceptron, por uma operação de convolução que pode ser treinada. A convolução é uma operação entre sinais que tem como objetivo buscar por um padrão. A ideia de utilizar uma convolução vem da dificuldade do MLP em lidar com imagens. Uma imagem digital é um mapa de pixel e para usar uma imagem como entrada em um MLP seria necessário um peso para cada pixel. Esse arranjo gera uma entrada com altíssima dimensão, com uma imagem de 200x200 seriam 40 mil entradas, e os pesos não possuem compreensão de que pixels podem ser vizinhos.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-63"><b>Figura 63</b> - Esquema básico de um <i>Multi-Layer Perceptron</i> ao receber uma imagem</p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 63.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.dropbox.com/scl/fi/vbw3iv4k8xunelxfbebh5/mpl_imagem.png?rlkey=ba6x96e6t7q237ttkm29j8lm3&dl=0">Anderson, 2024</a>.</small></p>
+																		</div>
+																	
+																	<p class="lead mb-3 text-justify indent">A convolução, por outro lado, oferece uma operação que permite compreender a vizinhança dos pixels e reduz a necessidade de tantos pesos, pois funciona como um filtro que captura uma região da imagem, gerando uma interpretação dessa região como saída. A figura a seguir mostra de forma simplificada uma sequência de duas convoluções sendo aplicadas.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-64"><b>Figura 64</b> - Esquema de um campo receptivo de duas camadas convolucionais</p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 64 - Esquema de um campo receptivo de duas camadas convolucionais.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.youtube.com/watch?app=desktop&v=ip2HYPC_T9Q">Deepia, 2024</a>.</small></p>
+																		</div>
+																	<p class="lead mb-3 text-justify indent">A convolução pode ser aplicada em toda a imagem, reutilizando o mesmo filtro, tornando-se assim muito mais eficiente, em termos de número de parâmetros, do que um MLP. A inspiração para as CNNs vem dos estudos sobre campos receptivos. A descoberta do funcionamento da percepção visual revelou que os sinais gerados pelos olhos são processados em várias camadas de neurônios, criando uma abstração do que está sendo observado. Assim, as CNNs são construídas com uso das convoluções seguidas de um MLP, que realiza a classificação a partir da abstração criada.</p>
+																	<p class="lead mb-3 text-justify indent">Apesar das CNNs terem sido introduzidas nos anos 90 foi só com o avanço das RNAs citados anteriormente que passamos a ter CNNs com grande número de camadas. Em 2012 o surgimento da arquitetura chamada AlexNet deu início ao que hoje chamamos de DL. Uma grande arquitetura, treinada em GPU, que combina várias técnicas de otimização e é treinada em um grande volume de dados.</p>
+																	<p class="lead mb-3 text-center" id="link-figura-65"><b>Figura 65</b> - Esquema da AlexNet</p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 65 - Esquema da AlexNet.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://www.pinecone.io/learn/series/image-search/imagenet/">Pinecone, 2012</a>.</small></p>
+																		</div>
+																	<p class="lead mb-3 text-justify indent">A AlexNet contém cinco camadas convolucionais e um MLP com três camadas em sua saída, conforme mostrado na figura anterior, e foi treinada com o conjunto de imagens chamado ImageNet, que contém cerca de 1,2 milhão de imagens obtidas na internet, anotadas em 1000 categorias. O desempenho reportado por essa arquitetura foi muito superior aos métodos tradicionais de visão computacional da época. </p>
+																	<p class="lead mb-3 text-center" id="link-figura-66"><b>Figura 66</b> - Exemplo de imagens do ImageNet</p>
+																	<div align="center">
+																		<span class="image fit" style="width: 70%;"><img src="images/Figura 66.jpg" alt="" /></span>
+																		<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://cv.gluon.ai/build/examples_datasets/imagenet.html">Gluon, 2012</a>.</small></p>
+																	</div>
+																		<p class="lead mb-3 text-justify indent">O resultado da AlexNet trouxe grande atenção às redes neurais a partir de 2012, levando ao surgimento de várias outras arquiteturas e avanços nas RNAs. Na visão computacional, surgiram soluções revolucionárias para tarefas como segmentação de imagens, detecção de objetos e descrição de imagens. Grande parte desse avanço se deve à introdução do conceito de Transferência de Aprendizado, conhecido como <i>transfer learning</i> em inglês.</p>
+																		<p class="lead mb-3 text-justify indent">A transferência de aprendizado ocorre ao treinar uma CNN em um grande conjunto de dados, como o ImageNet, em uma tarefa mais simples — no caso do ImageNet, a classificação de imagens — e, em seguida, usar os pesos resultantes para iniciar outro treinamento em uma tarefa semelhante, mas com um menor volume de dados disponível. Assim, o primeiro treino passou a ser chamado de pré-treino, enquanto o segundo treinamento é conhecido como ajuste fino, ou <i>fine tuning</i>. Ao retreinar a rede, ela é capaz de trazer consigo o entendimento básico dos objetos do dataset do seu treino inicial, como exemplificado na figura a seguir, e adaptar esse conhecimento prévio para uma nova tarefa.</p>
+																		<p class="lead mb-3 text-center" id="link-figura-67"><b>Figura 67</b> - Visualização das convoluções obtidas ao treinar uma CNN</p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 67  - Visualização das convoluções obtidas ao treinar uma CNN.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: Adaptada de <a href="https://arxiv.org/pdf/1311.2901">Zeiler, Fergus, 2013</a>.</small></p>
+																		</div>
+																	
+																		<p class="lead mb-3 text-justify indent">Essa abordagem permitiu o uso de DL em diversos problemas que anteriormente não eram abordados com 
+																			RNAs devido à falta de volume de dados. No entanto, as CNNs tratavam majoritariamente de problemas que envolviam imagens como entradas. 
+																			Em outros campos, como Linguagem Natural e Processamento de Áudio, as CNNs e o <i>transfer learning</i> ainda enfrentavam dificuldades para 
+																			obter bons resultados. A mudança nessas áreas ocorreu com o surgimento da arquitetura <i>Transformer</i>, que introduziu uma operação diferente 
+																			tanto do MLP quanto da convolução, permitindo o <i>transfer learning</i> com textos e áudios.</p>
+																		<p class="lead mb-3 text-justify indent"></p>
+																	<h3 class="mb-0" id="uni11-3-2">11.3.2 <i>Transformer</i></h3>
+																	<p class="lead mb-3 text-justify indent">Em 2017 foi introduzida pela equipe da Google a arquitetura chamada <i>Transformer</i>. Inicialmente proposta para 
+																		tradução de textos, a arquitetura usa de uma operação chamada “mecanismo de atenção” para processar suas entradas. O mecanismo de atenção é uma 
+																		técnica que permite que o modelo foque em partes específicas da entrada enquanto realiza uma tarefa. Ele atribui diferentes pesos a diferentes 
+																		partes da entrada, destacando informações mais relevantes, como no exemplo da figura a seguir, melhorando assim a performance em tarefas sequenciais e de PLN.</p>
+																		<p class="lead mb-3 text-center" id="link-figura-68"><b>Figura 68</b> - Visualização da atenção em um problema de tradução</p>
+																		<div align="center">
+																			<span class="image fit" style="width: 70%;"><img src="images/Figura 68 - Visualização da atenção em um problema de tradução.png" alt="" /></span>
+																			<p class="lead mb-2 text-center"><small>Fonte: autoria própria.</small></p>
+																		</div>
+																	
+																		<p class="lead mb-3 text-justify indent">Com o uso dos </i>Transformers</i> (transformadores), foi possível realizar um pré-treino eficiente tanto em Linguagem Natural 
+																			quanto em Áudio. Utilizando a arquitetura pré-treinada na tarefa de modelagem de linguagem, que consiste em prever a próxima palavra de um texto, surgiram 
+																			modelos como BERT, GPT e Llama, que revolucionaram o PLN ao resolverem tarefas anteriormente consideradas complexas. O impacto foi semelhante ao das primeiras 
+																			CNNs treinadas com o ImageNet, que, no caso do PLN, introduziu o DL em várias tarefas anteriormente tratadas com métodos clássicos de PLN. No contexto do 
+																			processamento de áudio, modelos baseados em <i>Transformers</i> como Whisper, Wav2Vec, HuBERT e Tacotron viabilizaram tarefas complexas, como reconhecimento, transcrição e sintetização de fala.</p>
+																	<h3 class="mb-0" id="uni11-3-3">11.3.3 Rede Neurais Generativas</h3>
+																	<p class="lead mb-3 text-justify indent">RNAs atualmente passaram a dominar a maior parto do campo da IA devido ao ótimo desempenho em tarefas complexas. A possibilidade de explorar os grandes conjuntos de dados que se formaram a partir da digitalização de processo e do avanço da internet age como combustível em soluções baseadas em RNAs. Com o desenvolvimento das redes neurais generativas e de modelos, o campo testemunhou uma explosão na criação de conteúdo sintético, desde imagens hiper-realistas até música e vídeo. Essas inovações não só melhoraram o desempenho em tarefas tradicionais, mas também abriram novas aplicações e indústrias, como arte digital, realidade aumentada e IA criativa. O contexto atual das RNAs é, portanto, marcado por um ciclo virtuoso de inovação, onde grandes dados alimentam redes mais poderosas, que, por sua vez, geram novos dados e tendências, continuando a impulsionar o progresso tecnológico.</p>
+																	
+																	<h3 class="mb-0" id="uni11-3-4">11.3.4 <i>Frameworks</i> para DL</h3>
+																	<p class="lead mb-3 text-justify indent">Com o avanço das RNAs e o surgimento do DL, foram criados <i>frameworks</i> para viabilizar a implementação de 
+																		novas arquiteturas neurais. Inicialmente, as implementações eram feitas usando Nvidia <i>Compute Unified Device Architecture</i> (CUDA), que 
+																		permite a programação de GPUs de forma geral, e não apenas para a geração de gráficos. No entanto, devido à complexidade da programação com CUDA, 
+																		foram propostos <i>frameworks</i> que servem como interface para o uso das GPUs no treinamento de redes neurais.</p>
+																	<p class="lead mb-3 text-justify indent">Entre os vários <i>frameworks</i> que surgiram, os principais são o <i>TensorFlow</i> e o PyTorch. 
+																		O <i>TensorFlow</i> foi inicialmente desenvolvido pela Google para uso interno e, em 2015, foi disponibilizado como uma biblioteca de código aberto. 
+																		O PyTorch foi lançado pela Meta AI (antigo Facebook) em 2016 e foi desenvolvido a partir do framework Torch. Ambos os <i>frameworks</i> são baseados 
+																		principalmente em Python e atuam como uma interface para operações implementadas em CUDA. Essas bibliotecas foram fundamentais para popularizar 
+																		a implementação e a criação de novos modelos de DL, facilitando o processo de codificação do treinamento e da inferência.</p>
+																
+																		<p><span class="image right" style="width: 25%;"><img src="Robozinho/roboCuriosoLupaRoxoEsquerda.png" alt="" /></span></p>
+																	<div class="box2">
+																		<h3 class="mb-0" id="uni-11-saiba-mais">Saiba mais…</h3>
+																		<ul style="margin-left: 1cm;" class="alt4 lead mb-3 text-justify indent">
+																		
+																		<li>Perceptron - <a class="break-all" href="https://youtu.be/6yYUc6nU3Cw?si=LZGZbtV-Ph0d4IJo">https://youtu.be/6yYUc6nU3Cw?si=LZGZbtV-Ph0d4IJo</a></li>
+																		<li>Redes Neurais - <a class="break-all" href="https://www.youtube.com/watch?v=CqOfi41LfDw">https://www.youtube.com/watch?v=CqOfi41LfDw</a></li>
+																		<li>Redes Neurais - <a class="break-all" href="https://youtu.be/XxZ0BibMTjw?si=vtO6zjtguK1a95nX">https://youtu.be/XxZ0BibMTjw?si=vtO6zjtguK1a95nX</a></li>
+																		<li>Gradiente Descendente - <a class="break-all" href="https://youtu.be/31w-xQX0Z_8?si=dkeqa39mdwSTYzhB">https://youtu.be/31w-xQX0Z_8?si=dkeqa39mdwSTYzhB</a></li>
+																		<li>Propagação reversa - <a class="break-all" href="https://www.youtube.com/watch?v=IN2XmBhILt4">https://www.youtube.com/watch?v=IN2XmBhILt4</a></li>
+																		<li>Propagação reversa - <a class="break-all" href="https://youtu.be/DGNbd2FGw2s?si=HJMNSUrcfyBsQcG4">https://youtu.be/DGNbd2FGw2s?si=HJMNSUrcfyBsQcG4</a></li>
+																		<li>ReLU - <a class="break-all" href="https://www.youtube.com/watch?v=68BZ5f7P94E">https://www.youtube.com/watch?v=68BZ5f7P94E</a></li>
+																		<li>RNN - <a class="break-all" href="https://www.youtube.com/watch?v=AsNTP8Kwu80">https://www.youtube.com/watch?v=AsNTP8Kwu80</a></li>
+																		<li>LSTM - <a class="break-all" href="https://www.youtube.com/watch?v=YCzL96nL7j0">https://www.youtube.com/watch?v=YCzL96nL7j0</a></li>
+																		<li>Transformers - <a class="break-all" href="https://www.youtube.com/watch?v=zxQyTK8quyY">https://www.youtube.com/watch?v=zxQyTK8quyY</a></li>
+																		<li>CNN - <a class="break-all" href="https://youtu.be/n4rmrZg1_58?si=NxSTmjKr9Ax0lxaH">https://youtu.be/n4rmrZg1_58?si=NxSTmjKr9Ax0lxaH</a></li>
+																		<li>AlexNet and ImageNet: The Birth of Deep Learning: - <a class="break-all" href="https://www.pinecone.io/learn/series/image-search/imagenet/">https://www.pinecone.io/learn/series/image-search/imagenet/</a></li>
+																		<li>Tutorial de Pytorch: <a class="break-all" href="https://pytorch.org/tutorials/beginner/basics/intro.html">https://pytorch.org/tutorials/beginner/basics/intro.html</a></li>
+																		<li>Tutorial de TensorFlow: <a class="break-all" href="https://www.tensorflow.org/learn?hl=pt-br">https://www.tensorflow.org/learn?hl=pt-br</a></li>
+																	</ul>	
+																	</div>
+																	<p><span class="image left" style="width: 25%;"><img src="Robozinho/roboCuriosoLapisRoxo.png" alt="" /></span></p>
+																	<div class="box3">
+																		<h3 class="mb-0" id="11-relembrar">Para relembrar…</h3>
+																		
+																		<p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Estrutura das Redes Neurais:</p>
+																		<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+																			<li>Camada de Entrada: recebe dados brutos</li>
+																			<li>Camadas Ocultas: processam e capturam complexidade dos dados</li>
+																			<li>Camada de Saída: produz a decisão final ou inferência</li>
+																		</ul>
+																		<p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Fluxo de Dados e Treinamento:</p>
+																		<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+																			<li><i>Feedforward</i>: propagação direta dos dados da entrada para a saída</li>
+																			<li><i>Backpropagation</i>: ajuste de pesos baseado no erro entre saída desejada e produzida</li>
+																		</ul>
+																		<p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font><i>Gradient Descent</i>: algoritmo para minimizar a função de custo</p>
+																		<p class="alt4 lead mb-3 text-justify"><font color="#19032B">&#10132 </font>Tipos de Redes Neurais:</p>
+																		<ul style="margin-left: 1cm;" class="lead mb-3 text-justify indent">
+																			<li><i>Perceptrons</i>: neurônio artificial simples</li>
+																			<li>MLP: multiplas camadas de Perceptrons</li>
+																			<li>CNNs: para processamento de imagens</li>
+																			<li>RNNs: para dados sequenciais (LSTM, GRU)</li>
+																			<li><i>Autoencoders</i>: para compressão e geração de dados</li>
+																			<li>GANs: para geração de dados realistas</li>
+																			
+																		</ul>
+																	</div>
+																
+																</section>
+																		
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+																	
+								</section>-->
+							
+							
+								
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h6>Introdução a <i>Machine Learning</i> e Redes Neurais</h6>
+									</header>
+									<ul>
+										
+										<li>
+											<a href="#uni11">Unidade XI - Redes Neurais</a></li>
+											<ul>
+												<li><a href="#uni11-1">11.1 Neurônio Artificial</a></li>
+												<li><a href="#uni11-2">11.2 <i>Multi-Layer Perceptron</i></a></li>
+												<li><a href="#uni11-3">11.3 <i>Deep Learning</i></a></li>
+											</ul>
+										
+									
+									</ul>
+								</nav>
+
+
+
+						</div>
+					</div>
+
+			</div>
+			<div vw class="enabled">
+				<div vw-access-button class="active"></div>
+				<div vw-plugin-wrapper>
+				  <div class="vw-plugin-top-wrapper"></div>
+				</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+			<script>
+				new window.VLibras.Widget('https://vlibras.gov.br/app');
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+												<script>hljs.highlightAll();</script>
+	</body>
+</html>
